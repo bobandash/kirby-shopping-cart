@@ -2,6 +2,7 @@ import Header from './components/Header'
 import LandingScreen from './homepage/LandingScreen'
 import FeaturedGames from './homepage/FeaturedGames'
 import FeaturedPlushies from './homepage/FeaturedPlushies'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -10,8 +11,9 @@ function App() {
       <LandingScreen />
       <FeaturedGames />
       <FeaturedPlushies />
+      <Footer />
     </>
   )
 }
 
-export default App
+export default App;
