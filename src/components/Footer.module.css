@@ -1,0 +1,49 @@
+.footer {
+  background: url('../assets/green-landscape-photoshopped.jpg');
+  min-height: 40vh;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  position: relative;
+}
+
+.sleeping-kirby {
+  position: absolute;
+  width: 200px;
+  bottom: 10%;
+  left: 5%;
+}
+
+.footer-container {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.col:first-child {
+  margin-left: auto;
+}
+
+.col:not(:last-child){
+  margin-right: 50px;
+}
+
+.col h3 {
+  font-size: 36px;
+  text-decoration: underline;
+  margin-bottom: 6px;
+}
+
+.col ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.col ul li {
+  list-style: none;
+  margin-left: 0;
+  font-size: 24px;
+}
