@@ -1,0 +1,47 @@
+.featured-plush-container {
+  background: url('../assets/kirby all forms.jpg');
+  min-height: 80vh;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.align-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-plushies-btn {
+  margin: 0 auto;
+  font-size: 48px;
+  background-color: white;
+  padding: 24px 30px;
+  border-radius: 20px;
+}
+
+.plush-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.plush-container > *:not(:last-child){
+  margin-bottom: 24px;
+}
+
+.shop-plushies-btn {
+  margin-top: 48px;
+}
+
+@media screen and (min-width: 800px) {
+  .plush-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+  }
+
+  .plush-container > *:not(:last-child){
+    margin-right: 24px;
+    margin-bottom: 0px;
+  }
+}
