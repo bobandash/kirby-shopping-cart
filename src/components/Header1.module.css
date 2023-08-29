@@ -1,0 +1,93 @@
+.header {
+  background-color: #FFA3B8;
+  padding: 15px 0px;
+  position: sticky;
+}
+
+.container-header {
+  width: 90%;
+  max-width: 1400px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container-header > * {
+  height: 40px;
+  flex: 1;
+}
+
+.kirby-logo {
+  height: 100%;
+  width: auto;
+}
+
+.search-bar-form {
+  min-width: 50%;
+  width: fit-content;
+}
+
+.search-bar-form > * {
+  height: 100%;
+}
+
+.search-bar-form input {
+  width: 85%;
+  padding-left: 10px;
+}
+
+.search-bar-form button{
+  width: 15%;
+  background-color: #e4000f;
+}
+
+.profile-cart-container {
+  display: flex;
+  align-items: center;
+}
+
+.profile-cart-container > *:first-child{
+  margin-left: auto;
+}
+
+/* for logos on the right side */
+.profile-cart-container span {
+  display: none;
+}
+
+.profile-cart-container > *:not(:last-child){
+  margin-right: 24px;
+}
+
+.profile-cart-container * {
+  color: black;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .profile-cart-container span {
+    margin-left: 8px;
+    display: inline;
+  }
+
+  .container-header > * {
+    height: 50px;
+  }
+
+  .header {
+    padding: 20px 0px;
+  }
+
+  .search-bar-form input {
+    width: 90%;
+    padding-left: 10px;
+  }
+  
+  .search-bar-form button{
+    width: 10%;
+    background-color: #e4000f;
+  }
+
+}
