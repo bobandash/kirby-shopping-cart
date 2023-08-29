@@ -2,3 +2,11 @@
   font-family: "KirbyClassic";
   src: url('./fonts/kirby-classic.ttf') format("truetype");  
 }
+
+html, body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
