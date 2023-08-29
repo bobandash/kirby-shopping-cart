@@ -1,0 +1,39 @@
+.subheader {
+  background-color: rgba(255, 0, 58, 50%);
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px 0px;
+}
+
+.container > ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.container > ul > li {
+  text-decoration: none;
+}
+
+.container > ul > li > a {
+  font-family: "Inter", "Times New Roman", "sans-serif";
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: black;
+}
+
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 17.5px 0px;
+  }
+}
