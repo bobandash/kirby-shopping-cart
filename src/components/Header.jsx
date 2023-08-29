@@ -1,6 +1,7 @@
 import KirbyLogo from '../assets/kirby-logo.png';
 import { Link } from 'react-router-dom';
-import styles from './Header1.module.css'
+import styles from './Header.module.css'
+import SubHeader from './Subheader';
 
 function Header1(){
   return (
@@ -16,6 +17,7 @@ function Header1(){
           <Link to="/"><i className="fa-solid fa-cart-shopping"></i><span>Cart</span></Link>
         </div>
       </div>
+      <SubHeader />
     </header>
   )
 }
