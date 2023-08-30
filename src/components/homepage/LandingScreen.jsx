@@ -1,6 +1,6 @@
-import KirbyLogo from '../assets/kirby-name-logo.png';
-import NoTrailStars from '../assets/no trail.png';
-import TrailStars from '../assets/trail.png';
+import KirbyLogo from '../../assets/kirby-name-logo.png';
+import NoTrailStars from '../../assets/no trail.png';
+import TrailStars from '../../assets/trail.png';
 import styles from './LandingScreen.module.css';
 
 

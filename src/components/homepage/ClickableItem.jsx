@@ -1,6 +1,6 @@
 import styles from './ClickableItem.module.css'
 // TO-DO: remove and add props to take any object once an API call is made
-import kirbyFront from '../assets/product-assets/little_buddy_kirby_front.jpg'
+import kirbyFront from '../../assets/product-assets/little_buddy_kirby_front.jpg'
 
 function ClickableItem(){
   return (

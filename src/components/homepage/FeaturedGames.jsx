@@ -1,6 +1,6 @@
 import styles from './FeaturedGames.module.css';
 import sharedStyles from './shared.module.css';
-import kirbyForgottenLand from '../assets/kriby-forgotten-land-promo.jpg'
+import kirbyForgottenLand from '../../assets/kriby-forgotten-land-promo.jpg'
 
 function FeaturedGames(){
   return (

@@ -1,5 +1,5 @@
 .landing-screen {
-  background: url('../assets/kirby-screen.png');
+  background: url('../../assets/kirby-screen.png');
   height: 85vh;
   background-size: cover;
   background-position: center center;

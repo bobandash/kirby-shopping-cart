@@ -1,5 +1,5 @@
 import styles from './Footer.module.css'
-import SleepingKirby from '../assets/KSSU_Sleep_Kirby.png'
+import SleepingKirby from '../../assets/KSSU_Sleep_Kirby.png'
 
 function Footer(){
   return (

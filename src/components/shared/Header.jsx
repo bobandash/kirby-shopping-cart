@@ -1,4 +1,4 @@
-import KirbyLogo from '../assets/kirby-logo.png';
+import KirbyLogo from '../../assets/kirby-logo.png';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css'
 import SubHeader from './Subheader';
