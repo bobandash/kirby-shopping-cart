@@ -1,8 +1,8 @@
-import Header from './components/Header'
-import LandingScreen from './homepage/LandingScreen'
-import FeaturedGames from './homepage/FeaturedGames'
-import FeaturedPlushies from './homepage/FeaturedPlushies'
-import Footer from './components/Footer'
+import Header from './components/shared/Header'
+import LandingScreen from './components/homepage/LandingScreen'
+import FeaturedGames from './components/homepage/FeaturedGames'
+import FeaturedPlushies from './components/homepage/FeaturedPlushies'
+import Footer from './components/shared/Footer'
 
 function App() {
   return (
