@@ -1,0 +1,32 @@
+.featured-items-container {
+  min-height: 80vh;
+  background: url(../assets/starry-night.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.game-images-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.game-image {
+  display: block;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.caret-btn {
+  padding: 15px;
+  width: 70px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.caret-btn i {
+  transform: scale(3.5);
+}
