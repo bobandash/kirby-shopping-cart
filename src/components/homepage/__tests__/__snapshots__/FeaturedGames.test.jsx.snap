@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Featured Games Component > renders featured games component 1`] = `
+<div>
+  <section
+    class="_featured-items-container_b6f7f5"
+  >
+    <div
+      class="_container_59ef55"
+    >
+      <h1
+        class="_header_59ef55"
+      >
+        Featured Games
+      </h1>
+      <div
+        class="_game-images-container_b6f7f5"
+      >
+        <button
+          class="_caret-btn_b6f7f5"
+        >
+          <i
+            class="fa-solid fa-angle-left"
+          />
+        </button>
+        <img
+          class="_game-image_b6f7f5"
+          src="/src/assets/kriby-forgotten-land-promo.jpg"
+        />
+        <button
+          class="_caret-btn_b6f7f5"
+        >
+          <i
+            class="fa-solid fa-angle-right"
+          />
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+`;

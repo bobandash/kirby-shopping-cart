@@ -1,0 +1,38 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Landing Screen Component > renders correctly 1`] = `
+<div>
+  <section
+    class="_landing-screen_7178c2"
+  >
+    <div
+      class="_container_7178c2"
+    >
+      <img
+        alt="stars no trail"
+        class="_stars_7178c2"
+        src="/src/assets/no trail.png"
+      />
+      <img
+        alt="stars trail"
+        class="_stars_7178c2 _trail-animation_7178c2"
+        src="/src/assets/trail.png"
+      />
+      <div
+        class="_store-information_7178c2"
+      >
+        <img
+          alt="kirby-logo"
+          class="_kirby-logo_7178c2"
+          src="/src/assets/kirby-name-logo.png"
+        />
+        <h2
+          class="_subheader_7178c2"
+        >
+          The Fake Online Store
+        </h2>
+      </div>
+    </div>
+  </section>
+</div>
+`;
