@@ -33,15 +33,26 @@
   margin-top: 48px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .plush-container {
     display: flex;
     flex-direction: row;
-    flex: 1;
+    justify-content: space-evenly;
+
+  }
+
+  .plush-container > * {
+    width: 33%;
   }
 
   .plush-container > *:not(:last-child){
     margin-right: 24px;
     margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .plush-container > * {
+    width: 30%;
   }
 }
