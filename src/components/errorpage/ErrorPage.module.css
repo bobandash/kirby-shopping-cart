@@ -1,0 +1,51 @@
+.error-page {
+  min-height: 85vh;
+  background-color: rgb(255, 221, 226);
+  background: url(../../assets/angry_kirby_final.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.container {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-message {
+  font-size: 48px;
+  margin: 0;
+  margin-bottom: 20px;
+  text-shadow:
+  5px 5px 0 #000,
+  -3px -3px 0 #000,  
+  3px -3px 0 #000,
+  -3px 3px 0 #000,
+  3px 3px 0 #000;
+  color: white;
+}
+
+.back-home-redirect {
+  font-size: 38px;
+  padding: 10px 20px;
+  background-color: hotpink;
+  border-radius: 5px;
+}
+
+.back-home-redirect:hover {
+  background-color: rgb(235, 59, 117);
+}
+
+
+@media screen and (min-width: 1200px){
+  .error-message {
+    font-size: 96px;
+  }
+
+  .back-home-redirect {
+    font-size: 60px;
+  }
+}
+
