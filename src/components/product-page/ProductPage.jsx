@@ -54,7 +54,7 @@ function ProductPage(){
           </div>
           <div className = {styles["product-information-container"]}>
             <h1 className = {styles["item-name"]}>{item.title}</h1>
-            <h2 className = {styles["item-price"]}>{item.price}</h2>
+            <h2 className = {styles["item-price"]}>${item.price.toFixed(2)}</h2>
             <button className = {styles["add-cart"]}>Add To Cart</button>
             <h3 className = {styles["description-header"]}>Description:</h3>
             <p className = {styles["item-description"]}>{item.description}</p>
