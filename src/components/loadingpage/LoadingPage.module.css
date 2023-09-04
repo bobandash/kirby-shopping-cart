@@ -1,0 +1,54 @@
+.loading-screen {
+  background-color: rgb(255, 221, 226);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.loading-gif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.kirby-img-container {
+  width: 100%;
+  position: absolute;
+  bottom: 20%;
+}
+
+.kirby-img-container img {
+  width: 20%;
+  animation: 4s ease-in infinite walk;
+}
+
+
+
+
+@keyframes walk {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(500%);
+  }
+}
+
+@media screen and (min-width: 800px){
+  .loading-gif {
+    width: 20%;
+  }
+
+}
+
+
+/* <section className = {styles["loading-screen"]}>
+<img className = {styles["loading-gif"]} src = {LoadingGif} alt = "loading gif"/>
+<div className = {styles["kirby-img-container"]}>
+  <img src = {Kirby} alt = "kirby gif" />
+</div>
+</section> */
