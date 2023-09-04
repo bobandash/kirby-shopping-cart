@@ -7,14 +7,41 @@ import {useParams} from 'react-router-dom';
 import { useEffect, useState } from "react";
 import LoadingScreen from "../loadingpage/LoadingPage";
 
-function ProductPage({cartItems}){
+function ProductPage({cartItems, addCartItem}){
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const {name} = useParams();
+  /* for quantity form */
+  const [quantity, setQuantity] = useState(0);
+  const [quantityError, setQuantityError] = useState(false);
+  
+
+
+  function handleQuantityChange(e){
+    e.preventDefault();
+    const inputBoxQuantity = e.target.value;
+    console.log(inputBoxQuantity);
+    if(inputBoxQuantity === "" || inputBoxQuantity === 0){
+      setQuantity(0);
+    } else {
+      setQuantity(Number(inputBoxQuantity));
+    }
+  }
+
+  function handleQuantityFormSubmit(e){
+    e.preventDefault();
+    if(quantity === 0){
+      setQuantityError(true);
+    } else {
+      if(quantityError){
+        setQuantityError(false);
+      }
+      addCartItem(item, quantity);
+    }
+  }
 
   useEffect(() => {
-    //TO-DO: 
     async function getProduct(id){
       try {
         const response = await fetch('https://fakestoreapi.com/products/'+id);
@@ -57,9 +84,17 @@ function ProductPage({cartItems}){
             <form className = {styles["qty-form"]}>
               <div className = {styles["same-line"]}>
                 <label htmlFor = "quantity">Quantity:</label>
-                <input type = "number" htmlFor = "quantity"/>
+                <input type = "number" htmlFor = "quantity" onChange = {(e) => handleQuantityChange(e)}/>
               </div>
-              <button className = {styles["add-cart"]}>Add To Cart</button>
+              {quantityError && <p className = {styles["error-message"]}>Invalid Quantity. Cannot Add to Cart.</p>}
+              <button
+                className = {styles["add-cart"]}
+                onClick = {(e) => {
+                  handleQuantityFormSubmit(e);
+                }}
+              >
+                Add To Cart
+              </button>
             </form>
             <h3 className = {styles["description-header"]}>Description:</h3>
             <p className = {styles["item-description"]}>{item.description}</p>
