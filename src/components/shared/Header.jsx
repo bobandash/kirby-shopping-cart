@@ -6,9 +6,14 @@ import cartIcon from '../../assets/Cart/empty_cart.png';
 import kirbyCartIcon from '../../assets/Cart/kirby_in_cart.png';
 
 function Header1({cartItems}){
-  const addQuantities = (a,b) => a +b;
+  const addQuantities = (a,b) => a + b;
+  let cartItemQuantity;
   const cartItemQuantitiesArray = cartItems.map(cartItem => {return cartItem.quantity;});
-  const cartItemQuantity = cartItemQuantitiesArray.reduce(addQuantities)
+  if(cartItemQuantitiesArray.length === 0){
+    cartItemQuantity = 0;
+  } else {
+    cartItemQuantity = cartItemQuantitiesArray.reduce(addQuantities)
+  }
 
   return (
     <header className = {styles.header}>
