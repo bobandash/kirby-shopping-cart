@@ -14,13 +14,13 @@ function GetFeaturedProducts(){
   const [error, setError] = useState(false);
 
   async function getFeaturedPlushies(){
-    const response = await fetch(`https://fakestoreapi.com/products/category/${CATEGORIES.Plushies}?limit=3`);
+    const response = await fetch(`https://fakestoreapi.com/products/category/${CATEGORIES.Plushies}?limit=3`, {mode: 'cors'});
     const data = response.json();
     return data;
   }
 
   async function getFeaturedGames(){
-    const response = await fetch(`https://fakestoreapi.com/products/category/${CATEGORIES.Games}?limit=3`);
+    const response = await fetch(`https://fakestoreapi.com/products/category/${CATEGORIES.Games}?limit=3`, {mode: 'cors'});
     const data = response.json();
     return data;    
   }
