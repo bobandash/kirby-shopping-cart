@@ -1,0 +1,206 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Error Page > renders correctly 1`] = `
+<div>
+  <header
+    class="_header_658eb3"
+  >
+    <div
+      class="_container-header_658eb3"
+    >
+      <div>
+        <a
+          href="/"
+        >
+          <img
+            alt="Kirby Logo"
+            class="_kirby-logo_658eb3"
+            src="/src/assets/kirby-logo.png"
+          />
+        </a>
+      </div>
+      <form
+        class="_search-bar-form_658eb3"
+      >
+        <input
+          placeholder="Search Products..."
+          type="text"
+        />
+        <button
+          type="submit"
+        >
+          <i
+            class="fa-solid fa-magnifying-glass"
+          />
+        </button>
+      </form>
+      <div
+        class="_profile-cart-container_658eb3"
+      >
+        <a
+          href="/"
+        >
+          <i
+            class="fa-solid fa-user"
+          />
+          <span>
+            Sign In/Register
+          </span>
+        </a>
+        <a
+          href="/"
+        >
+          <i
+            class="fa-solid fa-cart-shopping"
+          />
+          <span>
+            Cart
+          </span>
+        </a>
+      </div>
+    </div>
+    <nav
+      class="_subheader_57155f"
+    >
+      <div
+        class="_container_57155f"
+      >
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              Shop All
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Games
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Plushies
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Keychains
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section
+    class="_error-page_8f9d9e"
+  >
+    <div
+      class="_container_8f9d9e"
+    >
+      <h1
+        class="_error-message_8f9d9e"
+      >
+        404 ERROR
+      </h1>
+      <button
+        class="_back-home-redirect_8f9d9e"
+      >
+        Back To Home 
+        <i
+          class="fa-solid fa-arrow-right"
+        />
+      </button>
+    </div>
+  </section>
+  <footer
+    class="_footer_f9afc1"
+  >
+    <img
+      alt="sleeping kirby"
+      class="_sleeping-kirby_f9afc1"
+      src="/src/assets/KSSU_Sleep_Kirby.png"
+    />
+    <div
+      class="_footer-container_f9afc1"
+    >
+      <div
+        class="_col_f9afc1"
+      >
+        <h3>
+          Categories
+        </h3>
+        <ul>
+          <li>
+            Games
+          </li>
+          <li>
+            Plush
+          </li>
+          <li>
+            Keychain
+          </li>
+        </ul>
+      </div>
+      <div
+        class="_col_f9afc1"
+      >
+        <h3>
+          Customer Service
+        </h3>
+        <ul>
+          <li>
+            Company Bio
+          </li>
+          <li>
+            Privacy Policy
+          </li>
+          <li>
+            Terms of Service
+          </li>
+          <li>
+            Refund Policy
+          </li>
+        </ul>
+      </div>
+      <div
+        class="_col_f9afc1"
+      >
+        <h3>
+          Site Info
+        </h3>
+        <ul>
+          <li>
+            About Kirby
+          </li>
+          <li>
+            News
+          </li>
+        </ul>
+        <div
+          class="social-media-links"
+        >
+          <a
+            href=""
+            target="_blank"
+          />
+          <a
+            href=""
+            target="_blank"
+          />
+          <a
+            href=""
+            target="_blank"
+          />
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;
