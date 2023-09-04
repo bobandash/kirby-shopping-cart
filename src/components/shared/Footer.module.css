@@ -1,10 +1,18 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .footer {
   background: url('../../assets/green-landscape-photoshopped.jpg');
-  min-height: 40vh;
   background-position: center center;
   background-size: cover;
   padding-top: 48px;
-  padding-bottom: 48px;
+  padding-bottom: 60px;
   position: relative;
 }
 
@@ -17,33 +25,131 @@
 
 .footer-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.col:first-child {
-  margin-left: auto;
-}
-
-.col:not(:last-child){
-  margin-right: 50px;
+.col {
+  position: relative;
+  width: 100%;
+  text-align: center;
 }
 
 .col h3 {
-  font-size: 36px;
-  text-decoration: underline;
-  margin-bottom: 6px;
+  margin: 0;
+  padding: 10px 0px;
+  width: 100%;
+  border: 1px solid black;
+  position: relative;
+}
+
+.col h3 i {
+  position: absolute;
+  right: 5%;
 }
 
 .col ul {
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 8px 0px;
+  border: 1px solid black;
+  border-top: none;
+  margin: 0;
+}
+
+.col.mobile-collapsed ul {
+  display: none;
 }
 
 .col ul li {
   list-style: none;
   margin-left: 0;
-  font-size: 24px;
+  font-size: 18px;
+}
+
+.social-media-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.social-media-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.social-media-links a i {
+  transform: scale(1.5);
+}
+
+.col h3:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .col h3 {
+    font-size: 24px;
+  }
+}
+
+/*desktop responsiveness*/
+@media screen and (min-width: 800px) {
+  .footer {
+    min-height: 35vh;
+  }
+
+  .col h3:hover {
+    cursor: default;
+  }
+
+  .footer-container {
+    width: 80%;
+    max-width: 800px; 
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .col {
+    width: auto;
+  }
+  
+  .col h3 {
+    font-size: 30px;
+    text-decoration: underline;
+    margin-bottom: 3px;
+    text-align: left;
+    margin: 0;
+    border: none;
+  }
+
+  .col h3 > i {
+    display: none;;
+  }
+  
+  .col ul {
+    margin: 0px;
+    border: none;
+  }
+
+  .col ul li {
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .col ul li:not(:first-child) {
+    margin-top: 4px;
+  }
+
+  .col.mobile-collapsed ul {
+    display: block;
+  }
+
+  .social-media-links {
+    justify-content: space-between;
+  }
 }

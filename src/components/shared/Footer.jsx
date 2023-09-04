@@ -1,40 +1,73 @@
 import styles from './Footer.module.css'
 import SleepingKirby from '../../assets/KSSU_Sleep_Kirby.png'
+import { useState } from 'react';
+import FooterItems from './FooterItems';
+import { v4 as uuid } from 'uuid';
 
 function Footer(){
+  const dropdownNumber = {
+    none: 0,
+    categories: 1,
+    customerService: 2,
+    siteInfo: 3
+  }
+  const [activeDropdownNumber, setActiveDropdownNumber] = useState(dropdownNumber.none);
+
+  const footerItem = (name, url, id) => {
+    return {name, url, id}
+  }
+
+  function handleSetActiveDropdownNumber(number){
+    if(activeDropdownNumber === number){
+      setActiveDropdownNumber(dropdownNumber.none);
+    } else {
+      setActiveDropdownNumber(number);
+    }
+  }
+
+  const categoriesNavObject = [
+    footerItem("Games", "/", uuid()),
+    footerItem("Plushies", "/", uuid()),
+    footerItem("Keychains", "/", uuid())
+  ]
+
+  const customerServiceNavObject = [
+    footerItem("Company Bio", "/", uuid()),
+    footerItem("Privacy Policy", "/", uuid()),
+    footerItem("Terms of Service", "/", uuid()),
+    footerItem("Refund Policy", "/", uuid()),
+  ]
+
+  const siteInfoNavObject = [
+    footerItem("About Kirby", "/", uuid()),
+    footerItem("News", "/", uuid()),
+  ]
+
   return (
     <footer className = {styles.footer}>
       <img className = {styles["sleeping-kirby"]} src = {SleepingKirby} alt = "sleeping kirby" />
       <div className = {styles["footer-container"]}>
-        <div className = {styles["col"]}>
-          <h3>Categories</h3>
-          <ul>
-            <li>Games</li>
-            <li>Plush</li>
-            <li>Keychain</li>
-          </ul>
-        </div>
-        <div className = {styles["col"]}>
-          <h3>Customer Service</h3>
-          <ul>
-            <li>Company Bio</li>
-            <li>Privacy Policy</li>
-            <li>Terms of Service</li>
-            <li>Refund Policy</li>
-          </ul>
-        </div>
-        <div className = {styles["col"]}>
-          <h3>Site Info</h3>
-          <ul>
-            <li>About Kirby</li>
-            <li>News</li>
-          </ul>
-          <div className = "social-media-links">
-            <a href="" target="_blank"></a>
-            <a href="" target="_blank"></a>
-            <a href="" target="_blank"></a>
-          </div>
-        </div>
+        <FooterItems 
+          dropdownNumber = {dropdownNumber.categories}
+          activeDropdownNumber= {activeDropdownNumber}
+          footerName = "Categories"
+          footerNavItemsArray= {categoriesNavObject}
+          handleClick= {handleSetActiveDropdownNumber}
+        />
+        <FooterItems 
+          dropdownNumber = {dropdownNumber.customerService}
+          activeDropdownNumber= {activeDropdownNumber}
+          footerName = "Customer Service"
+          footerNavItemsArray= {customerServiceNavObject}
+          handleClick= {handleSetActiveDropdownNumber}
+        />
+        <FooterItems 
+          dropdownNumber = {dropdownNumber.siteInfo}
+          activeDropdownNumber= {activeDropdownNumber}
+          footerName = "Site Info"
+          footerNavItemsArray= {siteInfoNavObject}
+          handleClick= {handleSetActiveDropdownNumber}
+        />
       </div>
     </footer>
   )
