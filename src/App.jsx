@@ -49,7 +49,7 @@ function GetFeaturedProducts(){
   return {featuredPlushies, featuredGames, loading, error};
 }
 
-function App() {
+function App({cartItems}) {
   const {featuredPlushies, featuredGames, loading, error} = GetFeaturedProducts();
   
   if(loading){
@@ -62,7 +62,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header cartItems = {cartItems}/>
       <LandingScreen />
       <FeaturedGames games = {featuredGames}/>
       <FeaturedPlushies plushies = {featuredPlushies}/>

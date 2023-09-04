@@ -7,7 +7,7 @@ import {useParams} from 'react-router-dom';
 import { useEffect, useState } from "react";
 import LoadingScreen from "../loadingpage/LoadingPage";
 
-function ProductPage(){
+function ProductPage({cartItems}){
   const [item, setItem] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -46,7 +46,7 @@ function ProductPage(){
 
   return(
     <>
-      <Header1 />
+      <Header1 cartItems = {cartItems}/>
       <section className = {styles["product-information-page"]}>
         <div className = {styles.container}>
           <div className = {styles["image-container"]}>

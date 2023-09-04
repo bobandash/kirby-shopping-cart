@@ -8,7 +8,7 @@ import ErrorPage from "../errorpage/ErrorPage";
 import CATEGORIES from "../../constants/categories";
 import LoadingScreen from "../loadingpage/LoadingPage";
 
-function CategoryPage(){
+function CategoryPage({cartItems}){
   const [categoryItems, setCategoryItems] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -38,7 +38,6 @@ function CategoryPage(){
     async function getProducts(){
       try{
         const fetchUrl = getFetchUrl(name);
-        console.log(fetchUrl);
         const response = await fetch(fetchUrl);
         if(!response.ok){
           setError(true);
@@ -65,7 +64,7 @@ function CategoryPage(){
 
   return (
     <>
-      <Header1 />
+      <Header1 cartItems = {cartItems}/>
         <section className = {styles["category-page"]}>
           <div className = {styles["item-container"]}>
             {categoryItems.map((item) => (
