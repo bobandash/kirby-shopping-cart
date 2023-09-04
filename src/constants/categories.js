@@ -3,7 +3,8 @@
 const CATEGORIES = {
   Games: 'electronics',
   Plushies: `men's clothing`,
-  Keychains: 'jewelry'
+  Keychains: 'jewelery',
+  All: ""
 }
 
 export default CATEGORIES;
