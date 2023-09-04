@@ -5,6 +5,7 @@ import PropTypes from "prop-types"
 import ErrorPage from "../errorpage/ErrorPage";
 import {useParams} from 'react-router-dom';
 import { useEffect, useState } from "react";
+import LoadingScreen from "../loadingpage/LoadingPage";
 
 function ProductPage(){
   const [item, setItem] = useState(null);
@@ -36,7 +37,7 @@ function ProductPage(){
 
   if(loading){
     //TO-DO: change to loading page
-    return <div>Loading...</div>
+    return <LoadingScreen />
   }
 
   if(error){
