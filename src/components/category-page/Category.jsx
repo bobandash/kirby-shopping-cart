@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import ClickableItem from "../homepage/ClickableItem";
 import ErrorPage from "../errorpage/ErrorPage";
 import CATEGORIES from "../../constants/categories";
+import LoadingScreen from "../loadingpage/LoadingPage";
 
 function CategoryPage(){
   const [categoryItems, setCategoryItems] = useState(null);
@@ -59,7 +60,7 @@ function CategoryPage(){
   }
 
   if(loading) {
-    return(<div>Loading...</div>)
+    return(<LoadingScreen />)
   }
 
   return (

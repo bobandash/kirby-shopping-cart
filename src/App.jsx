@@ -5,6 +5,7 @@ import FeaturedPlushies from './components/homepage/FeaturedPlushies'
 import Footer from './components/shared/Footer'
 import { useState, useEffect } from 'react'
 import CATEGORIES from './constants/categories'
+import LoadingScreen from './components/loadingpage/LoadingPage'
 
 /* renders featured plush and featured games for the home screen */
 function GetFeaturedProducts(){
@@ -52,7 +53,7 @@ function App() {
   const {featuredPlushies, featuredGames, loading, error} = GetFeaturedProducts();
   
   if(loading){
-    return(<div>Loading...</div>);
+    return(<LoadingScreen />);
   }
 
   if(error){
