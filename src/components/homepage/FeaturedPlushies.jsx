@@ -2,8 +2,16 @@ import styles from './FeaturedPlushies.module.css';
 import sharedStyles from './shared.module.css';
 import ClickableItem from './ClickableItem';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
+
 
 function FeaturedPlushies({plushies}){
+    const navigate = useNavigate();
+  
+  function redirectPlushies(){
+      navigate("/category/plushies")
+  }
+  
   return (
     <section className = {styles["featured-plush-container"]}>
       <div className = {`${sharedStyles.container} ${styles["align-container"]}`}>
@@ -13,7 +21,7 @@ function FeaturedPlushies({plushies}){
             <ClickableItem plush = {plush} key = {plush.id}/>
           ))}
         </div>
-        <button className = {styles["shop-plushies-btn"]}>Shop All Plushies</button>
+        <button onClick = {redirectPlushies} className = {styles["shop-plushies-btn"]}>Shop All Plushies</button>
       </div>
     </section>
   )
