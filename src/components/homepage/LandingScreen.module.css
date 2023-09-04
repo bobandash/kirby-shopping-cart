@@ -3,6 +3,7 @@
   height: 85vh;
   background-size: cover;
   background-position: center center;
+  overflow-x: hidden;
 }
 
 .container {
