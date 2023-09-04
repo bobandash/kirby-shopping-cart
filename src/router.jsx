@@ -6,7 +6,7 @@ import CategoryPage from "./components/category-page/Category.jsx"
 import { useState } from "react"
 
 const Router = () => {
-  const [cartItems, setCartItems] = useState([{quantity: 77}]);
+  const [cartItems, setCartItems] = useState([]);
 
   function addCartItem(item, itemQuantity){
     const hasItem = cartItems.filter(cartItem => cartItem.id === item.id).length > 0 ? true : false;
@@ -14,12 +14,12 @@ const Router = () => {
     if(hasItem){
       setCartItems(cartItems.map(cartItem => {
         if(cartItem.id === item.id){
-          return cartItem.quantity += itemQuantity;
+          return {...cartItem, quantity: Number(cartItem.quantity) + itemQuantity};
         }
         return cartItem;
       }))
     } else {
-      setCartItems(...cartItems, {...item, quantity: itemQuantity})
+      setCartItems([...cartItems, {...item, quantity: itemQuantity}])
     }
   }
 
@@ -35,7 +35,7 @@ const Router = () => {
     },
     {
       path: "products/:name",
-      element: <ProductPage cartItems ={cartItems} />
+      element: <ProductPage cartItems ={cartItems} addCartItem = {addCartItem} />
     },
     {
       path: "category/:name",
