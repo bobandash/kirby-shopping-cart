@@ -43,17 +43,38 @@
   margin-top: 5px;
 }
 
-.add-cart {
+.qty-form {
+  margin: 24px 0px;
+}
+
+.qty-form * {
+  font-size: 24px;
+}
+
+.qty-form input {
+  width: 30%;
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+.add-cart{
+  background-color: hotpink;
   width: 100%;
   padding: 5px 0px;
-  font-size: 24px;
-  background-color: hotpink;
-  margin: 15px 0px;
+  margin-top: 10px;
 }
 
 .add-cart:hover {
   background-color: rgb(235, 59, 117);
 }
+/* <form className = {styles["qty-form"]}>
+<div className = {styles["same-line"]}>
+  <label htmlFor = "quantity">Quantity:</label>
+  <input type = "number" htmlFor = "quantity"/>
+</div>
+<button className = {styles["add-cart"]}>Add To Cart</button>
+</form> */
+
 
 
 @media screen and (min-width: 800px){
@@ -62,7 +83,7 @@
       justify-content: space-around;
       align-items: flex-start;
   }
-  
+
   .image-container {
     width: 50%;
   }
@@ -82,17 +103,30 @@
     font-weight: 400;
   }
 
-  .add-cart {
-    margin: 20px 0px;
-    padding: 10px 0px;
-  }
-
   .description-header {
     font-size: 28px;
     margin-bottom: 10px;
   }
   .item-description {
     font-size: 24px;
+  }
+
+  .qty-form {
+    margin: 36px 0px;
+  }
+  
+  .qty-form * {
+    font-size: 32px;
+  }
+
+  .qty-form > *:first-child {
+    margin-bottom: 6px;
+  }
+  
+  .qty-form input {
+    width: 35%;
+    margin-left: 10px;
+    font-size: 30px;
   }
 }
 
