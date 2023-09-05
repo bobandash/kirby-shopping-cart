@@ -23,3 +23,7 @@ button {
 button:hover {
   background-color: rgb(235, 59, 117);
 }
+
+section {
+  overflow-x: hidden;
+}
