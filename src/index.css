@@ -14,3 +14,12 @@ html, body, #root {
   box-sizing: border-box;
   font-family: "KirbyClassic", "Times New Roman", "Serif";
 }
+
+
+button {
+  background-color: hotpink;
+}
+
+button:hover {
+  background-color: rgb(235, 59, 117);
+}
