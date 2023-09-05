@@ -1,0 +1,157 @@
+/* <section className = {styles["cart-section"]}>
+<div className = {styles.container}>
+  <CartItemsHeader />
+  {cartItems.map(cartItem => (
+    <CartItem key = {cartItem.id} item = {cartItem} handleRemoveItem= {handleRemoveItem} handleChangeQuantity={handleChangeQuantity} />
+  ))}
+</div>
+</section> */
+
+.cart-section, .no-items-container {
+  background-color: rgb(255, 221, 226);
+  min-height: 60vh;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1200px;
+  padding: 40px 0px;
+}
+
+.cart-item-header {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.no-items-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-items-container h1 {
+  text-align: center;
+  font-size: 36px;
+}
+
+.no-items-container button {
+  padding: 20px;
+  font-size: 24px;
+}
+
+.cart-item-header h1 {
+  font-size: 16px;
+  margin: 12px 0px;
+}
+
+.cart-item-header, .cart-item, .cart-item-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+}
+
+.cart-item:last-of-type{
+  padding-bottom: 30px;
+  border-bottom: 1px solid black;
+  margin-bottom: 30px;
+}
+
+.cart-item {
+  margin-top: 30px;
+}
+
+.quantity-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.quantity-container > * {
+  width: 100%;
+}
+
+.remove-product {
+  margin-top: 10px;
+}
+
+.product-image-name-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image-name-container * {
+  display: block;
+  max-width: 100%;
+}
+
+.product-image-name-container p {
+  margin-left: 0px;
+}
+
+.cart-item > p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-contents {
+  grid-column: 4;
+}
+
+.footer-contents > h1 {
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.footer-contents button {
+  width: 100%;
+}
+
+.product-image-name-container > p {
+  margin: 0;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 600px) {
+  .product-image-name-container > p {
+    font-size: 18px;
+  }
+
+  .cart-item-header h1 {
+    font-size: 24px;
+  }
+
+  .cart-item > p {
+    font-size: 24px;
+  }
+
+  .quantity-container > input {
+    font-size: 24px;
+  }
+
+  .quantity-container > * {
+    width: 50%;
+  }
+
+  .footer-contents > * {
+    font-size: 30px;
+  }
+
+  .product-image-name-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .product-image-name-container > p {
+    margin: 0;
+    margin-left: 10px;
+  }
+  
+  .product-image-name-container > img {
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    width: 30%;
+  }
+}

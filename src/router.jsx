@@ -4,6 +4,7 @@ import ErrorPage from "./components/errorpage/ErrorPage.jsx"
 import ProductPage from "./components/product-page/ProductPage.jsx"
 import CategoryPage from "./components/category-page/Category.jsx"
 import { useState } from "react"
+import Cart from "./components/cart-page/Cart.jsx"
 
 const Router = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -14,7 +15,7 @@ const Router = () => {
     if(hasItem){
       setCartItems(cartItems.map(cartItem => {
         if(cartItem.id === item.id){
-          return {...cartItem, quantity: Number(cartItem.quantity) + itemQuantity};
+          return {...cartItem, quantity: cartItem.quantity + itemQuantity};
         }
         return cartItem;
       }))
@@ -24,7 +25,16 @@ const Router = () => {
   }
 
   function removeCartItem(item){
-    setCartItems(cartItems.filter(cartItem => {cartItem.id !== item.id}));
+    setCartItems(cartItems.filter(cartItem => cartItem.id !== item.id));
+  }
+
+  function changeCartQuantity(item, newQuantity){
+    setCartItems(cartItems.map(cartItem => {
+      if(cartItem.id === item.id){
+        return {...cartItem, quantity: newQuantity};
+      }
+      return cartItem;
+    }))
   }
 
   const router = createBrowserRouter([
@@ -40,6 +50,10 @@ const Router = () => {
     {
       path: "category/:name",
       element: <CategoryPage cartItems ={cartItems} />
+    },
+    {
+      path: "cart",
+      element: <Cart cartItems = {cartItems} handleRemoveItem = {removeCartItem} handleChangeQuantity = {changeCartQuantity} />
     }
   ])
 

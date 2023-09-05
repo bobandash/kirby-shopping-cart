@@ -26,8 +26,8 @@ function Header1({cartItems}){
         <div className = {styles["profile-cart-container"]}>
           <Link to="/"><i className="fa-lg fa-solid fa-user "></i><span>Sign In/Register</span></Link>
           {(cartItems.length === 0) ?
-            <Link to="/"><img className = {styles["cart-icon"]} src = {cartIcon} /><span>Cart</span></Link> :
-            <Link to="/">
+            <Link to="/cart"><img className = {styles["cart-icon"]} src = {cartIcon} /><span>Cart</span></Link> :
+            <Link to="/cart">
               <div className = {styles["cart-icon-container"]}>
                 <img className = {styles["cart-icon"]} src = {kirbyCartIcon} />
                 {cartItemQuantity > 99 ? 
