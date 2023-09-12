@@ -3,6 +3,7 @@
   min-height: 80vh;
   background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -40,7 +41,10 @@
 
 @media screen and (min-width: 900px) {
   .featured-plush-container {
-    background: url('../../assets/kirby all together.jpg');
+    background: url('../../assets/kirby all together.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .plush-container {
