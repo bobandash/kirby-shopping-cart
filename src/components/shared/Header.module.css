@@ -5,6 +5,10 @@
   z-index: 1000;
 }
 
+.opaque {
+  opacity: 90%;
+}
+
 .container-header {
   width: 80%;
   max-width: 1400px;
