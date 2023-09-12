@@ -16,6 +16,7 @@ function ProductPage({cartItems, addCartItem}){
   /* for quantity form */
   const [quantity, setQuantity] = useState(1);
   const [quantityError, setQuantityError] = useState(false);
+  const [isAddedToCart, setAddedToCart] = useState(false);
   let quantityOptions = [];
   // creates an array with all quantity options
   for(let i = 1; i <= 30; i++){
@@ -35,8 +36,16 @@ function ProductPage({cartItems, addCartItem}){
     } else {
       setQuantity(Number(inputBoxQuantity));
     }
+    setAddedToCart(false);
+  }
+
+  function blurDropdown(e){
     e.target.size = 1;
     e.target.blur();
+  }
+
+  function removeAddedToCartText(){
+    setAddedToCart(false);
   }
 
   function handleQuantityFormSubmit(e){
@@ -47,6 +56,7 @@ function ProductPage({cartItems, addCartItem}){
       if(quantityError){
         setQuantityError(false);
       }
+      setAddedToCart(true);
       addCartItem(item, quantity);
     }
   }
@@ -95,14 +105,20 @@ function ProductPage({cartItems, addCartItem}){
               <div className = {styles["same-line"]}>
                 <label htmlFor = "quantity">Quantity:</label>
                 <select className = {styles["qty-select"]}
-                  onChange = {(e) => {handleQuantityChange(e)}}
-                  onFocus = {(e) => e.target.size=5}
+                  onChange = {(e) => {
+                    handleQuantityChange(e);
+                    blurDropdown(e);
+                  }}
+                  onFocus = {(e) => {
+                    removeAddedToCartText();
+                    e.target.size=5;
+                  }}
                   onBlur = {(e) => e.target.size=1}
                   >
                   {quantityOptions.map((obj) => (<option key = {obj.id}>{obj.number}</option>))}
                 </select>
               </div>
-              {quantityError && <p className = {styles["error-message"]}>Invalid Quantity. Cannot Add to Cart.</p>}
+              {quantityError && <p className = {`${styles["message"]} ${styles["failure"]}`}>Invalid Quantity. Cannot Add to Cart.</p>}
               <button
                 className = {styles["add-cart"]}
                 onClick = {(e) => {
@@ -111,6 +127,7 @@ function ProductPage({cartItems, addCartItem}){
               >
                 Add To Cart
               </button>
+              {isAddedToCart && <p className = {`${styles["message"]} ${styles["success"]}`}>Successfully added to cart.</p> }
             </form>
             <h3 className = {styles["description-header"]}>Description:</h3>
             <p className = {styles["item-description"]}>{item.description}</p>
