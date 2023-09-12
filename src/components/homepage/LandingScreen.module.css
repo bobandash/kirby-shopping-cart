@@ -1,19 +1,24 @@
 .landing-screen {
-  background: url('../../assets/kirby-screen.png');
+  background-color: rgb(255, 221, 226); 
   height: 85vh;
   background-size: cover;
   background-position: center center;
-  overflow-x: hidden;
 }
 
 .container {
   position: relative;
   height: 100%;
-  width: 90%;
+  width: 80%;
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
   align-items: center;
+}
+
+.stars-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .store-information {
@@ -26,7 +31,7 @@
 }
 
 .subheader {
-  font-size: 64px;
+  font-size: 48px;
   margin-top: 0px;
   color: rgb(242, 242, 242);
   text-shadow:
@@ -40,11 +45,24 @@
 .stars {
   position: absolute;
   height: 80%;
-  left: -30%;
+  left: -10%;
+  top: 0%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .trail-animation {
   animation: 5s linear infinite TrailAnimation;
+}
+
+.kirby-sitting {
+  position: absolute;
+  height: 20%;
+  bottom: 10%;
+}
+
+.desktop-image {
+  display: none;
 }
 
 @keyframes TrailAnimation {
@@ -57,12 +75,93 @@
   }
 }
 
+@media screen and (min-width: 400px) {
+  .stars {
+    position: absolute;
+    height: 80%;
+    left: -20%;
+  }
+}
+
+
+
 @media screen and (min-width: 800px) {
+  .store-information {
+    width: 60%;
+  }
+
+  .kirby-sitting {
+    width: 40%;
+    height: auto;
+  }
+
   .stars {
     position: absolute;
     height: 100%;
     width: auto;
     left: -15%;
     top: -10%;
+  }
+
+  .kirby-sitting {
+    position: static;
+    transform: scaleX(-1);
+    align-self: flex-end;
+    margin-left: auto;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .store-information, .kirby-sitting {
+    width: 50%;
+  }
+
+  .desktop-image {
+    display: block;
+    position: absolute;
+    height: 270px;
+  }
+
+  @keyframes float-down {
+    from {
+      transform: translateY(-25%);
+      opacity: 0%;
+    }
+
+    to {
+      transform: translateY(0%);
+      opacity: 100%;
+    }
+  }
+
+  @keyframes hide {
+    from {
+      opacity: 0%;
+    }
+
+    to {
+      opacity: 0%;
+    }
+  }
+
+  .top-middle {
+    right: 17.5%;
+    top: 0%;
+    animation: 2s linear 0s 1 hide, 
+               1s ease-in 2s 1 float-down;
+  }
+
+  .top-left {
+    right: 40%;
+    top: 10%;
+    animation: 1s ease-in 0s 1 float-down;
+  }
+
+  .top-right {
+    right: -10%;
+    top: 10%;
+    animation: 1s linear 0s 1 hide, 
+               1s ease-in 1s 1 float-down;
   }
 }
