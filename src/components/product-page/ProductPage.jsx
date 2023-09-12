@@ -145,7 +145,7 @@ ProductPage.propTypes ={
   title: PropTypes.string,
   price: PropTypes.string,
   description: PropTypes.string,
-  cartItems: PropTypes.object,
+  cartItems: PropTypes.array,
   addCartItem: PropTypes.func
 }
 
