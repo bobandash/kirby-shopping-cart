@@ -6,19 +6,33 @@
 }
 
 .container-header {
-  width: 90%;
+  width: 80%;
   max-width: 1400px;
-  height: 100%;
   padding: 15px 0px;
-  margin: auto;
+  margin: 0 auto;
+  height: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.container-header a:hover {
+  text-decoration: none;
+}
+
+.container-header span {
+  padding-bottom: 3px;
+  background: linear-gradient(0deg, black, black) bottom center no-repeat;
+  background-size: 0px 3px;
+  transition: background-size 0.3s;
+  text-decoration: none;
+}
+
+.container-header span:hover {
+  background-size: 100% 3px;
 }
 
 .container-header > * {
   height: 40px;
-  flex: 1;
 }
 
 .kirby-logo {
@@ -26,23 +40,45 @@
   width: auto;
 }
 
-.search-bar-form {
-  min-width: 50%;
-  width: fit-content;
+i:hover {
+  cursor: pointer;
 }
 
-.search-bar-form > * {
-  height: 100%;
+.search-bar-form {
+  background-color: white;
+  display: flex;
+  min-width: 50%;
+  width: fit-content;
+  border-radius: 20px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
 }
 
 .search-bar-form input {
   width: 85%;
-  padding-left: 10px;
+  border-radius: 20px;
+  padding-left: 20px;
+  height: 100%;
+  font-size: 18px;
+  border: none;
 }
 
-.search-bar-form button{
-  width: 15%;
+.search-bar-form input:focus {
+  outline: none;
+}
+
+.search-bar-form button {
+  height: 85%;
+  aspect-ratio: 1 / 1;
   background-color: #e4000f;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+.search-bar-form button i {
+  color: white;
 }
 
 .profile-cart-container {
@@ -68,14 +104,16 @@
   text-decoration: none;
 }
 
+.cart-icon-container, .profile-cart-container a {
+  height: 32px;
+}
+
 .profile-cart-container a {
-  height: 28px;
   display: flex;
   align-items: center;
 }
 
 .cart-icon-container {
-  height: 28px;
   position: relative;
 }
 
@@ -107,6 +145,37 @@
   height: 100%;
 }
 
+.desktop-icon-container {
+  display: none !important;
+}
+
+.mobile-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 800px) {
+  .container-header > * {
+    flex: 1;
+  }
+  
+  .mobile-icon-container {
+    display: none !important;
+  }
+
+  .desktop-icon-container {
+    display: flex !important;
+  }
+
+  .container-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+}
+
 @media screen and (min-width: 1200px) {
   .profile-cart-container span {
     margin-left: 8px;
@@ -122,14 +191,21 @@
     height: 50px;
   }
 
+  .search-bar-form {
+    min-width: 35%;
+  }
+
   .search-bar-form input {
     width: 90%;
     padding-left: 10px;
+    margin-left: 10px;
   }
   
   .search-bar-form button{
-    width: 10%;
     background-color: #e4000f;
   }
 
+  .search-bar-form button i {
+    transform: scale(1.33);
+  }
 }
