@@ -21,7 +21,6 @@ function ProductPage({cartItems, addCartItem}){
   function handleQuantityChange(e){
     e.preventDefault();
     const inputBoxQuantity = e.target.value;
-    console.log(inputBoxQuantity);
     if(inputBoxQuantity === "" || inputBoxQuantity === 0){
       setQuantity(0);
     } else {

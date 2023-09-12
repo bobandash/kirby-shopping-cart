@@ -1,0 +1,9 @@
+.divider::before {
+  width: 100%;
+  height: 35px;
+  background: url("../../assets/zig-zag-border.png");
+  content: "";
+  position: absolute;
+  top: -1rem;
+  z-index: 3;
+}

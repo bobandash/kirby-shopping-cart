@@ -5,6 +5,7 @@
   background-size: cover;
   padding-top: 48px;
   padding-bottom: 48px;
+  position: relative;
 }
 
 .game-images-container {

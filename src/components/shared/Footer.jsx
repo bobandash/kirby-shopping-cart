@@ -3,6 +3,7 @@ import SleepingKirby from '../../assets/KSSU_Sleep_Kirby.png'
 import { useState } from 'react';
 import FooterItems from './FooterItems';
 import { v4 as uuid } from 'uuid';
+import dividerStyle from './divider.module.css';
 
 function Footer(){
   const dropdownNumber = {
@@ -44,7 +45,7 @@ function Footer(){
   ]
 
   return (
-    <footer className = {styles.footer}>
+    <footer className = {`${styles.footer} ${dividerStyle.divider}`}>
       <img className = {styles["sleeping-kirby"]} src = {SleepingKirby} alt = "sleeping kirby" />
       <div className = {styles["footer-container"]}>
         <FooterItems 

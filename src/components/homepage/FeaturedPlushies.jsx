@@ -3,7 +3,7 @@ import sharedStyles from './shared.module.css';
 import ClickableItem from './ClickableItem';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-
+import dividerStyle from '../shared/divider.module.css'
 
 function FeaturedPlushies({plushies}){
     const navigate = useNavigate();
@@ -13,7 +13,7 @@ function FeaturedPlushies({plushies}){
   }
   
   return (
-    <section className = {styles["featured-plush-container"]}>
+    <section className = {`${dividerStyle["divider"]} ${styles["featured-plush-container"]}`}>
       <div className = {`${sharedStyles.container} ${styles["align-container"]}`}>
         <h1 className = {sharedStyles.header}>Featured Plushies</h1>
         <div className = {styles["plush-container"]}>

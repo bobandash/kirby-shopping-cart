@@ -1,4 +1,5 @@
 import styles from './FeaturedGames.module.css';
+import dividerStyle from '../shared/divider.module.css'
 import sharedStyles from './shared.module.css';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
@@ -30,7 +31,7 @@ function FeaturedGames({games}){
   }
 
   return (
-    <section className = {styles["featured-items-container"]}>
+    <section className = {`${styles["featured-items-container"]} ${dividerStyle["divider"]}`}>
       <div className = {sharedStyles.container}>
         <h1 className = {sharedStyles.header}>Featured Games</h1>
         <div className = {styles["game-images-container"]}>
