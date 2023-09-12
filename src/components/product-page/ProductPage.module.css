@@ -29,7 +29,7 @@
 }
 
 .item-price {
-  font-family: 'Inter', 'Times New Roman', 'Sans Serif';
+  font-family: 'Bubblegum Sans', cursive;
   font-weight: bold;
   margin: 5px 0px 10px 0px;
   font-size: 20px;
@@ -41,6 +41,7 @@
 
 .item-description {
   margin-top: 5px;
+  font-family: 'Bubblegum Sans', cursive;
 }
 
 .qty-form {
@@ -58,6 +59,8 @@
 }
 
 .add-cart{
+  font-family: 'Bubblegum Sans', cursive;
+  text-transform: uppercase;
   background-color: hotpink;
   width: 100%;
   padding: 5px 0px;
@@ -67,15 +70,6 @@
 .add-cart:hover {
   background-color: rgb(235, 59, 117);
 }
-/* <form className = {styles["qty-form"]}>
-<div className = {styles["same-line"]}>
-  <label htmlFor = "quantity">Quantity:</label>
-  <input type = "number" htmlFor = "quantity"/>
-</div>
-<button className = {styles["add-cart"]}>Add To Cart</button>
-</form> */
-
-
 
 @media screen and (min-width: 800px){
   .container {
