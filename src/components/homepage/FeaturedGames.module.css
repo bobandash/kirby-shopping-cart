@@ -1,32 +1,20 @@
 .featured-items-container {
-  min-height: 80vh;
   background: url('../../assets/starry-night.jpg');
   background-position: center center;
   background-size: cover;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .game-images-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-}
-
-.game-image {
-  display: block;
-  width: 85%;
-  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .caret-btn {
-  padding: 15px;
-  width: 70px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  background-color: white;
+  display: none;
 }
 
 .caret-btn i {
@@ -34,12 +22,88 @@
 }
 
 .clickable-images-container {
-  width: 80%;
-  aspect-ratio: 1.777 / 1;
+  padding: 20px;
+  background-color: white;
 }
 
-.clickable-images-container > img {
-  display: block;
+.circle-nav-container {
+  display: flex;
+  max-width: 100px;
+  margin: 20px auto 0px auto;
+  justify-content: space-between;
+}
+
+.circle-nav {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.clickable-images-container {
+  margin: 0 auto;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.clickable-images-container:hover {
+  cursor: pointer;
+}
+
+.game-image {
+  width: 100%;
   max-height: 100%;
-  max-width: 100%;
+}
+
+
+.active {
+  background-color: rgb(255, 163, 184);;
+}
+
+@media screen and (min-width: 800px) {
+  .caret-btn {
+    display: block;
+    padding: 15px;
+    width: 70px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: hotpink;
+    border: 3px solid black;
+  }
+
+  .caret-btn > i {
+    color: white;
+  }
+
+  .caret-btn:hover {
+    background-color: rgb(255, 163, 184);
+  }
+
+  .clickable-images-container {
+    width: 80%;
+    height: auto;
+    aspect-ratio: 1.777 / 1;
+    background-color: white;
+    border: 5px solid black;
+  }  
+
+  .clickable-images-container > img {
+    display: block;
+    max-height: 100%;
+    width: auto;
+  }
+
+  .game-image {
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .circle-nav-container {
+    display: none;
+  }
 }

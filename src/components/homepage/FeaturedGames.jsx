@@ -1,7 +1,7 @@
 import styles from './FeaturedGames.module.css';
 import dividerStyle from '../shared/divider.module.css'
 import sharedStyles from './shared.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,6 +9,20 @@ function FeaturedGames({games}){
   const [activeGameNumber, setActiveGameNumber] = useState(0);
   const numGamesArrayIndex = games.length - 1;
   const navigate = useNavigate();
+  useEffect(() => {
+    function incrementActiveGameNumber(){
+      if(activeGameNumber === numGamesArrayIndex){
+        setActiveGameNumber(0);
+      } else {
+        setActiveGameNumber(activeGameNumber + 1);
+      }
+    }
+    const key = setInterval(incrementActiveGameNumber, 10000)
+    return () => {
+      clearInterval(key)
+    }
+  }, [activeGameNumber, numGamesArrayIndex])
+
 
   function incrementActiveGameNumber(){
     if(activeGameNumber === numGamesArrayIndex){
@@ -26,8 +40,21 @@ function FeaturedGames({games}){
     }
   }
 
+  function handleCircleClick(index){
+    if(activeGameNumber !== index){
+      setActiveGameNumber(index);
+    }
+  }
+
   function redirectToItem(id){
     navigate("/products/"+id);
+  }
+
+  function createCircleGameNav(index){
+    if(activeGameNumber === index) {
+      return (<button className = {`${styles.active} ${styles["circle-nav"]}`}></button>)
+    }
+    return (<button onClick = {() => {handleCircleClick(index)}}className = {styles["circle-nav"]}></button>)
   }
 
   return (
@@ -41,7 +68,11 @@ function FeaturedGames({games}){
           </div>
           <button onClick = {incrementActiveGameNumber} className = {styles["caret-btn"]}><i className="fa-solid fa-angle-right"></i></button>
         </div>
-        
+        {games.length >= 2 && 
+          <div className = {styles["circle-nav-container"]}>
+            {games.map((game,index) => createCircleGameNav(index))}
+          </div>
+        }
       </div>
     </section>
   )
