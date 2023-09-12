@@ -6,6 +6,7 @@ import ErrorPage from "../errorpage/ErrorPage";
 import {useParams} from 'react-router-dom';
 import { useEffect, useState } from "react";
 import LoadingScreen from "../loadingpage/LoadingPage";
+import { v4 as uuid } from 'uuid';
 
 function ProductPage({cartItems, addCartItem}){
   const [item, setItem] = useState(null);
@@ -13,10 +14,18 @@ function ProductPage({cartItems, addCartItem}){
   const [error, setError] = useState(null);
   const {name} = useParams();
   /* for quantity form */
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   const [quantityError, setQuantityError] = useState(false);
-  
-
+  let quantityOptions = [];
+  // creates an array with all quantity options
+  for(let i = 1; i <= 30; i++){
+    quantityOptions.push(
+      {
+        number: i,
+        id: uuid
+      }
+    );
+  }
 
   function handleQuantityChange(e){
     e.preventDefault();
@@ -26,6 +35,8 @@ function ProductPage({cartItems, addCartItem}){
     } else {
       setQuantity(Number(inputBoxQuantity));
     }
+    e.target.size = 1;
+    e.target.blur();
   }
 
   function handleQuantityFormSubmit(e){
@@ -83,7 +94,13 @@ function ProductPage({cartItems, addCartItem}){
             <form className = {styles["qty-form"]}>
               <div className = {styles["same-line"]}>
                 <label htmlFor = "quantity">Quantity:</label>
-                <input type = "number" htmlFor = "quantity" onChange = {(e) => handleQuantityChange(e)}/>
+                <select className = {styles["qty-select"]}
+                  onChange = {(e) => {handleQuantityChange(e)}}
+                  onFocus = {(e) => e.target.size=5}
+                  onBlur = {(e) => e.target.size=1}
+                  >
+                  {quantityOptions.map((obj) => (<option key = {obj.id}>{obj.number}</option>))}
+                </select>
               </div>
               {quantityError && <p className = {styles["error-message"]}>Invalid Quantity. Cannot Add to Cart.</p>}
               <button
@@ -110,7 +127,9 @@ ProductPage.propTypes ={
   image: PropTypes.string,
   title: PropTypes.string,
   price: PropTypes.string,
-  description: PropTypes.string
+  description: PropTypes.string,
+  cartItems: PropTypes.object,
+  addCartItem: PropTypes.func
 }
 
 export default ProductPage;

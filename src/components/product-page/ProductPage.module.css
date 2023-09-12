@@ -71,6 +71,34 @@
   background-color: rgb(235, 59, 117);
 }
 
+.same-line {
+  position: relative;
+}
+
+.qty-select {
+  position: absolute;
+  text-align: center;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+.qty-select:hover {
+  cursor: pointer;
+}
+
+.qty-select option {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+.qty-select option:hover {
+  background-color: lightpink;
+}
+
 @media screen and (min-width: 800px){
   .container {
       flex-direction: row;
