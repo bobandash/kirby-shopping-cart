@@ -8,9 +8,7 @@ a:hover {
 }
 
 .footer {
-  background: url('../../assets/green-landscape-photoshopped.jpg');
-  background-position: center center;
-  background-size: cover;
+  background-color: lightgreen;
   padding-top: 48px;
   padding-bottom: 60px;
   position: relative;
@@ -18,6 +16,7 @@ a:hover {
 
 .sleeping-kirby {
   position: absolute;
+  visibility: hidden;
   width: 200px;
   bottom: 10%;
   left: 5%;
@@ -68,6 +67,7 @@ a:hover {
   list-style: none;
   margin-left: 0;
   font-size: 18px;
+  font-family: 'Bubblegum Sans', cursive;
 }
 
 .social-media-links {
@@ -98,8 +98,15 @@ a:hover {
 
 /*desktop responsiveness*/
 @media screen and (min-width: 800px) {
+  .sleeping-kirby {
+    visibility: visible;
+  }
+
   .footer {
     min-height: 35vh;
+    background: url('../../assets/green-landscape-photoshopped.jpg');
+    background-position: center center;
+    background-size: cover;
   }
 
   .col h3:hover {
@@ -128,7 +135,7 @@ a:hover {
   }
 
   .col h3 > i {
-    display: none;;
+    display: none;
   }
   
   .col ul {
