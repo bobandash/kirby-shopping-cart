@@ -27,9 +27,10 @@ function Footer(){
   }
 
   const categoriesNavObject = [
-    footerItem("Games", "/", uuid()),
-    footerItem("Plushies", "/", uuid()),
-    footerItem("Keychains", "/", uuid())
+    footerItem("Shop All", "/category/all", uuid()),
+    footerItem("Games", "/category/games", uuid()),
+    footerItem("Plushies", "/category/plushies", uuid()),
+    footerItem("Keychains", "/category/keychains", uuid())
   ]
 
   const customerServiceNavObject = [
