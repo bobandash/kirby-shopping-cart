@@ -10,7 +10,7 @@ function CartItem({item, handleRemoveItem, handleChangeQuantity}){
         <p className = {styles["product-name"]}>{item.title}</p>
       </div>
       <div className = {styles["quantity-container"]}>
-        <input type = "number" value = {item.quantity} onChange = {(e) => {
+        <input type = "number" value = {item.quantity} min = "1" onChange = {(e) => {
             handleChangeQuantity(item, e.target.value)
         }}/>
         <button className = {styles["remove-product"]} onClick = {() => {handleRemoveItem(item)}}><i className="fa-solid fa-trash"></i> Remove Product</button>
