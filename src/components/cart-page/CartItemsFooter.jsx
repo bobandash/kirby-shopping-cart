@@ -1,5 +1,7 @@
 import styles from "./Cart.module.css"
 
+//TO-DO: add checkout button functionality
+// add error in case customer enters negative quantity
 function CartItemsFooter({totalPrice}){
   return (
     <section className = {styles["cart-item-footer"]}>
