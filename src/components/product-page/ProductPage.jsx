@@ -23,7 +23,7 @@ function ProductPage({cartItems, addCartItem}){
     quantityOptions.push(
       {
         number: i,
-        id: uuid
+        id: uuid()
       }
     );
   }
@@ -104,7 +104,7 @@ function ProductPage({cartItems, addCartItem}){
             <form className = {styles["qty-form"]}>
               <div className = {styles["same-line"]}>
                 <label htmlFor = "quantity">Quantity:</label>
-                <select className = {styles["qty-select"]}
+                <select className = {styles["qty-select"]} value = {quantity}
                   onChange = {(e) => {
                     handleQuantityChange(e);
                     blurDropdown(e);
