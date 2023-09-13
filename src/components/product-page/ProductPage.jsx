@@ -6,7 +6,7 @@ import ErrorPage from "../errorpage/ErrorPage";
 import {useParams} from 'react-router-dom';
 import { useEffect, useState } from "react";
 import LoadingScreen from "../loadingpage/LoadingPage";
-import { v4 as uuid } from 'uuid';
+import QuantityOptions from "./quantityOptions";
 
 function ProductPage({cartItems, addCartItem}){
   const [item, setItem] = useState(null);
@@ -17,16 +17,6 @@ function ProductPage({cartItems, addCartItem}){
   const [quantity, setQuantity] = useState(1);
   const [quantityError, setQuantityError] = useState(false);
   const [isAddedToCart, setAddedToCart] = useState(false);
-  let quantityOptions = [];
-  // creates an array with all quantity options
-  for(let i = 1; i <= 30; i++){
-    quantityOptions.push(
-      {
-        number: i,
-        id: uuid()
-      }
-    );
-  }
 
   function handleQuantityChange(e){
     e.preventDefault();
@@ -115,7 +105,7 @@ function ProductPage({cartItems, addCartItem}){
                   }}
                   onBlur = {(e) => e.target.size=1}
                   >
-                  {quantityOptions.map((obj) => (<option key = {obj.id}>{obj.number}</option>))}
+                    <QuantityOptions />
                 </select>
               </div>
               {quantityError && <p className = {`${styles["message"]} ${styles["failure"]}`}>Invalid Quantity. Cannot Add to Cart.</p>}
