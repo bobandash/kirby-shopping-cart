@@ -75,13 +75,17 @@
   position: relative;
 }
 
-.qty-select {
+.qty-select, .qty-input {
   position: absolute;
   text-align: center;
   margin-left: 10px;
   padding-left: 10px;
   padding-right: 10px;
   font-family: 'Bubblegum Sans', cursive;
+}
+
+.qty-input {
+  padding-right: 0px;
 }
 
 .qty-select:hover {

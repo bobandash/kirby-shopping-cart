@@ -17,12 +17,16 @@ function ProductPage({cartItems, addCartItem}){
   const [quantity, setQuantity] = useState(1);
   const [quantityError, setQuantityError] = useState(false);
   const [isAddedToCart, setAddedToCart] = useState(false);
+  const [isInputBoxActive, setInputBoxActive] = useState(false);
 
   function handleQuantityChange(e){
     e.preventDefault();
     const inputBoxQuantity = e.target.value;
     if(inputBoxQuantity === "" || inputBoxQuantity === 0){
       setQuantity(0);
+    } else if(inputBoxQuantity === "30+"){
+      setInputBoxActive(true);
+      setQuantity(30);
     } else {
       setQuantity(Number(inputBoxQuantity));
     }
@@ -94,7 +98,7 @@ function ProductPage({cartItems, addCartItem}){
             <form className = {styles["qty-form"]}>
               <div className = {styles["same-line"]}>
                 <label htmlFor = "quantity">Quantity:</label>
-                <select className = {styles["qty-select"]} value = {quantity}
+                {!isInputBoxActive ? <select className = {styles["qty-select"]} value = {quantity}
                   onChange = {(e) => {
                     handleQuantityChange(e);
                     blurDropdown(e);
@@ -106,9 +110,17 @@ function ProductPage({cartItems, addCartItem}){
                   onBlur = {(e) => e.target.size=1}
                   >
                     <QuantityOptions />
-                </select>
+                </select> 
+                : 
+                <input  className = {styles["qty-input"]} type = "number"
+                  min = "1"
+                  value = {quantity}
+                  onChange = {(e) => {
+                    handleQuantityChange(e);
+                  }}
+                />
+                }
               </div>
-              {quantityError && <p className = {`${styles["message"]} ${styles["failure"]}`}>Invalid Quantity. Cannot Add to Cart.</p>}
               <button
                 className = {styles["add-cart"]}
                 onClick = {(e) => {
@@ -117,6 +129,7 @@ function ProductPage({cartItems, addCartItem}){
               >
                 Add To Cart
               </button>
+              {quantityError && <p className = {`${styles["message"]} ${styles["failure"]}`}>Invalid Quantity. Cannot Add to Cart.</p>}
               {isAddedToCart && <p className = {`${styles["message"]} ${styles["success"]}`}>Successfully added to cart.</p> }
             </form>
             <h3 className = {styles["description-header"]}>Description:</h3>
