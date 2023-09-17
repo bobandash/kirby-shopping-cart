@@ -7,6 +7,7 @@ import {useParams} from 'react-router-dom';
 import { useEffect, useState } from "react";
 import LoadingScreen from "../loadingpage/LoadingPage";
 import QuantityOptions from "./quantityOptions";
+import { preventMinus, preventPasteNegative } from "../../shared-functions/input";
 
 function ProductPage({cartItems, addCartItem}){
   const [item, setItem] = useState(null);
@@ -112,20 +113,18 @@ function ProductPage({cartItems, addCartItem}){
                     <QuantityOptions />
                 </select> 
                 : 
-                <input  className = {styles["qty-input"]} type = "number"
+                <input className = {styles["qty-input"]} type = "number"
                   min = "1"
                   value = {quantity}
-                  onChange = {(e) => {
-                    handleQuantityChange(e);
-                  }}
+                  onChange = {handleQuantityChange}
+                  onKeyDown={preventMinus}
+                  onPaste={preventPasteNegative}
                 />
                 }
               </div>
               <button
                 className = {styles["add-cart"]}
-                onClick = {(e) => {
-                  handleQuantityFormSubmit(e);
-                }}
+                onClick = {handleQuantityFormSubmit}
               >
                 Add To Cart
               </button>
