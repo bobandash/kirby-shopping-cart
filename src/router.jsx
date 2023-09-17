@@ -29,12 +29,16 @@ const Router = () => {
   }
 
   function changeCartQuantity(item, newQuantity){
-    setCartItems(cartItems.map(cartItem => {
-      if(cartItem.id === item.id){
-        return {...cartItem, quantity: newQuantity};
-      }
-      return cartItem;
-    }))
+    if(Number(newQuantity) === 0 || newQuantity === ''){
+      removeCartItem(item);
+    } else {
+      setCartItems(cartItems.map(cartItem => {
+        if(cartItem.id === item.id){
+          return {...cartItem, quantity: newQuantity};
+        }
+        return cartItem;
+      }))
+    }
   }
 
   const router = createBrowserRouter([
