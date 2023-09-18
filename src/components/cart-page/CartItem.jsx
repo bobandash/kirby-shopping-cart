@@ -25,7 +25,10 @@ function CartItem({item, handleRemoveItem, handleChangeQuantity}){
         <>
           <select className = {styles["quantity-select"]}
             onChange = {(e) => {
-              if(e.target.value === '30+'){
+              if(e.target.value === '0 (Delete)'){
+                handleChangeQuantity(item, 0);
+              }
+              else if(e.target.value === '30+'){
                 handleChangeQuantity(item, 30);
                 setEditQty(30);
                 setIsInputBox(false)
