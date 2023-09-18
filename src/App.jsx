@@ -6,6 +6,7 @@ import Footer from './components/shared/Footer'
 import { useState, useEffect } from 'react'
 import CATEGORIES from './constants/categories'
 import LoadingScreen from './components/loadingpage/LoadingPage'
+import PropTypes from 'prop-types'
 
 /* renders featured plush and featured games for the home screen */
 function GetFeaturedProducts(){
@@ -69,6 +70,10 @@ function App({cartItems}) {
       <Footer />
     </>
   )
+}
+
+App.propTypes = {
+  cartItems: PropTypes.array,
 }
 
 export default App;
