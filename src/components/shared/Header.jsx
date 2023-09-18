@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react';
 
 function Header1({cartItems}){
-  const addQuantities = (a,b) => a + b;
+  const addQuantities = (a,b) => Number(a) + Number(b);
   let cartItemQuantity;
   const cartItemQuantitiesArray = cartItems.map(cartItem => {return cartItem.quantity;});
   if(cartItemQuantitiesArray.length === 0){
