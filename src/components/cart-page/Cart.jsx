@@ -5,6 +5,7 @@ import CartItem from './CartItem';
 import CartItemsHeader from './CartItemHeader';
 import CartItemsFooter from './CartItemsFooter'
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types'
 
 function Cart({cartItems, handleRemoveItem, handleChangeQuantity}){
   const navigate = useNavigate();
@@ -50,5 +51,12 @@ function Cart({cartItems, handleRemoveItem, handleChangeQuantity}){
     </>
   )
 }
+
+Cart.propTypes = {
+  cartItems: PropTypes.array,
+  handleRemoveItem: PropTypes.func,
+  handleChangeQuantity: PropTypes.func,
+}
+
 
 export default Cart;

@@ -1,4 +1,5 @@
 import styles from "./Cart.module.css"
+import PropTypes from 'prop-types'
 
 //TO-DO: add checkout button functionality
 // add error in case customer enters negative quantity
@@ -11,7 +12,10 @@ function CartItemsFooter({totalPrice}){
       </div>
     </section>
   )
+}
 
+CartItemsFooter.propTypes = {
+  totalPrice: PropTypes.number,
 }
 
 export default CartItemsFooter;
