@@ -8,11 +8,22 @@ function CartItem({item, handleRemoveItem, handleChangeQuantity}){
   const [isInputBox, setIsInputBox] = useState(() => item.quantity >= 30 ? true : false)
   const [editQty, setEditQty] = useState(item.quantity);
   const [isUpdatingQty, setIsUpdatingQty] = useState(false);
+  const [isSelectFocused, setIsSelectFocused] = useState(false);
 
   function blurDropdown(e){
     e.target.size = 1;
     e.target.blur();
   }
+
+  function handleFocusOff(){
+    setIsSelectFocused(false);
+  }
+
+  function handleFocusOn(){
+    setIsSelectFocused(true);
+  }
+
+  const selectClasses = isSelectFocused ? `${styles["focused"]} ${styles["quantity-select"]}` : `${styles["quantity-select"]}`
 
   return(
     <div className = {styles["cart-item"]}>
@@ -23,7 +34,7 @@ function CartItem({item, handleRemoveItem, handleChangeQuantity}){
       <div className = {styles["quantity-container"]}>
       {!isInputBox ? 
         <>
-          <select className = {styles["quantity-select"]}
+          <select className = {selectClasses}
             onChange = {(e) => {
               if(e.target.value === '0 (Delete)'){
                 handleChangeQuantity(item, 0);
@@ -42,8 +53,12 @@ function CartItem({item, handleRemoveItem, handleChangeQuantity}){
             }}
             onFocus = {(e) => {
               e.target.size=5;
+              handleFocusOn();
             }}
-            onBlur = {(e) => e.target.size=1}
+            onBlur = {(e) => {
+              e.target.size = 1;
+              handleFocusOff()
+            }}
             value = {item.quantity}
           >
             <QuantityOptionsIncludingZero /> 
