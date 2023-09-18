@@ -9,6 +9,12 @@
     -3px 3px 0 #000,
     3px 3px 0 #000;
   text-decoration: underline;
+  transform: translateX(-100%);
+}
+
+.header.visible {
+  transform: translateX(0%);
+  transition: transform 1s ease-in;
 }
 
 .container {

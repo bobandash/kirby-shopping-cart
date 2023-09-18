@@ -1,12 +1,15 @@
 import styles from './FeaturedGames.module.css';
 import dividerStyle from '../shared/divider.module.css'
 import sharedStyles from './shared.module.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
 function FeaturedGames({games}){
   const [activeGameNumber, setActiveGameNumber] = useState(0);
+  const headerRef = useRef(null);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+
   const numGamesArrayIndex = games.length - 1;
   const navigate = useNavigate();
   useEffect(() => {
@@ -22,6 +25,15 @@ function FeaturedGames({games}){
       clearInterval(key)
     }
   }, [activeGameNumber, numGamesArrayIndex])
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if(entry.isIntersecting){
+        setIsHeaderVisible(true);
+      }
+    });
+    observer.observe(headerRef.current);
+  }, []);
 
 
   function incrementActiveGameNumber(){
@@ -57,10 +69,11 @@ function FeaturedGames({games}){
     return (<button key = {key} onClick = {() => {handleCircleClick(index)}}className = {styles["circle-nav"]}></button>)
   }
 
+  const headerClasses = isHeaderVisible ? `${sharedStyles.header} ${sharedStyles.visible}` : sharedStyles.header; 
   return (
     <section className = {`${styles["featured-items-container"]} ${dividerStyle["divider"]}`}>
       <div className = {sharedStyles.container}>
-        <h1 className = {sharedStyles.header}>Featured Games</h1>
+        <h1 ref = {headerRef} className = {headerClasses}>Featured Games</h1>
         <div className = {styles["game-images-container"]}>
           <button onClick = {decrementActiveGameNumber} className = {styles["caret-btn"]}><i className="fa-solid fa-angle-left"></i></button>
           <div onClick = {() => redirectToItem(games[activeGameNumber].id)} className = {styles["clickable-images-container"]}>
