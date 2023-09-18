@@ -3,7 +3,11 @@ import { v4 as uuid } from 'uuid';
 function QuantityOptionsIncludingZero(){
   let quantityOptions = [];
   // creates an array with all quantity options
-  for(let i = 0; i <= 29; i++){
+  quantityOptions.push({
+    number: '0 (Delete)',
+    id: uuid(),
+  })
+  for(let i = 1; i <= 29; i++){
     quantityOptions.push(
       {
         number: i,

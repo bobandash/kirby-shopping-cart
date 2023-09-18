@@ -29,7 +29,7 @@ const Router = () => {
   }
 
   function changeCartQuantity(item, newQuantity){
-    if(Number(newQuantity) === 0 || newQuantity === ''){
+    if(Number(newQuantity) === 0 || newQuantity === '' || newQuantity === '0 (Delete)'){
       removeCartItem(item);
     } else {
       setCartItems(cartItems.map(cartItem => {
