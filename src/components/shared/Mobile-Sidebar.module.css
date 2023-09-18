@@ -1,0 +1,63 @@
+
+.mobile-sidebar {
+  position: fixed;
+  background-color: rgb(255, 221, 226);
+  z-index: -1;
+  width: 100%;
+  opacity: 0;
+  top: 7%;
+  height: 0vh;
+/*   TO-DO: fix the opposite transition */
+  transition: height 1s ease-in;
+}
+
+.mobile-sidebar.active {
+  opacity: 100%;
+  height: 93vh;
+  transition: height 0.5s ease-in;
+  z-index: 1000;
+}
+
+.sidebar-links {
+  padding-left: 0;
+  margin: 0px;
+  text-align: left;
+  padding: 10px 0px;
+}
+
+.sidebar-links li {
+  list-style-type: none;
+  font-size: 44px;
+  padding: 5px 0px;
+  margin: 5px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-60%);
+}
+
+.link.active {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.link.active:nth-child(1) {
+  transition: opacity 0.5s ease-in 0.5s, transform 0.5s ease-in 0.5s;
+}
+
+.link.active:nth-child(2) {
+  transition: opacity 0.5s ease-in 1s, transform 0.5s ease-in 1s;
+}
+
+.link.active:nth-child(3) {
+  transition: opacity 0.5s ease-in 1.5s, transform 0.5s ease-in 1.5s;
+}
+
+.link.active:nth-child(4) {
+  transition: opacity 0.5s ease-in 2s, transform 0.5s ease-in 2s;
+}
+
+@media screen and (min-width: 800px) {
+  .mobile-sidebar {
+    display: none;
+  } 
+}

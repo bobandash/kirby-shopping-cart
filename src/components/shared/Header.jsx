@@ -6,6 +6,7 @@ import cartIcon from '../../assets/Cart/empty_cart.png';
 import kirbyCartIcon from '../../assets/Cart/kirby_in_cart.png';
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react';
+import MobileSideBar from './Mobile-Sidebar';
 
 function Header1({cartItems}){
   const addQuantities = (a,b) => Number(a) + Number(b);
@@ -19,6 +20,7 @@ function Header1({cartItems}){
 
   const [atTop, setAtTop] = useState(true);
   const [y, setY] = useState(window.scrollY);
+  const [mobileSideBarIsActive, setMobileSideBarIsActive] = useState(false);
 
   window.addEventListener("scroll", () => {
     setY(window.scrollY);
@@ -37,13 +39,22 @@ function Header1({cartItems}){
     e.preventDefault();
   }
 
+  function handleMobileSideBar(){
+    setMobileSideBarIsActive(!mobileSideBarIsActive);
+  }
+
   const headerClasses = `${styles.header} ${atTop ? styles.opaque : ''}`;
 
   return (
+    <>
     <header className = {headerClasses}>
       <div className = {styles["container-header"]}>
         {/* mobile hamburger bar */}
-        <div className = {styles["mobile-icon-container"]}><i className="fa-2x fa-solid fa-bars"></i></div>        
+        <div 
+          className = {styles["mobile-icon-container"]}
+          onClick = {handleMobileSideBar}>
+            <i className="fa-2x fa-solid fa-bars"></i>
+        </div>        
         <div><Link to="/"><img className = {styles["kirby-logo"]} src = {KirbyLogo} alt = "Kirby Logo"/></Link></div>
         <form onSubmit = {(e) => {handleSearchClick(e)}} className = {`${styles["search-bar-form"]} ${styles["desktop-icon-container"]}`}>
           <input type = "text" placeholder = "Search Products..."/>
@@ -68,6 +79,8 @@ function Header1({cartItems}){
       </div>
       <SubHeader />
     </header>
+    <MobileSideBar isActive = {mobileSideBarIsActive} />
+    </>
   )
 }
 
