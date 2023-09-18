@@ -1,5 +1,6 @@
 import styles from './Mobile-Sidebar.module.css'
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'
 
 function MobileSideBar({isActive}){
   const asideClasses = isActive ? `${styles["mobile-sidebar"]} ${styles["active"]}` : `${styles["mobile-sidebar"]} ${styles["hidden"]}`
@@ -15,6 +16,10 @@ function MobileSideBar({isActive}){
       </ul>
     </aside>
   )
+}
+
+MobileSideBar.propTypes = {
+  isActive: PropTypes.bool
 }
 
 export default MobileSideBar;
