@@ -26,6 +26,26 @@
   color: white;
 }
 
+
+
+@keyframes scaleBtn {
+  0% {
+    transform: scale(100%);
+  }
+
+  80% {
+    transform: scale(110%);
+  }
+
+  100% {
+    transform: scale(100%);
+  }
+}
+
+.shop-plushies-btn.visible {
+  animation: 2s scaleBtn linear 1s 1;
+}
+
 .plush-container {
   display: flex;
   flex-direction: column;
@@ -39,6 +59,27 @@
   margin-top: 48px;
 }
 
+.plush-container > *:nth-child(1) {
+  transform: translateX(-100%);
+}
+
+.plush-container > *:nth-child(2) {
+  transform: translateX(-100%);
+}
+
+.plush-container > *:nth-child(3) {
+  transform: translateX(-100%);
+}
+
+.plush-container > *.visible {
+  transform: translateX(0%);
+}
+
+.plush-container > *.visible {
+  transition: transform 1s linear 0.5s;
+}
+
+
 @media screen and (min-width: 900px) {
   .featured-plush-container {
     background: url('../../assets/kirby all together.png');
@@ -51,7 +92,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
   }
 
   .plush-container > * {
@@ -66,10 +106,62 @@
   .shop-plushies-btn {
     font-size: 48px;
   }
+
+  .plush-container > *:nth-child(1) {
+    transform: translateX(0%);
+  }
+
+  .plush-container > *:nth-child(2) {
+    transform: translateX(-101.5%);
+  }
+
+  .plush-container > *:nth-child(3) {
+    transform: translateX(-203%);
+  }
+
+  .plush-container > *.visible {
+    transform: translateX(0%);
+  }
+
+  .plush-container > *.visible:nth-child(2) {
+    transition: transform 1s linear 1.55s;
+  }
+
+  .plush-container > *.visible:nth-child(3) {
+    transition: transform 1s linear 1.5s;
+  }
+
+  .shop-plushies-btn.visible {
+    animation: 3s scaleBtn linear 3s 1;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .plush-container > * {
     width: 30%;
+  }
+
+  .plush-container > *:nth-child(1) {
+    transform: translateX(0%);
+  }
+
+  .plush-container > *:nth-child(2) {
+    transform: translateX(-116.5%);
+  }
+
+  .plush-container > *:nth-child(3) {
+    transform: translateX(-233%);
+  }
+
+  .plush-container > *.visible {
+    transform: translateX(0%);
+  }
+
+  .plush-container > *.visible:nth-child(2) {
+    transition: transform 1s linear 1.6s;
+  }
+
+  .plush-container > *.visible:nth-child(3) {
+    transition: transform 1s linear 1.5s;
   }
 }

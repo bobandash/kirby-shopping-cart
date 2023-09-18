@@ -9,16 +9,31 @@ import { useRef, useEffect, useState } from 'react';
 function FeaturedPlushies({plushies}){
   const navigate = useNavigate();
   const headerRef = useRef(null);
+  const plushBtnRef = useRef(null);
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+  const [isPlushBtnVisible, setIsPlushBtnVisible] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      if(entry.isIntersecting){
+      const headerEntry = entries[0];
+      if(headerEntry.isIntersecting){
         setIsHeaderVisible(true);
       }
+
     });
     observer.observe(headerRef.current);
+
   }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const plushBtnEntry = entries[0];
+      if (plushBtnEntry.isIntersecting){
+        setIsPlushBtnVisible(true);
+      }    
+    });
+    observer.observe(plushBtnRef.current);
+  }, []);
+
 
   function redirectPlushies(){
       navigate("/category/plushies")
@@ -26,6 +41,7 @@ function FeaturedPlushies({plushies}){
   
 
   const headerClasses = isHeaderVisible ? `${sharedStyles.header} ${sharedStyles.visible}` : sharedStyles.header; 
+  const plushBtnClasses = isPlushBtnVisible ? `${styles.visible} ${styles["shop-plushies-btn"]}` : styles["shop-plushies-btn"];
   return (
     <section className = {`${dividerStyle["divider"]} ${styles["featured-plush-container"]}`}>
       <div className = {`${sharedStyles.container} ${styles["align-container"]}`}>
@@ -35,7 +51,12 @@ function FeaturedPlushies({plushies}){
             <ClickableItem plush = {plush} key = {plush.id}/>
           ))}
         </div>
-        <button onClick = {redirectPlushies} className = {styles["shop-plushies-btn"]}>Shop All Plushies</button>
+        <button 
+          ref = {plushBtnRef}
+          onClick = {redirectPlushies}
+          className = {plushBtnClasses}>
+            Shop All Plushies
+        </button>
       </div>
     </section>
   )
