@@ -8,13 +8,13 @@ import { convertCurrencyFormat } from '../../utils/currency';
 function ClickableItem({plush}){
   const navigate = useNavigate();
   const clickableItemRef = useRef(null);
-/*   const [isVisible, setIsVisible] = useState(false); */
+  const [isVisible, setIsVisible] = useState(false);
 
   function redirectPlush(plushId){
     navigate("/products/" + plushId)
   }
 
-/*   useEffect(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       if(entry.isIntersecting){
@@ -22,15 +22,15 @@ function ClickableItem({plush}){
       }
     });
     observer.observe(clickableItemRef.current);
-  }, []); */
+  }, []);
 
-/*   const clickableItemClasses = isVisible ? `${styles.card} ${plushAnimationStyles.visible}` : styles.card;  */
+  const clickableItemClasses = isVisible ? `${styles.card} ${plushAnimationStyles.visible}` : styles.card; 
   return (
     <div 
       ref = {clickableItemRef}
       onClick = {() => {
       redirectPlush(plush.id);
-    }} className = {styles.card}>
+    }} className = {clickableItemClasses}>
       <div className = {styles["image-container"]}>
         <img src = {plush.image} alt = "primary-image" />
       </div>
