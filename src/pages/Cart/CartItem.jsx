@@ -3,6 +3,7 @@ import QuantityOptionsIncludingZero from '../../components/QuantityOptionsInclud
 import { useState } from 'react';
 import { preventMinus, preventPasteNegative } from '../../utils/input';
 import PropTypes from 'prop-types'
+import { convertCurrencyFormat } from '../../utils/currency';
 
 function CartItem({item, handleChangeQuantity}){
   const totalPrice = item.quantity * item.price;
@@ -10,7 +11,7 @@ function CartItem({item, handleChangeQuantity}){
   const [editQty, setEditQty] = useState(item.quantity);
   const [isUpdatingQty, setIsUpdatingQty] = useState(false);
   const [isSelectFocused, setIsSelectFocused] = useState(false);
-
+  
   function blurDropdown(e){
     e.target.size = 1;
     e.target.blur();
@@ -102,8 +103,8 @@ function CartItem({item, handleChangeQuantity}){
         
       }
       </div>
-      <p className = {styles["product-price"]}>${item.price.toFixed(2)}</p>
-      <p className = {styles["product-total-price"]}>${totalPrice.toFixed(2)}</p>
+      <p className = {styles["product-price"]}>${convertCurrencyFormat(item.price)}</p>
+      <p className = {styles["product-total-price"]}>${convertCurrencyFormat(totalPrice)}</p>
     </div>
     
   )
