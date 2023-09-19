@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import App from './App.jsx'
-import ErrorPage from "./components/errorpage/ErrorPage.jsx"
-import ProductPage from "./components/product-page/ProductPage.jsx"
-import CategoryPage from "./components/category-page/Category.jsx"
+import ErrorPage from "./pages/Error/ErrorPage.jsx"
+import ProductPage from "./pages/Product/ProductPage.jsx"
+import CategoryPage from "./pages/Category/Category.jsx"
 import { useState } from "react"
-import Cart from "./components/cart-page/Cart.jsx"
+import Cart from "./pages/Cart/Cart.jsx"
 
 const Router = () => {
   const [cartItems, setCartItems] = useState([]);

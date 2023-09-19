@@ -1,9 +1,9 @@
-import KirbyLogo from '../../assets/kirby-logo.png';
+import KirbyLogo from '../assets/kirby-logo.png';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css'
 import SubHeader from './Subheader';
-import cartIcon from '../../assets/Cart/empty_cart.png';
-import kirbyCartIcon from '../../assets/Cart/kirby_in_cart.png';
+import cartIcon from '../assets/Cart/empty_cart.png';
+import kirbyCartIcon from '../assets/Cart/kirby_in_cart.png';
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react';
 import MobileSideBar from './Mobile-Sidebar';

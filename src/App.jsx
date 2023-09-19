@@ -1,11 +1,11 @@
-import Header from './components/shared/Header'
-import LandingScreen from './components/homepage/LandingScreen'
-import FeaturedGames from './components/homepage/FeaturedGames'
-import FeaturedPlushies from './components/homepage/FeaturedPlushies'
-import Footer from './components/shared/Footer'
+import Header from './components/Header'
+import LandingScreen from './pages/Home/LandingScreen'
+import FeaturedGames from './pages/Home/FeaturedGames'
+import FeaturedPlushies from './pages/Home/FeaturedPlushies'
+import Footer from './components/Footer'
 import { useState, useEffect } from 'react'
 import CATEGORIES from './constants/categories'
-import LoadingScreen from './components/loadingpage/LoadingPage'
+import LoadingScreen from './pages/Loading/LoadingPage'
 import PropTypes from 'prop-types'
 
 /* renders featured plush and featured games for the home screen */

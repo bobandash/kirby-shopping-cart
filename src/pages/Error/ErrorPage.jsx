@@ -1,6 +1,6 @@
 import styles from './ErrorPage.module.css';
-import Header1 from '../shared/Header';
-import Footer from '../shared/Footer';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import { redirect } from 'react-router-dom';
 
 function ErrorPage(){
@@ -10,7 +10,7 @@ function ErrorPage(){
 
   return(
     <>
-      <Header1 />
+      <Header />
       <section className = {styles["error-page"]}>
         <div className = {styles.container}>
           <h1 className = {styles["error-message"]}>404 ERROR</h1>

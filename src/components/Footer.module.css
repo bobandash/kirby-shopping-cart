@@ -104,7 +104,7 @@ a:hover {
 
   .footer {
     min-height: 35vh;
-    background: url('../../assets/green-landscape-photoshopped.jpg');
+    background: url('../assets/green-landscape-photoshopped.jpg');
     background-position: center center;
     background-size: cover;
   }

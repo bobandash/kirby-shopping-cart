@@ -1,13 +1,13 @@
-import Header1 from "../shared/Header";
-import Footer from "../shared/Footer";
+import Header1 from "../../components/Header";
+import Footer from "../../components/Footer";
 import styles from './ProductPage.module.css';
 import PropTypes from "prop-types"
-import ErrorPage from "../errorpage/ErrorPage";
+import ErrorPage from "../Error/ErrorPage";
 import {useParams} from 'react-router-dom';
 import { useEffect, useState } from "react";
-import LoadingScreen from "../loadingpage/LoadingPage";
-import QuantityOptions from "./quantityOptions";
-import { preventMinus, preventPasteNegative } from "../../shared-functions/input";
+import LoadingScreen from "../Loading/LoadingPage";
+import QuantityOptions from "../../components/QuantityOptions";
+import { preventMinus, preventPasteNegative } from "../../utils/input";
 
 function ProductPage({cartItems, addCartItem}){
   const [item, setItem] = useState(null);

@@ -1,5 +1,5 @@
-import Header1 from '../shared/Header';
-import Footer from '../shared/Footer';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import styles from './Cart.module.css';
 import CartItem from './CartItem';
 import CartItemsHeader from './CartItemHeader';
@@ -22,7 +22,7 @@ function Cart({cartItems, handleRemoveItem, handleChangeQuantity}){
   if(cartItems.length === 0){
     return (
       <>
-      <Header1 cartItems={cartItems}/>
+      <Header cartItems={cartItems}/>
       <section className = {styles["cart-section"]}>
         <div className = {`${styles.container} ${styles["no-items-container"]}`}>
           <h1>There are currently no items in your cart.</h1>
@@ -37,7 +37,7 @@ function Cart({cartItems, handleRemoveItem, handleChangeQuantity}){
 
   return (
     <>
-    <Header1 cartItems={cartItems}/>
+    <Header cartItems={cartItems}/>
     <section className = {styles["cart-section"]}>
       <div className = {styles.container}>
         <CartItemsHeader />

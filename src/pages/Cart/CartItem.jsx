@@ -1,9 +1,10 @@
 import styles from './Cart.module.css';
-import QuantityOptionsIncludingZero from './QuantityOptionsIncludingZero';
+import QuantityOptionsIncludingZero from '../../components/QuantityOptionsIncludingZero';
 import { useState } from 'react';
-import { preventMinus, preventPasteNegative } from '../../shared-functions/input';
+import { preventMinus, preventPasteNegative } from '../../utils/input';
+import PropTypes from 'prop-types'
 
-function CartItem({item, handleRemoveItem, handleChangeQuantity}){
+function CartItem({item, handleChangeQuantity}){
   const totalPrice = item.quantity * item.price;
   const [isInputBox, setIsInputBox] = useState(() => item.quantity >= 30 ? true : false)
   const [editQty, setEditQty] = useState(item.quantity);
@@ -106,6 +107,11 @@ function CartItem({item, handleRemoveItem, handleChangeQuantity}){
     </div>
     
   )
+}
+
+CartItem.propTypes = {
+  item: PropTypes.object,
+  handleChangeQuantity: PropTypes.func,
 }
 
 export default CartItem;

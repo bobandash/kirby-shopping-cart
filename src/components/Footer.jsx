@@ -1,5 +1,5 @@
 import styles from './Footer.module.css'
-import SleepingKirby from '../../assets/KSSU_Sleep_Kirby.png'
+import SleepingKirby from '../assets/KSSU_Sleep_Kirby.png'
 import { useState } from 'react';
 import FooterItems from './FooterItems';
 import { v4 as uuid } from 'uuid';

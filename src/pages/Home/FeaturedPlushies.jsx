@@ -3,7 +3,7 @@ import sharedStyles from './shared.module.css';
 import ClickableItem from './ClickableItem';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import dividerStyle from '../shared/divider.module.css'
+import dividerStyle from '../../components/divider.module.css'
 import { useRef, useEffect, useState } from 'react';
 
 function FeaturedPlushies({plushies}){

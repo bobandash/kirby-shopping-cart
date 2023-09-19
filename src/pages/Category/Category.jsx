@@ -1,12 +1,12 @@
-import Header1 from "../shared/Header";
-import Footer from "../shared/Footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import styles from './Category.module.css';
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import ClickableItem from "../homepage/ClickableItem";
-import ErrorPage from "../errorpage/ErrorPage";
+import ClickableItem from "../Home/ClickableItem";
+import ErrorPage from "../Error/ErrorPage";
 import CATEGORIES from "../../constants/categories";
-import LoadingScreen from "../loadingpage/LoadingPage";
+import LoadingScreen from "../Loading/LoadingPage";
 
 function CategoryPage({cartItems}){
   const [categoryItems, setCategoryItems] = useState(null);
@@ -63,7 +63,7 @@ function CategoryPage({cartItems}){
 
   return (
     <>
-      <Header1 cartItems = {cartItems}/>
+      <Header cartItems = {cartItems}/>
         <section className = {styles["category-page"]}>
           <div className = {styles["item-container"]}>
             {categoryItems.map((item) => (

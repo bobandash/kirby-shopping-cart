@@ -1,5 +1,5 @@
 import styles from './FeaturedGames.module.css';
-import dividerStyle from '../shared/divider.module.css'
+import dividerStyle from '../../components/divider.module.css'
 import sharedStyles from './shared.module.css';
 import { useState, useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
@@ -25,11 +25,12 @@ function FeaturedGames({games}){
       clearInterval(key)
     }
   }, [activeGameNumber, numGamesArrayIndex])
+  
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       if(entry.isIntersecting){
-        setIsHeaderVisible(true);
+        setIsHeaderVisible(entry.isIntersecting);
       }
     });
     observer.observe(headerRef.current);

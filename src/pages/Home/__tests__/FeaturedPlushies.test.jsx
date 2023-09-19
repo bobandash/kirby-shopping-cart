@@ -1,4 +1,4 @@
-import FeaturedPlushies from "../FeaturedPlushies";
+import FeaturedPlushies from "../homepage/FeaturedPlushies";
 import {render} from "@testing-library/react";
 import { describe, it, expect } from 'vitest';
 

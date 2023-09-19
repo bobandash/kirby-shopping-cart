@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import ErrorPage from '../ErrorPage';
+import ErrorPage from '../../../pages/Error/ErrorPage';
 import {render} from "@testing-library/react";
 import { BrowserRouter as Router } from 'react-router-dom';
 
