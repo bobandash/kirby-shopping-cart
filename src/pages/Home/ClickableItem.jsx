@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import plushAnimationStyles from './FeaturedPlushies.module.css';
 import { useRef, useState, useEffect } from 'react';
-function convertDouble(number){
-  return number.toFixed(2);
-}
+import { convertCurrencyFormat } from '../../utils/currency';
 
 function ClickableItem({plush}){
   const navigate = useNavigate();
@@ -37,7 +35,7 @@ function ClickableItem({plush}){
         <img src = {plush.image} alt = "primary-image" />
       </div>
       <h2 className = {styles["product-name"]}>{plush.title}</h2>
-      <p className = {styles.price}>${convertDouble(plush.price)}</p>
+      <p className = {styles.price}>${convertCurrencyFormat(plush.price)}</p>
     </div>
   )
 }
