@@ -1,0 +1,165 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header > DOM > matches snapshot 1`] = `
+<div>
+  <header
+    class="_header_1d983c _opaque_1d983c"
+  >
+    <div
+      class="_container-header_1d983c"
+    >
+      <div
+        class="_mobile-icon-container_1d983c"
+      >
+        <i
+          class="fa-2x fa-solid fa-bars"
+        />
+      </div>
+      <div>
+        <a
+          href="/"
+        >
+          <img
+            alt="Kirby Logo"
+            class="_kirby-logo_1d983c"
+            src="/src/assets/kirby-logo.png"
+          />
+        </a>
+      </div>
+      <form
+        class="_search-bar-form_1d983c _desktop-icon-container_1d983c"
+      >
+        <input
+          placeholder="Search Products..."
+          type="text"
+        />
+        <button
+          type="submit"
+        >
+          <i
+            class="fa-solid fa-magnifying-glass"
+          />
+        </button>
+      </form>
+      <div
+        class="_profile-cart-container_1d983c"
+      >
+        <a
+          class="_desktop-icon-container_1d983c"
+          href="/"
+        >
+          <i
+            class="fa-2x fa-solid fa-user"
+          />
+          <span>
+            Sign In/Register
+          </span>
+        </a>
+        <a
+          href="/cart"
+        >
+          <div
+            class="_cart-icon-container_1d983c"
+          >
+            <img
+              alt="Cart"
+              class="_cart-icon_1d983c"
+              src="/src/assets/Cart/kirby_in_cart.png"
+            />
+            <p
+              class="_cart-quantity_1d983c _less-than-two-digits_1d983c"
+            >
+              11
+            </p>
+          </div>
+          <span>
+            Cart
+          </span>
+        </a>
+      </div>
+    </div>
+    <nav
+      class="_subheader_8b03fa"
+    >
+      <div
+        class="_container_8b03fa"
+      >
+        <ul>
+          <li>
+            <a
+              href="/category/all"
+            >
+              Shop All
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/games"
+            >
+              Games
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/plushies"
+            >
+              Plushies
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/keychains"
+            >
+              Keychains
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <aside
+    class="_mobile-sidebar_ff7a54 _hidden_ff7a54"
+  >
+    <ul
+      class="_sidebar-links_ff7a54"
+    >
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/all"
+        >
+          Shop All
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/games"
+        >
+          Games
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/plushies"
+        >
+          Plushies
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/keychains"
+        >
+          Keychains
+        </a>
+      </li>
+    </ul>
+  </aside>
+</div>
+`;

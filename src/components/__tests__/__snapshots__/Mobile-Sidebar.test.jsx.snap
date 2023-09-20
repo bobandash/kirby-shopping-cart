@@ -1,0 +1,50 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Footer > DOM > matches snapshot 1`] = `
+<div>
+  <aside
+    class="_mobile-sidebar_ff7a54 _hidden_ff7a54"
+  >
+    <ul
+      class="_sidebar-links_ff7a54"
+    >
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/all"
+        >
+          Shop All
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/games"
+        >
+          Games
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/plushies"
+        >
+          Plushies
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/keychains"
+        >
+          Keychains
+        </a>
+      </li>
+    </ul>
+  </aside>
+</div>
+`;

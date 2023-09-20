@@ -1,0 +1,153 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Footer > DOM > matches snapshot 1`] = `
+<div>
+  <footer
+    class="_footer_0c88cc _divider_a8154b"
+  >
+    <img
+      alt="sleeping kirby"
+      class="_sleeping-kirby_0c88cc"
+      src="/src/assets/KSSU_Sleep_Kirby.png"
+    />
+    <div
+      class="_footer-container_0c88cc"
+    >
+      <div
+        class="_col_0c88cc _mobile-collapsed_0c88cc "
+      >
+        <h3>
+          Categories
+          <i
+            class="fa-solid fa-caret-down"
+          />
+        </h3>
+        <ul>
+          <li>
+            <a
+              href="/category/all"
+            >
+              Shop All
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/games"
+            >
+              Games
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/plushies"
+            >
+              Plushies
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/keychains"
+            >
+              Keychains
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="_col_0c88cc _mobile-collapsed_0c88cc "
+      >
+        <h3>
+          Customer Service
+          <i
+            class="fa-solid fa-caret-down"
+          />
+        </h3>
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              Company Bio
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Terms of Service
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Refund Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="_col_0c88cc _mobile-collapsed_0c88cc "
+      >
+        <h3>
+          Site Info
+          <i
+            class="fa-solid fa-caret-down"
+          />
+        </h3>
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              About Kirby
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              News
+            </a>
+          </li>
+        </ul>
+        <div
+          class="_social-media-links_0c88cc"
+        >
+          <a
+            href=""
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-facebook"
+            />
+          </a>
+          <a
+            href=""
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-instagram"
+            />
+          </a>
+          <a
+            href=""
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-x-twitter"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;

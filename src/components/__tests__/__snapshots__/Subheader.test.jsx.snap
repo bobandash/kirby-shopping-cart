@@ -1,0 +1,87 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header > DOM > matches snapshot 1`] = `
+<div>
+  <nav
+    class="_subheader_8b03fa"
+  >
+    <div
+      class="_container_8b03fa"
+    >
+      <ul>
+        <li>
+          <a
+            href="/category/all"
+          >
+            Shop All
+          </a>
+        </li>
+        <li>
+          <a
+            href="/category/games"
+          >
+            Games
+          </a>
+        </li>
+        <li>
+          <a
+            href="/category/plushies"
+          >
+            Plushies
+          </a>
+        </li>
+        <li>
+          <a
+            href="/category/keychains"
+          >
+            Keychains
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`Subheader > DOM > matches snapshot 1`] = `
+<div>
+  <nav
+    class="_subheader_8b03fa"
+  >
+    <div
+      class="_container_8b03fa"
+    >
+      <ul>
+        <li>
+          <a
+            href="/category/all"
+          >
+            Shop All
+          </a>
+        </li>
+        <li>
+          <a
+            href="/category/games"
+          >
+            Games
+          </a>
+        </li>
+        <li>
+          <a
+            href="/category/plushies"
+          >
+            Plushies
+          </a>
+        </li>
+        <li>
+          <a
+            href="/category/keychains"
+          >
+            Keychains
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
