@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Loading Screen > matches snapshot 1`] = `
+<div>
+  <section
+    class="_loading-screen_463e30"
+  >
+    <img
+      alt="loading gif"
+      class="_loading-gif_463e30"
+      src="/src/assets/Loading/loading.gif"
+    />
+    <div
+      class="_kirby-img-container_463e30"
+    >
+      <img
+        alt="kirby gif"
+        src="/src/assets/Loading/kirby-walking.gif"
+      />
+    </div>
+  </section>
+</div>
+`;
