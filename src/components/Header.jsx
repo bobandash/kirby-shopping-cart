@@ -63,10 +63,10 @@ function Header1({cartItems}){
         <div className = {styles["profile-cart-container"]}>
           <Link to="/" className = {styles["desktop-icon-container"]}><i className="fa-2x fa-solid fa-user"></i><span>Sign In/Register</span></Link>
           {(cartItems.length === 0) ?
-            <Link to="/cart"><img className = {styles["cart-icon"]} src = {cartIcon}/><span>Cart</span></Link> :
+            <Link to="/cart"><img className = {styles["cart-icon"]} alt = "Empty Cart" src = {cartIcon}/><span>Cart</span></Link> :
             <Link to="/cart">
               <div className = {styles["cart-icon-container"]}>
-                <img className = {styles["cart-icon"]} src = {kirbyCartIcon} />
+                <img className = {styles["cart-icon"]} src = {kirbyCartIcon} alt = "Cart" />
                 {cartItemQuantity > 99 ? 
                   <p className = {`${styles["cart-quantity"]} ${styles["three-digits"]}`}>99+</p> :
                   <p className = {`${styles["cart-quantity"]} ${styles["less-than-two-digits"]}`}>{cartItemQuantity}</p>
