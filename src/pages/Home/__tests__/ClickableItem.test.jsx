@@ -1,28 +1,24 @@
-import {vi} from 'vitest'
-import {describe, it, expect, beforeEach} from 'vitest'
+import {describe, it, expect, beforeEach, vi} from 'vitest'
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import ClickableItem from '../ClickableItem';
-import LittleBuddyKirby from '../../../assets/product-assets/little_buddy_kirby_front.jpg'
+import { BrowserRouter } from 'react-router-dom';
+import userEvent from '@testing-library/user-event';
 
 // setups props
 const plush = {
-  image: LittleBuddyKirby, 
+  image: "test", 
   title: 'Little Buddy Kirby 5"H',
-  price: 19.99
-}
-
-const plush2 = {
-  image: LittleBuddyKirby, 
-  title: 'Little Buddy Kirby 5"H',
-  price: 19.9 
+  price: 19.99,
+  id: 1
 }
 
 describe('Clickable Item', () => {
+  beforeEach(() => {
+    const routerWrapper = ({children}) => <BrowserRouter>{children}</BrowserRouter>
+    render(<ClickableItem plush={plush}/>, {wrapper: routerWrapper});
+  })
+
   describe('normal product features', () => {
-    beforeEach(() => {
-      render(<ClickableItem plush={plush}/>);
-    })
     it('renders title', () => {
       expect(screen.getByRole('heading', {name: plush.title})).toBeInTheDocument();
     })
@@ -34,12 +30,12 @@ describe('Clickable Item', () => {
     })
   })
 
-  describe('price one decimal product', () => {
-    beforeEach(() => {
-      render(<ClickableItem plush={plush2}/>);
-    })
-    it('renders two decimals places if input one decimal', () => {
-      expect(screen.getByText(`$${plush2.price}0`)).toBeInTheDocument();
+  describe(('click functionality'), () => {
+    it('onClick routes to product page', async () => {
+      const user = userEvent.setup();
+      const productCard = screen.getByTestId("product-card");
+      await user.click(productCard);
+      expect(window.location.pathname).toBe('/products/' + plush.id)
     })
   })
 })

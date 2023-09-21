@@ -1,0 +1,324 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Error Page > renders correctly 1`] = `
+<div>
+  <header
+    class="_header_1d983c _opaque_1d983c"
+  >
+    <div
+      class="_container-header_1d983c"
+    >
+      <div
+        class="_mobile-icon-container_1d983c"
+      >
+        <i
+          class="fa-2x fa-solid fa-bars"
+        />
+      </div>
+      <div>
+        <a
+          href="/"
+        >
+          <img
+            alt="Kirby Logo"
+            class="_kirby-logo_1d983c"
+            src="/src/assets/kirby-logo.png"
+          />
+        </a>
+      </div>
+      <form
+        class="_search-bar-form_1d983c _desktop-icon-container_1d983c"
+      >
+        <input
+          placeholder="Search Products..."
+          type="text"
+        />
+        <button
+          type="submit"
+        >
+          <i
+            class="fa-solid fa-magnifying-glass"
+          />
+        </button>
+      </form>
+      <div
+        class="_profile-cart-container_1d983c"
+      >
+        <a
+          class="_desktop-icon-container_1d983c"
+          href="/"
+        >
+          <i
+            class="fa-2x fa-solid fa-user"
+          />
+          <span>
+            Sign In/Register
+          </span>
+        </a>
+        <a
+          href="/cart"
+        >
+          <img
+            alt="Empty Cart"
+            class="_cart-icon_1d983c"
+            src="/src/assets/Cart/empty_cart.png"
+          />
+          <span>
+            Cart
+          </span>
+        </a>
+      </div>
+    </div>
+    <nav
+      class="_subheader_8b03fa"
+    >
+      <div
+        class="_container_8b03fa"
+      >
+        <ul>
+          <li>
+            <a
+              href="/category/all"
+            >
+              Shop All
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/games"
+            >
+              Games
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/plushies"
+            >
+              Plushies
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/keychains"
+            >
+              Keychains
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <aside
+    class="_mobile-sidebar_ff7a54 _hidden_ff7a54"
+  >
+    <ul
+      class="_sidebar-links_ff7a54"
+    >
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/all"
+        >
+          Shop All
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/games"
+        >
+          Games
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/plushies"
+        >
+          Plushies
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/keychains"
+        >
+          Keychains
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <section
+    class="_error-page_5c351e"
+  >
+    <div
+      class="_container_5c351e"
+    >
+      <h1
+        class="_error-message_5c351e"
+      >
+        404 ERROR
+      </h1>
+      <button
+        class="_back-home-redirect_5c351e"
+      >
+        Back To Home 
+        <i
+          class="fa-solid fa-arrow-right"
+        />
+      </button>
+    </div>
+  </section>
+  <footer
+    class="_footer_0c88cc _divider_a8154b"
+  >
+    <img
+      alt="sleeping kirby"
+      class="_sleeping-kirby_0c88cc"
+      src="/src/assets/KSSU_Sleep_Kirby.png"
+    />
+    <div
+      class="_footer-container_0c88cc"
+    >
+      <div
+        class="_col_0c88cc _mobile-collapsed_0c88cc "
+      >
+        <h3>
+          Categories
+          <i
+            class="fa-solid fa-caret-down"
+          />
+        </h3>
+        <ul>
+          <li>
+            <a
+              href="/category/all"
+            >
+              Shop All
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/games"
+            >
+              Games
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/plushies"
+            >
+              Plushies
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/keychains"
+            >
+              Keychains
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="_col_0c88cc _mobile-collapsed_0c88cc "
+      >
+        <h3>
+          Customer Service
+          <i
+            class="fa-solid fa-caret-down"
+          />
+        </h3>
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              Company Bio
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Terms of Service
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Refund Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="_col_0c88cc _mobile-collapsed_0c88cc "
+      >
+        <h3>
+          Site Info
+          <i
+            class="fa-solid fa-caret-down"
+          />
+        </h3>
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              About Kirby
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              News
+            </a>
+          </li>
+        </ul>
+        <div
+          class="_social-media-links_0c88cc"
+        >
+          <a
+            href=""
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-facebook"
+            />
+          </a>
+          <a
+            href=""
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-instagram"
+            />
+          </a>
+          <a
+            href=""
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-x-twitter"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;

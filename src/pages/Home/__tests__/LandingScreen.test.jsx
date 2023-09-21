@@ -1,4 +1,4 @@
-import LandingScreen from "../homepage/LandingScreen";
+import LandingScreen from "../LandingScreen";
 import {render} from "@testing-library/react";
 import { describe, it, expect } from 'vitest';
 

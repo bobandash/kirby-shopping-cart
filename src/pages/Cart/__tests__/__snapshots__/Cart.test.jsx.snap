@@ -1,0 +1,843 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Cart > DOM > cart with items matches snapshot 1`] = `
+<div>
+  <header
+    class="_header_1d983c _opaque_1d983c"
+  >
+    <div
+      class="_container-header_1d983c"
+    >
+      <div
+        class="_mobile-icon-container_1d983c"
+      >
+        <i
+          class="fa-2x fa-solid fa-bars"
+        />
+      </div>
+      <div>
+        <a
+          href="/"
+        >
+          <img
+            alt="Kirby Logo"
+            class="_kirby-logo_1d983c"
+            src="/src/assets/kirby-logo.png"
+          />
+        </a>
+      </div>
+      <form
+        class="_search-bar-form_1d983c _desktop-icon-container_1d983c"
+      >
+        <input
+          placeholder="Search Products..."
+          type="text"
+        />
+        <button
+          type="submit"
+        >
+          <i
+            class="fa-solid fa-magnifying-glass"
+          />
+        </button>
+      </form>
+      <div
+        class="_profile-cart-container_1d983c"
+      >
+        <a
+          class="_desktop-icon-container_1d983c"
+          href="/"
+        >
+          <i
+            class="fa-2x fa-solid fa-user"
+          />
+          <span>
+            Sign In/Register
+          </span>
+        </a>
+        <a
+          href="/cart"
+        >
+          <div
+            class="_cart-icon-container_1d983c"
+          >
+            <img
+              alt="Cart"
+              class="_cart-icon_1d983c"
+              src="/src/assets/Cart/kirby_in_cart.png"
+            />
+            <p
+              class="_cart-quantity_1d983c _less-than-two-digits_1d983c"
+            >
+              51
+            </p>
+          </div>
+          <span>
+            Cart
+          </span>
+        </a>
+      </div>
+    </div>
+    <nav
+      class="_subheader_8b03fa"
+    >
+      <div
+        class="_container_8b03fa"
+      >
+        <ul>
+          <li>
+            <a
+              href="/category/all"
+            >
+              Shop All
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/games"
+            >
+              Games
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/plushies"
+            >
+              Plushies
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/keychains"
+            >
+              Keychains
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <aside
+    class="_mobile-sidebar_ff7a54 _hidden_ff7a54"
+  >
+    <ul
+      class="_sidebar-links_ff7a54"
+    >
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/all"
+        >
+          Shop All
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/games"
+        >
+          Games
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/plushies"
+        >
+          Plushies
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/keychains"
+        >
+          Keychains
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <section
+    class="_cart-section_64619f"
+  >
+    <div
+      class="_container_64619f"
+    >
+      <section
+        class="_cart-item-header_64619f"
+      >
+        <h1>
+          Product
+        </h1>
+        <h1>
+          Quantity
+        </h1>
+        <h1>
+          Price
+        </h1>
+        <h1>
+          Total Price
+        </h1>
+      </section>
+      <div
+        class="_cart-item_64619f"
+      >
+        <div
+          class="_product-image-name-container_64619f"
+        >
+          <img
+            alt="Test"
+            class="_product-image_64619f"
+            src="test"
+          />
+          <p
+            class="_product-name_64619f"
+          >
+            Test
+          </p>
+        </div>
+        <div
+          class="_quantity-container_64619f"
+        >
+          <select
+            class="_quantity-select_64619f"
+          >
+            <option>
+              0 (Delete)
+            </option>
+            <option>
+              1
+            </option>
+            <option>
+              2
+            </option>
+            <option>
+              3
+            </option>
+            <option>
+              4
+            </option>
+            <option>
+              5
+            </option>
+            <option>
+              6
+            </option>
+            <option>
+              7
+            </option>
+            <option>
+              8
+            </option>
+            <option>
+              9
+            </option>
+            <option>
+              10
+            </option>
+            <option>
+              11
+            </option>
+            <option>
+              12
+            </option>
+            <option>
+              13
+            </option>
+            <option>
+              14
+            </option>
+            <option>
+              15
+            </option>
+            <option>
+              16
+            </option>
+            <option>
+              17
+            </option>
+            <option>
+              18
+            </option>
+            <option>
+              19
+            </option>
+            <option>
+              20
+            </option>
+            <option>
+              21
+            </option>
+            <option>
+              22
+            </option>
+            <option>
+              23
+            </option>
+            <option>
+              24
+            </option>
+            <option>
+              25
+            </option>
+            <option>
+              26
+            </option>
+            <option>
+              27
+            </option>
+            <option>
+              28
+            </option>
+            <option>
+              29
+            </option>
+            <option>
+              30+
+            </option>
+          </select>
+        </div>
+        <p
+          class="_product-price_64619f"
+        >
+          $
+          1.10
+        </p>
+        <p
+          class="_product-total-price_64619f"
+        >
+          $
+          1.10
+        </p>
+      </div>
+      <div
+        class="_cart-item_64619f"
+      >
+        <div
+          class="_product-image-name-container_64619f"
+        >
+          <img
+            alt="Test"
+            class="_product-image_64619f"
+            src="test"
+          />
+          <p
+            class="_product-name_64619f"
+          >
+            Test
+          </p>
+        </div>
+        <div
+          class="_quantity-container_64619f"
+        >
+          <input
+            min="1"
+            type="number"
+            value="50"
+          />
+        </div>
+        <p
+          class="_product-price_64619f"
+        >
+          $
+          1.10
+        </p>
+        <p
+          class="_product-total-price_64619f"
+        >
+          $
+          55.00
+        </p>
+      </div>
+      <section
+        class="_cart-item-footer_64619f"
+      >
+        <div
+          class="_footer-contents_64619f"
+        >
+          <h1>
+            Total: $
+            56.10
+          </h1>
+          <button>
+            Checkout
+            <i
+              class="fa-solid fa-arrow-right"
+            />
+          </button>
+        </div>
+      </section>
+    </div>
+  </section>
+  <footer
+    class="_footer_0c88cc _divider_a8154b"
+  >
+    <img
+      alt="sleeping kirby"
+      class="_sleeping-kirby_0c88cc"
+      src="/src/assets/KSSU_Sleep_Kirby.png"
+    />
+    <div
+      class="_footer-container_0c88cc"
+    >
+      <div
+        class="_col_0c88cc _mobile-collapsed_0c88cc "
+      >
+        <h3>
+          Categories
+          <i
+            class="fa-solid fa-caret-down"
+          />
+        </h3>
+        <ul>
+          <li>
+            <a
+              href="/category/all"
+            >
+              Shop All
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/games"
+            >
+              Games
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/plushies"
+            >
+              Plushies
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/keychains"
+            >
+              Keychains
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="_col_0c88cc _mobile-collapsed_0c88cc "
+      >
+        <h3>
+          Customer Service
+          <i
+            class="fa-solid fa-caret-down"
+          />
+        </h3>
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              Company Bio
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Terms of Service
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Refund Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="_col_0c88cc _mobile-collapsed_0c88cc "
+      >
+        <h3>
+          Site Info
+          <i
+            class="fa-solid fa-caret-down"
+          />
+        </h3>
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              About Kirby
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              News
+            </a>
+          </li>
+        </ul>
+        <div
+          class="_social-media-links_0c88cc"
+        >
+          <a
+            href=""
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-facebook"
+            />
+          </a>
+          <a
+            href=""
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-instagram"
+            />
+          </a>
+          <a
+            href=""
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-x-twitter"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;
+
+exports[`Cart > DOM > empty cart matches snapshot 1`] = `
+<div>
+  <header
+    class="_header_1d983c _opaque_1d983c"
+  >
+    <div
+      class="_container-header_1d983c"
+    >
+      <div
+        class="_mobile-icon-container_1d983c"
+      >
+        <i
+          class="fa-2x fa-solid fa-bars"
+        />
+      </div>
+      <div>
+        <a
+          href="/"
+        >
+          <img
+            alt="Kirby Logo"
+            class="_kirby-logo_1d983c"
+            src="/src/assets/kirby-logo.png"
+          />
+        </a>
+      </div>
+      <form
+        class="_search-bar-form_1d983c _desktop-icon-container_1d983c"
+      >
+        <input
+          placeholder="Search Products..."
+          type="text"
+        />
+        <button
+          type="submit"
+        >
+          <i
+            class="fa-solid fa-magnifying-glass"
+          />
+        </button>
+      </form>
+      <div
+        class="_profile-cart-container_1d983c"
+      >
+        <a
+          class="_desktop-icon-container_1d983c"
+          href="/"
+        >
+          <i
+            class="fa-2x fa-solid fa-user"
+          />
+          <span>
+            Sign In/Register
+          </span>
+        </a>
+        <a
+          href="/cart"
+        >
+          <img
+            alt="Empty Cart"
+            class="_cart-icon_1d983c"
+            src="/src/assets/Cart/empty_cart.png"
+          />
+          <span>
+            Cart
+          </span>
+        </a>
+      </div>
+    </div>
+    <nav
+      class="_subheader_8b03fa"
+    >
+      <div
+        class="_container_8b03fa"
+      >
+        <ul>
+          <li>
+            <a
+              href="/category/all"
+            >
+              Shop All
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/games"
+            >
+              Games
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/plushies"
+            >
+              Plushies
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/keychains"
+            >
+              Keychains
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <aside
+    class="_mobile-sidebar_ff7a54 _hidden_ff7a54"
+  >
+    <ul
+      class="_sidebar-links_ff7a54"
+    >
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/all"
+        >
+          Shop All
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/games"
+        >
+          Games
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/plushies"
+        >
+          Plushies
+        </a>
+      </li>
+      <li
+        class="_link_ff7a54 _hidden_ff7a54"
+      >
+        <a
+          href="/category/keychains"
+        >
+          Keychains
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <section
+    class="_cart-section_64619f"
+  >
+    <div
+      class="_container_64619f _no-items-container_64619f"
+    >
+      <h1>
+        There are currently no items in your cart.
+      </h1>
+      <button>
+        Shop All Products 
+        <i
+          class="fa-solid fa-arrow-right"
+        />
+      </button>
+    </div>
+  </section>
+  <footer
+    class="_footer_0c88cc _divider_a8154b"
+  >
+    <img
+      alt="sleeping kirby"
+      class="_sleeping-kirby_0c88cc"
+      src="/src/assets/KSSU_Sleep_Kirby.png"
+    />
+    <div
+      class="_footer-container_0c88cc"
+    >
+      <div
+        class="_col_0c88cc _mobile-collapsed_0c88cc "
+      >
+        <h3>
+          Categories
+          <i
+            class="fa-solid fa-caret-down"
+          />
+        </h3>
+        <ul>
+          <li>
+            <a
+              href="/category/all"
+            >
+              Shop All
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/games"
+            >
+              Games
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/plushies"
+            >
+              Plushies
+            </a>
+          </li>
+          <li>
+            <a
+              href="/category/keychains"
+            >
+              Keychains
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="_col_0c88cc _mobile-collapsed_0c88cc "
+      >
+        <h3>
+          Customer Service
+          <i
+            class="fa-solid fa-caret-down"
+          />
+        </h3>
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              Company Bio
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Terms of Service
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              Refund Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="_col_0c88cc _mobile-collapsed_0c88cc "
+      >
+        <h3>
+          Site Info
+          <i
+            class="fa-solid fa-caret-down"
+          />
+        </h3>
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              About Kirby
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              News
+            </a>
+          </li>
+        </ul>
+        <div
+          class="_social-media-links_0c88cc"
+        >
+          <a
+            href=""
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-facebook"
+            />
+          </a>
+          <a
+            href=""
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-instagram"
+            />
+          </a>
+          <a
+            href=""
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-x-twitter"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;

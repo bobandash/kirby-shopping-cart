@@ -7,7 +7,7 @@ import CartItemsFooter from './CartItemsFooter'
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types'
 
-function Cart({cartItems, handleRemoveItem, handleChangeQuantity}){
+function Cart({cartItems, handleChangeQuantity}){
   const navigate = useNavigate();
   let totalCartPrice = 0;
   cartItems.forEach(item => {
@@ -42,7 +42,7 @@ function Cart({cartItems, handleRemoveItem, handleChangeQuantity}){
       <div className = {styles.container}>
         <CartItemsHeader />
         {cartItems.map(cartItem => (
-          <CartItem key = {cartItem.id} item = {cartItem} handleRemoveItem= {handleRemoveItem} handleChangeQuantity={handleChangeQuantity} />
+          <CartItem key = {cartItem.id} item = {cartItem} handleChangeQuantity={handleChangeQuantity} />
         ))}
         <CartItemsFooter totalPrice = {totalCartPrice} />
       </div>

@@ -1,0 +1,94 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Featured Plushies Component > renders featured plushies component 1`] = `
+<div>
+  <section
+    class="_divider_a8154b _featured-plush-container_182dd4"
+  >
+    <div
+      class="_container_8b8d20 _align-container_182dd4"
+    >
+      <h1
+        class="_header_8b8d20"
+      >
+        Featured Plushies
+      </h1>
+      <div
+        class="_plush-container_182dd4"
+      >
+        <div
+          class="_card_b92ee8"
+          data-testid="product-card"
+        >
+          <div
+            class="_image-container_b92ee8"
+          >
+            <img
+              alt="primary-image"
+              src="test"
+            />
+          </div>
+          <h2
+            class="_product-name_b92ee8"
+          />
+          <p
+            class="_price_b92ee8"
+          >
+            $
+            5.99
+          </p>
+        </div>
+        <div
+          class="_card_b92ee8"
+          data-testid="product-card"
+        >
+          <div
+            class="_image-container_b92ee8"
+          >
+            <img
+              alt="primary-image"
+              src="test"
+            />
+          </div>
+          <h2
+            class="_product-name_b92ee8"
+          />
+          <p
+            class="_price_b92ee8"
+          >
+            $
+            5.99
+          </p>
+        </div>
+        <div
+          class="_card_b92ee8"
+          data-testid="product-card"
+        >
+          <div
+            class="_image-container_b92ee8"
+          >
+            <img
+              alt="primary-image"
+              src="test"
+            />
+          </div>
+          <h2
+            class="_product-name_b92ee8"
+          />
+          <p
+            class="_price_b92ee8"
+          >
+            $
+            5.99
+          </p>
+        </div>
+      </div>
+      <button
+        class="_shop-plushies-btn_182dd4"
+      >
+        Shop All Plushies
+      </button>
+    </div>
+  </section>
+</div>
+`;

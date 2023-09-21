@@ -1,0 +1,64 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Featured Games Component > DOM > renders featured games component 1`] = `
+<div>
+  <section
+    class="_featured-items-container_4c6bb5 _divider_a8154b"
+  >
+    <div
+      class="_container_8b8d20"
+    >
+      <h1
+        class="_header_8b8d20"
+      >
+        Featured Games
+      </h1>
+      <div
+        class="_game-images-container_4c6bb5"
+      >
+        <button
+          class="_caret-btn_4c6bb5"
+        >
+          <i
+            aria-label="Decrement Active Game Number"
+            class="fa-solid fa-angle-left"
+          />
+        </button>
+        <div
+          class="_clickable-images-container_4c6bb5"
+        >
+          <img
+            alt="test1"
+            class="_game-image_4c6bb5"
+            src="test1"
+          />
+        </div>
+        <button
+          class="_caret-btn_4c6bb5"
+        >
+          <i
+            aria-label="Increment Active Game Number"
+            class="fa-solid fa-angle-right"
+          />
+        </button>
+      </div>
+      <div
+        class="_circle-nav-container_4c6bb5"
+      >
+        <button
+          aria-label="circle-nav"
+          class="_active_4c6bb5 _circle-nav_4c6bb5"
+        />
+        <button
+          aria-label="circle-nav"
+          class="_circle-nav_4c6bb5"
+        />
+        <button
+          aria-label="circle-nav"
+          class="_circle-nav_4c6bb5"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -3,57 +3,57 @@
 exports[`Landing Screen Component > renders correctly 1`] = `
 <div>
   <section
-    class="_landing-screen_7178c2"
+    class="_landing-screen_b2b0af"
   >
     <div
-      class="_container_7178c2"
+      class="_container_b2b0af"
     >
       <div
-        class="_stars-container_7178c2"
+        class="_stars-container_b2b0af"
       >
         <img
           alt="stars no trail"
-          class="_stars_7178c2"
+          class="_stars_b2b0af"
           src="/src/assets/no trail.png"
         />
         <img
           alt="stars trail"
-          class="_stars_7178c2 _trail-animation_7178c2"
+          class="_stars_b2b0af _trail-animation_b2b0af"
           src="/src/assets/trail.png"
         />
       </div>
       <div
-        class="_store-information_7178c2"
+        class="_store-information_b2b0af"
       >
         <img
           alt="kirby-logo"
-          class="_kirby-logo_7178c2"
+          class="_kirby-logo_b2b0af"
           src="/src/assets/kirby-name-logo.png"
         />
         <h2
-          class="_subheader_7178c2"
+          class="_subheader_b2b0af"
         >
           The Fake Online Store
         </h2>
       </div>
       <img
         alt="kirby-sitting"
-        class="_kirby-sitting_7178c2"
+        class="_kirby-sitting_b2b0af"
         src="/src/assets/kirby-sitting.png"
       />
       <img
         alt="king de de de"
-        class="_desktop-image_7178c2 _top-middle_7178c2"
+        class="_desktop-image_b2b0af _top-middle_b2b0af"
         src="/src/assets/Landing Page/king de de de.png"
       />
       <img
         alt="waddle dee"
-        class="_desktop-image_7178c2 _top-left_7178c2"
+        class="_desktop-image_b2b0af _top-left_b2b0af"
         src="/src/assets/Landing Page/waddle dee.png"
       />
       <img
         alt="meta knight"
-        class="_desktop-image_7178c2 _top-right_7178c2"
+        class="_desktop-image_b2b0af _top-right_b2b0af"
         src="/src/assets/Landing Page/meta knight.png"
       />
     </div>
