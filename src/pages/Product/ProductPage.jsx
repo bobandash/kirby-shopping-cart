@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import LoadingScreen from "../Loading/LoadingPage";
 import QuantityOptions from "../../components/QuantityOptions";
 import { preventMinus, preventPasteNegative } from "../../utils/input";
+import { convertCurrencyFormat } from "../../utils/currency";
 
 function ProductPage({cartItems, addCartItem}){
   const [item, setItem] = useState(null);
@@ -60,17 +61,14 @@ function ProductPage({cartItems, addCartItem}){
     async function getProduct(id){
       try {
         const response = await fetch('https://fakestoreapi.com/products/'+id);
-        if(!response.ok){
-          setError(true);
-        } else {
-          const data = await response.json();
-          setItem(data);
-          setError(false);
-        }
+        const data = await response.json();
+        setItem(data);
+        setError(false);
         setLoading(false);
       }
       catch {
         setError(true);
+        setLoading(false);
       }
     }
     getProduct(name);
@@ -78,7 +76,7 @@ function ProductPage({cartItems, addCartItem}){
 
 
   if(loading){
-    return <LoadingScreen />
+    return (<LoadingScreen />)
   }
 
   if(error){
@@ -95,11 +93,11 @@ function ProductPage({cartItems, addCartItem}){
           </div>
           <div className = {styles["product-information-container"]}>
             <h1 className = {styles["item-name"]}>{item.title}</h1>
-            <h2 className = {styles["item-price"]}>${item.price.toFixed(2)}</h2>
-            <form className = {styles["qty-form"]}>
+            <h2 className = {styles["item-price"]}>${item.price}</h2>
+            <form htmlFor = "cart-quantity" className = {styles["qty-form"]}>
               <div className = {styles["same-line"]}>
                 <label htmlFor = "quantity">Quantity:</label>
-                {!isInputBoxActive ? <select className = {styles["qty-select"]} value = {quantity}
+                {!isInputBoxActive ? <select id = "quantity" className = {styles["qty-select"]} value = {quantity}
                   onChange = {(e) => {
                     handleQuantityChange(e);
                     blurDropdown(e);
@@ -113,7 +111,7 @@ function ProductPage({cartItems, addCartItem}){
                     <QuantityOptions />
                 </select> 
                 : 
-                <input className = {styles["qty-input"]} type = "number"
+                <input id = "quantity" className = {styles["qty-input"]} type = "number"
                   min = "1"
                   value = {quantity}
                   onChange = {handleQuantityChange}
