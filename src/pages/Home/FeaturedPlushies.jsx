@@ -40,7 +40,7 @@ function FeaturedPlushies({plushies}){
   }
   
 
-  const headerClasses = isHeaderVisible ? `${sharedStyles.header} ${sharedStyles.visible}` : sharedStyles.header; 
+  const headerClasses = isHeaderVisible ? `${sharedStyles.header} ${sharedStyles.visible}` : sharedStyles.header;
   const plushBtnClasses = isPlushBtnVisible ? `${styles.visible} ${styles["shop-plushies-btn"]}` : styles["shop-plushies-btn"];
   return (
     <section className = {`${dividerStyle["divider"]} ${styles["featured-plush-container"]}`}>
