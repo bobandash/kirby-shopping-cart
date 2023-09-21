@@ -65,9 +65,9 @@ function FeaturedGames({games}){
 
   function createCircleGameNav(index, key){
     if(activeGameNumber === index) {
-      return (<button key = {key} className = {`${styles.active} ${styles["circle-nav"]}`}></button>)
+      return (<button aria-label = "circle-nav" key = {key} className = {`${styles.active} ${styles["circle-nav"]}`}></button>)
     }
-    return (<button key = {key} onClick = {() => {handleCircleClick(index)}}className = {styles["circle-nav"]}></button>)
+    return (<button aria-label = "circle-nav" key = {key} onClick = {() => {handleCircleClick(index)}} className = {styles["circle-nav"]}></button>)
   }
 
   const headerClasses = isHeaderVisible ? `${sharedStyles.header} ${sharedStyles.visible}` : sharedStyles.header; 
@@ -76,11 +76,11 @@ function FeaturedGames({games}){
       <div className = {sharedStyles.container}>
         <h1 ref = {headerRef} className = {headerClasses}>Featured Games</h1>
         <div className = {styles["game-images-container"]}>
-          <button onClick = {decrementActiveGameNumber} className = {styles["caret-btn"]}><i className="fa-solid fa-angle-left"></i></button>
+          <button onClick = {decrementActiveGameNumber} className = {styles["caret-btn"]}><i className="fa-solid fa-angle-left" aria-label="Decrement Active Game Number"></i></button>
           <div onClick = {() => redirectToItem(games[activeGameNumber].id)} className = {styles["clickable-images-container"]}>
-            <img src = {games[activeGameNumber].image} className = {styles["game-image"]} />
+            <img src = {games[activeGameNumber].image} className = {styles["game-image"]} alt = {games[activeGameNumber].title}/>
           </div>
-          <button onClick = {incrementActiveGameNumber} className = {styles["caret-btn"]}><i className="fa-solid fa-angle-right"></i></button>
+          <button onClick = {incrementActiveGameNumber} className = {styles["caret-btn"]}><i className="fa-solid fa-angle-right" aria-label="Increment Active Game Number"></i></button>
         </div>
         {games.length >= 2 && 
           <div className = {styles["circle-nav-container"]}>

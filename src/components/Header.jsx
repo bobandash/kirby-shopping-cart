@@ -8,10 +8,10 @@ import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react';
 import MobileSideBar from './Mobile-Sidebar';
 
-function Header1({cartItems}){
+function Header1({cartItems = []}){
   const addQuantities = (a,b) => Number(a) + Number(b);
   let cartItemQuantity;
-  const cartItemQuantitiesArray = cartItems.map(cartItem => {return cartItem.quantity;});
+  const cartItemQuantitiesArray = cartItems.length === 0 ? [] : cartItems.map(cartItem => {return cartItem.quantity;});
   if(cartItemQuantitiesArray.length === 0){
     cartItemQuantity = 0;
   } else {

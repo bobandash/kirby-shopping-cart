@@ -37,6 +37,7 @@ function CartItem({item, handleChangeQuantity}){
       {!isInputBox ? 
         <>
           <select className = {selectClasses}
+            data-testid = "select-quantity"
             onChange = {(e) => {
               if(e.target.value === '0 (Delete)'){
                 handleChangeQuantity(item, 0);
@@ -69,6 +70,7 @@ function CartItem({item, handleChangeQuantity}){
         :
         <>
           <input type = "number"
+            data-testid = "input-quantity"
             value = {editQty}
             min = "1"
             onKeyDown={preventMinus}

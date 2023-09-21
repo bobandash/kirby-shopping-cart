@@ -30,7 +30,9 @@ function ClickableItem({plush}){
       ref = {clickableItemRef}
       onClick = {() => {
       redirectPlush(plush.id);
-    }} className = {clickableItemClasses}>
+    }} 
+      data-testid = "product-card"
+      className = {clickableItemClasses}>
       <div className = {styles["image-container"]}>
         <img src = {plush.image} alt = "primary-image" />
       </div>
