@@ -76,14 +76,15 @@ function CartItem({item, handleChangeQuantity}){
             onKeyDown={preventMinus}
             onPaste={preventPasteNegative}
             onChange = {(e) => {
-              setEditQty(e.target.value);
+              setEditQty(Number(e.target.value));
               setIsUpdatingQty(true);
           }}/>
           {isUpdatingQty &&
             <>
             <button
               onClick = {() => {
-                handleChangeQuantity(item, editQty);
+                const numberQty = Number(editQty);
+                handleChangeQuantity(item, numberQty);
                 setIsUpdatingQty(false)
                 if(editQty < 30){
                   setIsInputBox(false);
@@ -94,7 +95,7 @@ function CartItem({item, handleChangeQuantity}){
             <button
               onClick = {() => {
                 setIsUpdatingQty(false)
-                setEditQty(item.quantity);
+                setEditQty(Number(item.quantity));
               }}
             >
               Cancel
