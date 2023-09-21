@@ -93,7 +93,7 @@ function ProductPage({cartItems, addCartItem}){
           </div>
           <div className = {styles["product-information-container"]}>
             <h1 className = {styles["item-name"]}>{item.title}</h1>
-            <h2 className = {styles["item-price"]}>${item.price}</h2>
+            <h2 className = {styles["item-price"]}>${convertCurrencyFormat(item.price)}</h2>
             <form htmlFor = "cart-quantity" className = {styles["qty-form"]}>
               <div className = {styles["same-line"]}>
                 <label htmlFor = "quantity">Quantity:</label>
