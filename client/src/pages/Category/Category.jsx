@@ -5,8 +5,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ClickableItem from "../Home/ClickableItem";
 import ErrorPage from "../Error/ErrorPage";
-import CATEGORIES from "../../constants/categories";
 import LoadingScreen from "../Loading/LoadingPage";
+import PropTypes from 'prop-types'
 
 function CategoryPage({cartItems}){
   const [categoryItems, setCategoryItems] = useState(null);
@@ -18,21 +18,11 @@ function CategoryPage({cartItems}){
   useEffect(() => {
     function getFetchUrl(name){
       if(name === "all")
-        return "https://fakestoreapi.com/products/"
-      
-      let apiCategory;
-      switch(name){
-        case "games":
-          apiCategory = CATEGORIES.Games;
-          break;
-        case "plushies":
-          apiCategory = CATEGORIES.Plushies;
-          break;
-        case "keychains":
-          apiCategory = CATEGORIES.Keychains;
-          break;
+        // TO-DO: change URL
+        return "http://localhost:3000/admin/api/products/all"
+      else {
+        return "http://localhost:3000/admin/api/products/" + name.charAt(0).toUpperCase() + name.slice(1);
       }
-      return "https://fakestoreapi.com/products/category/"+apiCategory;
     }
 
     async function getProducts(){
@@ -43,6 +33,7 @@ function CategoryPage({cartItems}){
           setError(true);
         } else {
           const data = await response.json();
+          console.log(data);
           setCategoryItems(data);
           setLoading(false);
         }
@@ -67,13 +58,17 @@ function CategoryPage({cartItems}){
         <section className = {styles["category-page"]}>
           <div className = {styles["item-container"]}>
             {categoryItems.map((item) => (
-              <ClickableItem plush = {item} key = {item.id} />
+              <ClickableItem item = {item} key = {item._id} />
             ))}
           </div>
         </section>
       <Footer />
     </>
   )
+}
+
+CategoryPage.propTypes = {
+  cartItems: PropTypes.array,
 }
 
 export default CategoryPage;

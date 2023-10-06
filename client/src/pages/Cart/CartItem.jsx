@@ -30,7 +30,7 @@ function CartItem({item, handleChangeQuantity}){
   return(
     <div className = {styles["cart-item"]}>
       <div className = {styles["product-image-name-container"]}>
-        <img className = {styles["product-image"]} src = {item.image} alt = {item.title} />
+        <img className = {styles["product-image"]} src = {item.imageUrl[0]} alt = {item.title} />
         <p className = {styles["product-name"]}>{item.title}</p>
       </div>
       <div className = {styles["quantity-container"]}>

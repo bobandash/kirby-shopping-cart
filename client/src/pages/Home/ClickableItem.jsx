@@ -5,12 +5,12 @@ import plushAnimationStyles from './FeaturedPlushies.module.css';
 import { useRef, useState, useEffect } from 'react';
 import { convertCurrencyFormat } from '../../utils/currency';
 
-function ClickableItem({plush}){
+function ClickableItem({item}){
   const navigate = useNavigate();
   const clickableItemRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  function redirectPlush(plushId){
+  function redirectItem(plushId){
     navigate("/products/" + plushId)
   }
 
@@ -29,24 +29,25 @@ function ClickableItem({plush}){
     <div 
       ref = {clickableItemRef}
       onClick = {() => {
-      redirectPlush(plush.id);
+      redirectItem(item._id);
     }} 
       data-testid = "product-card"
       className = {clickableItemClasses}>
       <div className = {styles["image-container"]}>
-        <img src = {plush.image} alt = "primary-image" />
+        <img src = {item.imageUrl[0]} alt = "primary-image" />
       </div>
-      <h2 className = {styles["product-name"]}>{plush.title}</h2>
-      <p className = {styles.price}>${convertCurrencyFormat(plush.price)}</p>
+      <h2 className = {styles["product-name"]}>{item.title}</h2>
+      <p className = {styles.price}>${convertCurrencyFormat(item.price)}</p>
     </div>
   )
 }
 
 ClickableItem.propTypes = {
-  plush: PropTypes.object,
+  item: PropTypes.object,
   image: PropTypes.string,
   title: PropTypes.string,
-  price: PropTypes.string
+  price: PropTypes.string,
+  imageUrl: PropTypes.array
 }
 
 

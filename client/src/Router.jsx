@@ -10,22 +10,22 @@ const Router = () => {
   const [cartItems, setCartItems] = useState([]);
 
   function addCartItem(item, itemQuantity){
-    const hasItem = cartItems.filter(cartItem => cartItem.id === item.id).length > 0 ? true : false;
+    const hasItem = cartItems.filter(cartItem => cartItem._id === item._id).length > 0 ? true : false;
 
     if(hasItem){
       setCartItems(cartItems.map(cartItem => {
-        if(cartItem.id === item.id){
-          return {...cartItem, quantity: cartItem.quantity + itemQuantity};
+        if(cartItem._id === item._id){
+          return {...cartItem, quantity: Number(cartItem.quantity) + Number(itemQuantity)};
         }
         return cartItem;
       }))
     } else {
-      setCartItems([...cartItems, {...item, quantity: itemQuantity}])
+      setCartItems([...cartItems, {...item, quantity: Number(itemQuantity)}])
     }
   }
 
   function removeCartItem(item){
-    setCartItems(cartItems.filter(cartItem => cartItem.id !== item.id));
+    setCartItems(cartItems.filter(cartItem => cartItem._id !== item._id));
   }
 
   function changeCartQuantity(item, newQuantity){
@@ -33,7 +33,7 @@ const Router = () => {
       removeCartItem(item);
     } else {
       setCartItems(cartItems.map(cartItem => {
-        if(cartItem.id === item.id){
+        if(cartItem._id === item._id){
           return {...cartItem, quantity: newQuantity};
         }
         return cartItem;
