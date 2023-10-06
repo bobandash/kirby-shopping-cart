@@ -60,7 +60,7 @@ function ProductPage({cartItems, addCartItem}){
   useEffect(() => {
     async function getProduct(id){
       try {
-        const response = await fetch('https://fakestoreapi.com/products/'+id);
+        const response = await fetch('http://localhost:3000/admin/api/products/id/'+id);
         const data = await response.json();
         setItem(data);
         setError(false);
@@ -89,7 +89,7 @@ function ProductPage({cartItems, addCartItem}){
       <section className = {styles["product-information-page"]}>
         <div className = {styles.container}>
           <div className = {styles["image-container"]}>
-            <img src = {item.image} className = {styles["product-image"]} />
+            <img src = {item.imageUrl[0]} className = {styles["product-image"]} />
           </div>
           <div className = {styles["product-information-container"]}>
             <h1 className = {styles["item-name"]}>{item.title}</h1>
