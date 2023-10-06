@@ -174,7 +174,8 @@
   }
 
   .product-image-name-container > p {
-    font-size: 18px;
+    font-size: 16px;
+    overflow: hidden;
   }
 
   .cart-item-header h1 {
@@ -206,7 +207,7 @@
     margin: 0;
     margin-left: 10px;
     width: 40%;
-    font-size: 12px;
+    font-size: 1px;
   }
   
   .product-image-name-container > img {
@@ -232,7 +233,7 @@
 
   .product-image-name-container > p {
     width: 70%;
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .quantity-container > * {
