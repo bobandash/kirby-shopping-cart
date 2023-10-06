@@ -34,13 +34,7 @@ const ProductSchema = new Schema({
     default: 0,
   },
   imageUrl: {
-    type: String,
-    validate: {
-      validator: function(value) {
-        // Regular expression to check for a valid URL
-        return /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/.test(value);
-      },
-    }
+    type: Schema.Types.Mixed,
   }
 })
 

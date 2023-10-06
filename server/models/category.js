@@ -12,7 +12,7 @@ const CategorySchema = new Schema({
   }
 })
 
-CategorySchema.virtual.get('url', function() {
+CategorySchema.virtual('url').get(function() {
   return `/${this.name}`;
 })
 
