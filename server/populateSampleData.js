@@ -29,7 +29,8 @@ async function createSamplePlushies(){
     categories[1],
     15.99,
     50,
-    ["https://i.imgur.com/xlqXDzr.jpg","https://i.imgur.com/8H3ag5n.jpg","https://i.imgur.com/IvGPz1m.jpg"]);
+    ["https://i.imgur.com/xlqXDzr.jpg","https://i.imgur.com/8H3ag5n.jpg","https://i.imgur.com/IvGPz1m.jpg"],
+    true);
 
   await createProduct(1001, 
     "Club Mocchi-Mocchi- Kirby Plush - Sleeping Squishy Collectible Kirby Plushies - 6 Inch",
@@ -37,26 +38,17 @@ async function createSamplePlushies(){
     categories[1],
     15.99,
     50,
-    ["https://i.imgur.com/TVM15Ai.jpg"]
-  )
-
-  await createProduct(1002, 
-    "Little Buddy Kirby Adventure All Star Collection 5.5\" Stuffed Plush, Multicolored", 
-    "Kirby is the main character of Nintendo's Kirby video game series created by Masahiro Sakurai and developed by HAL Laboratory. The Kirby series is one of Nintendo's many well-known game franchises, spanning nearly twenty games since 1992.", 
-    categories[1], 
-    13.99, 
-    50, 
-    ["https://i.imgur.com/Dor4xr1.jpg"]
-);
-
+    ["https://i.imgur.com/Dor4xr1.jpg"],
+    false);
+  
   await createProduct(1003, 
       "Club Mocchi-Mocchi- Kirby Plush - Kirby and Friend Plushie - Squishy Kirby Plushies - 15 Inch", 
       "Officially Licensed Product: This collectible Warpstar Kirby plush is the perfect companion for all kinds of pop culture collectors", 
       categories[1], 
       32.99, 
       50, 
-      ["https://i.imgur.com/RQI3gXv.jpg","https://i.imgur.com/RWG4ZT0.jpg"]
-  );
+      ["https://i.imgur.com/RQI3gXv.jpg","https://i.imgur.com/RWG4ZT0.jpg"],
+      false);
 
   await createProduct(1004, 
       "Little Buddy 1678 Kirby Adventure All Star - Cutter Kirby 2 Plush, 6\", Multi-Colored", 
@@ -64,8 +56,8 @@ async function createSamplePlushies(){
       categories[1], 
       19.76, 
       50, 
-      ["https://i.imgur.com/LwDbZGs.jpg"]
-  );
+      ["https://i.imgur.com/LwDbZGs.jpg"],
+      false);
 
     await createProduct(1005, 
       "Sanei Kirby Adventure All Star Collection KP02 Orange Waddle Dee 5\" Stuffed Plush", 
@@ -73,8 +65,8 @@ async function createSamplePlushies(){
       categories[1], 
       16.49, 
       10, 
-      ["https://i.imgur.com/eW0awjM.jpg","https://i.imgur.com/yLXfwM2.jpg"]
-  );
+      ["https://i.imgur.com/eW0awjM.jpg","https://i.imgur.com/yLXfwM2.jpg"],
+      true);
 
     await createProduct(1006, 
       "Little Buddy 1402 Kirby Adventure All Star Collection Meta Knight Plush, 5.5\"",
@@ -82,8 +74,8 @@ async function createSamplePlushies(){
       categories[1],
       22.38,
       50,
-      ["https://i.imgur.com/XNVsY1q.jpg","https://i.imgur.com/5LAEEZw.jpg"]
-  );
+      ["https://i.imgur.com/XNVsY1q.jpg","https://i.imgur.com/5LAEEZw.jpg"],
+      true);
 }
 
 async function createSampleGames(){
@@ -93,8 +85,8 @@ async function createSampleGames(){
     categories[0],
     50.94,
     50,
-    ["https://i.imgur.com/rO8V7pi.jpg"]
-  );
+    ["https://i.imgur.com/rO8V7pi.jpg"],
+    true);
 
   await createProduct(1011, 
       "Kirby and the Forgotten Land (Nintendo Switch)",
@@ -102,8 +94,8 @@ async function createSampleGames(){
       categories[0],
       46.96,
       50,
-      ["https://i.imgur.com/8wVPpgY.jpg"]
-  );
+      ["https://i.imgur.com/8wVPpgY.jpg"],
+      true);
 
   await createProduct(1012, 
       "Kirby Star Allies - Switch",
@@ -111,8 +103,8 @@ async function createSampleGames(){
       categories[0],
       44.75,
       50,
-      ["https://i.imgur.com/bc7WfvJ.jpg"]
-  );
+      ["https://i.imgur.com/bc7WfvJ.jpg"],
+      true);
 }
 
 async function createSampleKeychains(){
@@ -122,8 +114,8 @@ async function createSampleKeychains(){
     categories[2],
     9,
     0,
-    ["https://i.imgur.com/f2FYxmn.jpg"]
-  );
+    ["https://i.imgur.com/f2FYxmn.jpg"],
+    false);
 
   await createProduct(1008, 
       "Little Buddy 1710 Kirby Dangling Pose Dangler Plush, 3.5\"",
@@ -131,8 +123,8 @@ async function createSampleKeychains(){
       categories[2],
       12.99,
       50,
-      ["https://i.imgur.com/gJkjcLO.jpg"]
-  );
+      ["https://i.imgur.com/gJkjcLO.jpg"],
+      false);
 
   await createProduct(1009, 
       "Little Buddy 1711 Kirby Hovering Pose Dangler Plush, 3.5\"",
@@ -140,8 +132,8 @@ async function createSampleKeychains(){
       categories[2],
       11.99,
       50,
-      ["https://i.imgur.com/Dh59x7l.jpg"]
-  );
+      ["https://i.imgur.com/Dh59x7l.jpg"],
+      false);
 }
 
 async function createCategory(index, name, description){
@@ -150,7 +142,7 @@ async function createCategory(index, name, description){
   categories[index] = newCategory;
 }
 
-async function createProduct(_id, title, description, category, price, inventory, imageUrl){
-  const newProduct = new Product({_id, title, description, category, price, inventory, imageUrl})
+async function createProduct(_id, title, description, category, price, inventory, imageUrl, featured){
+  const newProduct = new Product({_id, title, description, category, price, inventory, imageUrl, featured})
   await newProduct.save();
 }
