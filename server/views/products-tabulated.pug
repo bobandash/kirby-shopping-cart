@@ -1,0 +1,38 @@
+extends layout 
+
+block content 
+  div.container
+    h1= title
+    div.action-btns
+      button(
+        method="GET"
+      ) Add Products 
+      button(
+        method="GET"
+      ) Add Categories
+    div.search-bar-container
+      form.searchbar(action="GET") 
+        input(
+          type= "text"
+          placeholder= "Search For Products")
+        button(
+          type= "Submit"
+        ) Search
+    table.products-tabulated
+      tr 
+        th Image
+        th Product Name
+        th Inventory
+        th Category
+        th Price ($)
+        th Update
+      each product in products 
+        tr
+          td 
+            img(src=product.imageUrl[0])
+          td.product-name #{product.title}
+          td #{product.inventory}
+          td #{product.category.name}
+          td #{product.price}
+          td
+            button(method="POST") Update

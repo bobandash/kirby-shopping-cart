@@ -43,3 +43,12 @@ exports.featured_games_list = asyncHandler(async (req, res, next) => {
   products = products.slice(0, 3);
   res.json(products);
 })
+
+exports.products_tabulated = asyncHandler(async (req, res, next) => {
+  const products = await Product.find({}).populate('category').exec();
+  res.render("products-tabulated", {
+    title: 'Admin Site',
+    products: products,
+
+  })
+})

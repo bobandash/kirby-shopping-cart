@@ -1,8 +1,85 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body, html {
+  margin: 0;
+  background-color: #F6F6F6;
 }
 
-a {
-  color: #00B7FF;
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.action-btns {
+  display: flex;
+  margin: 0 auto;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.action-btns button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: lightpink;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.action-btns button:hover {
+  cursor: pointer;
+  background-color: pink;
+}
+
+.searchbar {
+  display: flex;
+}
+
+.searchbar input {
+  width: 100%;
+}
+
+.products-tabulated th {
+  padding: 10px 0px;
+}
+
+.products-tabulated tr {
+  display: grid;
+  grid-template-columns: 80px minmax(200px, 3fr) repeat(4, minmax(60px, 1fr));
+  grid-column-gap: 20px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.products-tabulated tr:nth-child(2n + 1) {
+  background-color: lightpink;
+}
+
+.products-tabulated tr:nth-child(2n + 2) {
+  background-color: white;
+}
+
+
+.products-tabulated tr:first-child {
+  background-color: pink;
+}
+
+.products-tabulated tr img {
+  width: 40px;
+  border: 1px solid gray;
+}
+
+.products-tabulated tr td:not(.product-name) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-name {
+  display: flex;
+  text-align: left;
+  align-items: center;
 }

@@ -3,6 +3,9 @@ var router = express.Router();
 const productController = require('../controller/productController')
 const productInstanceController = require('../controller/productInstanceController');
 
+/*FOR THE ADMIN VIEW*/
+router.get('/', productController.products_tabulated)
+
 /* FOR CATEGORY OPERATIONS */
 router.get('/api/featured/plush', productController.featured_plush_list);
 router.get('/api/featured/game', productController.featured_games_list);
