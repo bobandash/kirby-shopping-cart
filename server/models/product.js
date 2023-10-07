@@ -35,6 +35,10 @@ const ProductSchema = new Schema({
   },
   imageUrl: {
     type: Schema.Types.Mixed,
+  },
+  featured: {
+    type: Boolean,
+    default: false
   }
 })
 
