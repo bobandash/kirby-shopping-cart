@@ -77,14 +77,14 @@ function FeaturedGames({games}){
         <h1 ref = {headerRef} className = {headerClasses}>Featured Games</h1>
         <div className = {styles["game-images-container"]}>
           <button onClick = {decrementActiveGameNumber} className = {styles["caret-btn"]}><i className="fa-solid fa-angle-left" aria-label="Decrement Active Game Number"></i></button>
-          <div onClick = {() => redirectToItem(games[activeGameNumber].id)} className = {styles["clickable-images-container"]}>
-            <img src = {games[activeGameNumber].image} className = {styles["game-image"]} alt = {games[activeGameNumber].title}/>
+          <div onClick = {() => redirectToItem(games[activeGameNumber]._id)} className = {styles["clickable-images-container"]}>
+            <img src = {games[activeGameNumber].imageUrl[0]} className = {styles["game-image"]} alt = {games[activeGameNumber].title}/>
           </div>
           <button onClick = {incrementActiveGameNumber} className = {styles["caret-btn"]}><i className="fa-solid fa-angle-right" aria-label="Increment Active Game Number"></i></button>
         </div>
         {games.length >= 2 && 
           <div className = {styles["circle-nav-container"]}>
-            {games.map((game,index) => createCircleGameNav(index, game.id))}
+            {games.map((game,index) => createCircleGameNav(index, game._id))}
           </div>
         }
       </div>
