@@ -42,7 +42,7 @@ function Cart({cartItems, handleChangeQuantity}){
       <div className = {styles.container}>
         <CartItemsHeader />
         {cartItems.map(cartItem => (
-          <CartItem key = {cartItem.id} item = {cartItem} handleChangeQuantity={handleChangeQuantity} />
+          <CartItem key = {cartItem._id} item = {cartItem} handleChangeQuantity={handleChangeQuantity} />
         ))}
         <CartItemsFooter totalPrice = {totalCartPrice} />
       </div>

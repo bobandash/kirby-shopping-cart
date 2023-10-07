@@ -33,7 +33,6 @@ function CategoryPage({cartItems}){
           setError(true);
         } else {
           const data = await response.json();
-          console.log(data);
           setCategoryItems(data);
           setLoading(false);
         }

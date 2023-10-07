@@ -48,7 +48,7 @@ function FeaturedPlushies({plushies}){
         <h1 ref = {headerRef} className = {headerClasses}>Featured Plushies</h1>
         <div className = {styles["plush-container"]}>
           {plushies.map(plush => (
-            <ClickableItem item = {plush} key = {plush.id}/>
+            <ClickableItem item = {plush} key = {plush._id}/>
           ))}
         </div>
         <button 
