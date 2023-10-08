@@ -1,0 +1,27 @@
+link(rel='stylesheet', href='/stylesheets/header.css')
+script.
+  function redirectAddProduct() {
+    window.location.href = "/admin/add/";
+  }
+header.header
+  a(href="/")
+    img(src= "/images/kirby-logo.png"
+      alt = "Kirby Logo")
+  div.search-bar-container
+    form.searchbar(action="GET") 
+      input(
+        type= "text"
+        placeholder= "Enter Product")
+      button(
+        type= "Submit"
+      ) Search
+  div 
+    p Admin
+div.action-btns
+  button(
+    method="GET"
+    onclick=`redirectAddProduct()`
+  ) Add Products 
+  button(
+    method="GET"
+  ) Add Categories

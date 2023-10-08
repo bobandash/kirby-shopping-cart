@@ -1,0 +1,81 @@
+.header {
+  display: flex;
+  background-color: lightpink;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar-container {
+  min-width: 50%;
+  width: 400px;
+}
+
+.header form {
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.header input {
+  width: 85%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 5px 15px;
+  height: 100%;
+  font-size: 14px;
+  border: none;
+}
+
+.header input:focus-visible {
+  outline: none;
+}
+
+.header button {
+  font-size: 14px;
+  width: 15%;
+  background-color: #e4000f;
+  border: 0px;
+  border-left: 1px solid black;
+  color: white;
+  padding: 5px 0px;
+  text-align: center;
+}
+
+.header button:hover {
+  cursor: pointer;
+}
+
+.header button {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.header img {
+  width: 40px;
+}
+
+.action-btns {
+  display: flex;
+  margin: 0 auto;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.action-btns button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: lightpink;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.action-btns button:hover {
+  cursor: pointer;
+  background-color: pink;
+}
