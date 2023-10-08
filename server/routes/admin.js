@@ -5,6 +5,8 @@ const productInstanceController = require('../controller/productInstanceControll
 
 /*FOR THE ADMIN VIEW*/
 router.get('/', productController.products_tabulated)
+router.get('/edit/:id', productInstanceController.product_edit_get)
+router.get('/add', productInstanceController.product_add_get)
 
 /* FOR CATEGORY OPERATIONS */
 router.get('/api/featured/plush', productController.featured_plush_list);
