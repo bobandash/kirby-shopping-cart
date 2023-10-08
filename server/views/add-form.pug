@@ -1,0 +1,65 @@
+extends layout 
+
+block content
+  title= title
+  link(rel='stylesheet', href='/stylesheets/form.css')
+  body
+    div.form-container
+      form.edit-form(
+        action="POST"
+        id= "edit-product"
+      )
+        label(
+          for= "sku"
+        ) Sku
+        input(
+          type= "text"
+          name= "sku"
+          id= "sku"
+        )
+        label(
+          for= "title"
+        ) Title
+        input(
+          type="text"
+          name="title"
+          id= "title"
+        )
+        label(
+          for= "description"
+        ) Description
+        textarea(
+          rows="5"
+          id= "description"
+        )
+        label(
+          for= "category"
+        ) Category
+        select(
+          name= "category"
+        )
+          each category in categories
+            option(
+              value= category.name
+            ) #{category.name}         
+        label(
+          for= "price"
+        ) Price
+        input(
+          type="number"
+          id= "price"
+        )
+        label(
+          for= "inventory"
+        ) Inventory 
+        input(
+          type="number"
+          id= "inventory"
+        )
+        div.buttons-container
+          button.delete-product(
+            method="POST"
+          ) Delete
+          button.save-btn(
+            type="Submit"
+            method="POST") Update

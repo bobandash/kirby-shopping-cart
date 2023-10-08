@@ -7,64 +7,64 @@ body, html {
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
 .container {
   max-width: 1200px;
   width: 95%;
   margin: 0 auto;
 }
 
-.action-btns {
-  display: flex;
-  margin: 0 auto;
-  gap: 10px;
-  justify-content: flex-end;
-  margin-bottom: 20px;
-}
-
-.action-btns button {
-  padding: 10px 20px;
-  border-radius: 10px;
-  background-color: lightpink;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.action-btns button:hover {
-  cursor: pointer;
-  background-color: pink;
-}
-
-.searchbar {
-  display: flex;
-}
-
-.searchbar input {
-  width: 100%;
-}
-
 .products-tabulated th {
   padding: 10px 0px;
 }
 
+.products-tabulated {
+  margin: 25px 0px;
+}
+
 .products-tabulated tr {
   display: grid;
-  grid-template-columns: 80px minmax(200px, 3fr) repeat(4, minmax(60px, 1fr));
+  grid-template-columns: 80px minmax(60px, 1fr) minmax(200px, 3fr) repeat(3, minmax(60px, 1fr));
   grid-column-gap: 20px;
   padding: 10px;
   border: 1px solid black;
 }
 
-.products-tabulated tr:nth-child(2n + 1) {
-  background-color: lightpink;
+.products-tabulated tr:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.products-tabulated tr:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.product-row:hover {
+  cursor: pointer;
+}
+
+.products-tabulated tr:nth-child(2n + 3) {
+  background-color: pink;
+}
+
+.products-tabulated tr:nth-child(2n + 3):hover {
+  background-color: rgb(252, 170, 182);
 }
 
 .products-tabulated tr:nth-child(2n + 2) {
   background-color: white;
 }
 
+.products-tabulated tr:nth-child(2n + 2):hover {
+  background-color: rgb(244, 236, 236);
+}
 
 .products-tabulated tr:first-child {
-  background-color: pink;
+  background-color: lightpink;
 }
 
 .products-tabulated tr img {
@@ -82,4 +82,13 @@ body, html {
   display: flex;
   text-align: left;
   align-items: center;
+}
+
+.product-name > a {
+  text-decoration: none;
+  color: black;
+}
+
+.product-name > a:hover {
+  text-decoration: underline;
 }

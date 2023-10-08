@@ -1,0 +1,90 @@
+extends layout 
+
+block content
+  title= title
+  link(rel='stylesheet', href='/stylesheets/form.css')
+  body
+    div.form-container
+      form.edit-form(
+        action="POST"
+        id= "edit-product"
+      )
+        label(
+          for= "sku"
+        ) Sku
+        input.read-only(
+          type= "text"
+          value= product._id
+          name= "sku"
+          id= "sku"
+          readOnly
+        )
+        label(
+          for= "title"
+        ) Title
+        input(
+          type="text"
+          value= product.title
+          name="title"
+          id= "title"
+        )
+        label(
+          for= "description"
+        ) Description
+        textarea(
+          rows="5"
+          id= "description"
+        )
+          #{product.description}
+        label(
+          for= "category"
+        ) Category
+        select(
+          name= "category"
+        )
+          each category in categories
+            if category.name == product.category.name
+              option(
+                value= category.name
+                selected= true
+              ) #{category.name}
+            else 
+              option(
+                value= category.name
+              ) #{category.name}         
+        label(
+          for= "price"
+        ) Price
+        input(
+          type="number"
+          id= "price"
+          value= product.price
+        )
+        label(
+          for= "inventory"
+        ) Inventory 
+        input(
+          type="number"
+          id= "inventory"
+          value= product.inventory
+        )
+        label(
+          for= "image"
+        ) Images
+        div.images-container
+          each image in product.imageUrl 
+            div
+              img(
+                type="text"
+                id= "image"
+                src= image
+              )
+          div.add-img-container 
+            a(href = "") Add By Image URL
+        div.buttons-container
+          button.delete-product(
+            method="POST"
+          ) Delete
+          button.save-btn(
+            type="Submit"
+            method="POST") Update

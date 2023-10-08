@@ -1,0 +1,111 @@
+.form-container {
+  margin: 20px 0px;
+  display: flex;
+}
+
+.edit-form {
+  width: 80%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+label, option {
+  font-size: 24px;
+}
+
+label:nth-child(n+2){
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+input, textarea, select{
+  font-size: 18px;
+  border: 1px solid lightgray;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.read-only {
+  background-color: lightgray;
+}
+
+.read-only:focus {
+  outline: none;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.buttons-container button {
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: lightpink;
+}
+
+.save-btn:hover {
+  background-color: rgb(249, 193, 201);
+}
+
+.delete-product {
+  background-color: rgba(255, 0, 0, 0.77);
+}
+
+.delete-product:hover {
+  background-color: rgba(251, 41, 41, 0.77);
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.images-container > div {
+  aspect-ratio: 1/1;
+  width: 40%;
+}
+
+.images-container > div:first-child {
+  padding: 10px;
+  background-color: white;
+}
+
+.images-container > div {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+}
+
+.images-container img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.images-container > div:nth-child(n+2){
+  width: 20%;
+  height: 40%;
+}
+
+.add-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
