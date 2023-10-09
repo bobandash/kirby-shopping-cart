@@ -3,6 +3,7 @@ extends layout
 block content
   title= title
   link(rel='stylesheet', href='/stylesheets/form.css')
+  - const isFeatured = product.isFeatured === true ? true : false
   body
     div.form-container
       form.edit-form(
@@ -33,6 +34,7 @@ block content
         ) Description
         textarea(
           rows="5"
+          name= "description"
           id= "description"
         )
           #{product.description}
@@ -41,6 +43,7 @@ block content
         ) Category
         select(
           name= "category"
+          id= "category"
         )
           each category in categories
             if category.name == product.category.name
@@ -68,6 +71,30 @@ block content
           id= "inventory"
           value= product.inventory
         )
+        div.radio-group
+          p Featured
+          div
+            input(
+              type= "radio"
+              id = "featured-true"
+              name = "featured"
+              value= "true"
+              checked= (product.featured === true)
+            )
+            label(
+              for = "featured-true"
+            ) True
+          div
+            input(
+              type= "radio"
+              id = "featured-false"
+              name = "featured"
+              value= "false"
+              checked= (product.featured === false)
+            )
+            label(
+              for = "featured-false"
+            ) False
         label(
           for= "image"
         ) Images
@@ -76,7 +103,6 @@ block content
             div
               img(
                 type="text"
-                id= "image"
                 src= image
               )
           div.add-img-container 
