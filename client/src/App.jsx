@@ -4,7 +4,6 @@ import FeaturedGames from './pages/Home/FeaturedGames'
 import FeaturedPlushies from './pages/Home/FeaturedPlushies'
 import Footer from './components/Footer'
 import { useState, useEffect } from 'react'
-import CATEGORIES from './constants/categories'
 import LoadingScreen from './pages/Loading/LoadingPage'
 import PropTypes from 'prop-types'
 
