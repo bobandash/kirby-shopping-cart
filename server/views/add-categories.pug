@@ -1,0 +1,29 @@
+extends layout 
+
+block content
+  div.container
+    h1= title
+    form(method="POST")
+      label(for= "add-categories") Add Categories
+      input(type="text"
+        name= "add-categories"
+        id= "add-categories")
+      button.add-category(type="submit") Add
+    if errors 
+      ul
+      each error in errors
+        li #{error.msg}
+    h2= "Existing Categories"
+    table
+      thead 
+        th Category Name
+        th Num Products
+        th Delete
+      tbody 
+        each category in categories 
+          tr
+            td #{category.name}
+            td #{category.num_products}
+            td
+              form(method="POST" action = `/admin/categories/delete/${category._id}`)
+                button Delete
