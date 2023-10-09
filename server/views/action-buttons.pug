@@ -1,3 +1,10 @@
+script.
+  function redirectAddProduct() {
+    window.location.href = "/admin/add/";
+  }
+  function redirectCategories(){
+    window.location.href = "/admin/categories";
+  }
 div.action-btns
   button(
     method="GET"
@@ -5,4 +12,5 @@ div.action-btns
   ) Add Products 
   button(
     method="GET"
+    onclick=`redirectCategories()`
   ) Add Categories
