@@ -51,10 +51,9 @@ exports.category_add_post = [
 exports.category_delete_post = asyncHandler(async (req, res, next) => {
   const categoryId = req.params.id;
   const numProductsInCategory = (await Product.find({category: categoryId})).length
+  const deleteCategoryErrors = [];
   if(numProductsInCategory === 0){
     await Category.findByIdAndRemove(categoryId);
-    res.redirect('/admin/categories')
-  } else {
     res.redirect('/admin/categories')
   }
 })
