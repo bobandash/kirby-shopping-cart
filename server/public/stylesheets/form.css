@@ -1,6 +1,7 @@
 .form-container {
   margin: 20px 0px;
   display: flex;
+  flex-direction: column;
 }
 
 .edit-form {
@@ -15,8 +16,18 @@
   border: 1px solid black;
 }
 
-label, option {
+.edit-form label, p {
   font-size: 24px;
+  margin: 12px 0px;
+}
+
+.edit-form textarea, input, .featured label, option, select {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 22px;
+}
+
+.featured label {
+  margin-left: 4px;
 }
 
 label:nth-child(n+2){
@@ -25,7 +36,6 @@ label:nth-child(n+2){
 }
 
 input, textarea, select{
-  font-size: 18px;
   border: 1px solid lightgray;
   padding-left: 4px;
   padding-right: 4px;
@@ -71,15 +81,25 @@ input, textarea, select{
   background-color: rgba(251, 41, 41, 0.77);
 }
 
-.images-container {
+.current-images {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 3%;
 }
 
-.images-container > div {
+.image-container {
   aspect-ratio: 1/1;
-  width: 40%;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  padding: 10px;
+  width: 30%;
+}
+
+.image-container > img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 .images-container > div:first-child {
@@ -92,13 +112,6 @@ input, textarea, select{
   border-radius: 20px;
 }
 
-.images-container img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  margin: 0 auto;
-}
-
 .images-container > div:nth-child(n+2){
   width: 20%;
   height: 40%;
@@ -108,4 +121,13 @@ input, textarea, select{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.image-links input {
+  display: block;
+  width: 100%;
+}
+
+.image-links input:nth-child(n+2) {
+  margin-top: 6px;
 }
