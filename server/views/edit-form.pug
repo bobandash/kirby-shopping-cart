@@ -3,12 +3,16 @@ extends layout
 block content
   title= title
   link(rel='stylesheet', href='/stylesheets/form.css')
-  - const isFeatured = product.isFeatured === true ? true : false
+  - const numImages = product.imageUrl.length;
+  - const numImagesToAdd = 6 - numImages;
+
   body
     div.form-container
       form.edit-form(
-        action="POST"
+        method="POST"
         id= "edit-product"
+        action= `/admin/edit/${product._id}`
+        enctype="multipart/form-data"
       )
         label(
           for= "sku"
@@ -37,7 +41,7 @@ block content
           name= "description"
           id= "description"
         )
-          #{product.description}
+          | #{product.description}
         label(
           for= "category"
         ) Category
@@ -61,6 +65,7 @@ block content
         input(
           type="number"
           id= "price"
+          name= "price"
           value= product.price
         )
         label(
@@ -69,11 +74,12 @@ block content
         input(
           type="number"
           id= "inventory"
+          name= "inventory"
           value= product.inventory
         )
         div.radio-group
           p Featured
-          div
+          div.featured
             input(
               type= "radio"
               id = "featured-true"
@@ -84,7 +90,7 @@ block content
             label(
               for = "featured-true"
             ) True
-          div
+          div.featured
             input(
               type= "radio"
               id = "featured-false"
@@ -95,22 +101,24 @@ block content
             label(
               for = "featured-false"
             ) False
+        p Current Images
+        div.current-images 
+          each imageUrl in product.imageUrl 
+            div.image-container
+              img(src= imageUrl)
         label(
           for= "image"
-        ) Images
-        div.images-container
-          each image in product.imageUrl 
-            div
-              img(
-                type="text"
-                src= image
-              )
-          div.add-img-container 
-            a(href = "") Add By Image URL
+        ) Image Links
+        div.image-links
+          - let imageIndex = 1;
+          each imageUrl in product.imageUrl
+            input(type="text" name = "image" value= imageUrl required= (imageIndex === 1) id= (imageIndex === 1 ? "image" : "") placeholder = `Image ${imageIndex}`)
+            - imageIndex += 1
+          - let i = 0
+          while i < numImagesToAdd 
+            input(type="text" name = "image" placeholder = `Image ${imageIndex}`)
+            - i += 1
+            - imageIndex += 1
         div.buttons-container
-          button.delete-product(
-            method="POST"
-          ) Delete
-          button.save-btn(
-            type="Submit"
-            method="POST") Update
+            button.delete-product(method="POST" formAction=`/admin/products/delete/${product._id}`) Delete
+            button.save-btn(type="Submit" method="POST") Update
