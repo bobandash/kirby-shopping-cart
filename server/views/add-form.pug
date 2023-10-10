@@ -1,12 +1,19 @@
 extends layout 
 
 block content
-  title= title
   link(rel='stylesheet', href='/stylesheets/form.css')
   body
+    h1= title
     div.form-container
+      if errors 
+        p Errors to Fix To Continue:
+        ul 
+          each error in errors 
+            li= error.msg
+      if message 
+        p= message 
       form.edit-form(
-        action="POST"
+        method="POST"
         id= "edit-product"
       )
         label(
@@ -31,23 +38,34 @@ block content
         textarea(
           rows="5"
           id= "description"
+          name= "description"
         )
         label(
           for= "category"
         ) Category
         select(
           name= "category"
+          id= "category"
         )
           each category in categories
-            option(
-              value= category.name
-            ) #{category.name}         
+            if currentCategory && category.name == currentCategory 
+              option(
+                value= category._id
+                selected= true
+              ) #{category.name}
+            else
+              option(
+                value= category._id
+              ) #{category.name}       
         label(
           for= "price"
         ) Price
         input(
           type="number"
           id= "price"
+          name= "price"
+          min= "0.01"
+          step="any"
         )
         label(
           for= "inventory"
@@ -55,11 +73,41 @@ block content
         input(
           type="number"
           id= "inventory"
+          name= "inventory"
         )
+        div.radio-group
+          p Featured
+          div.featured
+            input(
+              type= "radio"
+              id = "featured-true"
+              name = "featured"
+              value= "true"
+            )
+            label(
+              for = "featured-true"
+            ) True
+          div.featured
+            input(
+              type= "radio"
+              id = "featured-false"
+              name = "featured"
+              value= "false"
+              checked= true
+            )
+            label(
+              for = "featured-false"
+            ) False
+        label(
+          for= "image"
+        ) Image Links
+        div.image-links
+          - let i = 1
+          - let numImagesToAdd = 6;
+          while i <= numImagesToAdd 
+            input(type="text" name = "image" placeholder = `Image ${i}` required= (i === 1) id = (i === 1 ? "image" : ""))
+            - i += 1
         div.buttons-container
-          button.delete-product(
-            method="POST"
-          ) Delete
           button.save-btn(
             type="Submit"
-            method="POST") Update
+            method="POST") Create Product
