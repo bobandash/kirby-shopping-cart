@@ -8,11 +8,16 @@ block content
 
   body
     div.form-container
+      if errors 
+        p Errors to Fix To Continue:
+        ul 
+          each error in errors 
+            li= error.msg
+      if message 
+        p= message 
       form.edit-form(
         method="POST"
         id= "edit-product"
-        action= `/admin/edit/${product._id}`
-        enctype="multipart/form-data"
       )
         label(
           for= "sku"
@@ -50,14 +55,19 @@ block content
           id= "category"
         )
           each category in categories
-            if category.name == product.category.name
-              option(
-                value= category.name
-                selected= true
-              ) #{category.name}
+            if currentCategory && category.name == currentCategory 
+                option(
+                  value= category._id
+                  selected= true
+                ) #{category.name}
+            else if product.category.name && category.name == product.category.name
+                option(
+                  value= category._id
+                  selected= true
+                ) #{category.name}
             else 
               option(
-                value= category.name
+                value= category._id
               ) #{category.name}         
         label(
           for= "price"
@@ -121,4 +131,4 @@ block content
             - imageIndex += 1
         div.buttons-container
             button.delete-product(method="POST" formAction=`/admin/products/delete/${product._id}`) Delete
-            button.save-btn(type="Submit" method="POST") Update
+            button.save-btn(type="Submit" method="POST" formAction=`/admin/edit/${product._id}`) Update

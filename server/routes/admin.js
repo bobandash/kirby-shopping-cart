@@ -15,13 +15,14 @@ router.get('/categories', categoryController.category_add_delete);
 router.post('/categories', categoryController.category_add_post);
 router.post('/categories/delete/:id', categoryController.category_delete_post)
 
+/* FOR PRODUCT OPERATIONS */
+router.post('/products/delete/:id', productInstanceController.product_delete);
+router.post('/edit/:id', productInstanceController.product_edit)
+
 /*FOR API CALLS*/
 router.get('/api/featured/plush', productController.featured_plush_list);
 router.get('/api/featured/game', productController.featured_games_list);
 router.get('/api/products/:category', productController.products_list);
-/* FOR FEATURED PRODUCT OPERATIONS */
-
-
 
 /* FOR INDIVIDUAL PRODUCT OPERATIONS */
 router.get('/api/products/id/:id', productInstanceController.product_information)
