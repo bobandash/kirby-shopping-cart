@@ -18,12 +18,17 @@ block content
       thead 
         th Category Name
         th Num Products
+        th Update
         th Delete
       tbody 
         each category in categories 
           tr
-            td #{category.name}
+            td 
+              input(type="text" form= category._id value = category.name name = "category-update")
             td #{category.num_products}
+            td 
+              form(id= category._id method="POST" action = `/admin/categories/update/${category._id}`)
+                button Update             
             td
               form(method="POST" action = `/admin/categories/delete/${category._id}`)
                 button Delete

@@ -45,12 +45,70 @@ exports.product_edit_get = asyncHandler(async (req, res, next) => {
 })
 
 exports.product_add_get = asyncHandler(async (req, res, next) => {
-  const listOfCategories = await Category.find({}).exec();
+  const listOfCategories = await Category.find({}).sort({name: 1}).exec();
   res.render('add-form', {
     title: "Add Products",
     categories: listOfCategories
   })
 })
+
+exports.product_add_post = [
+  body('title', 'Title cannot be empty')
+    .trim()
+    .isLength({min: 1})
+    .escape(),
+  body('description', 'Description cannot be empty')
+    .trim()
+    .isLength({min: 1})
+    .escape(),
+  body('price', 'Price must be formatted with at most two decimal points')
+    .trim()
+    .custom(value => checkDecimalPlaces(value, 2))
+    .escape(),
+  body('inventory', "Inventory has to be at least 0")
+    .trim()
+    .custom(value => checkDecimalPlaces(value, 0))
+    .escape(),
+  asyncHandler(async (req, res, next) => {
+    const errors = validationResult(req).array();
+    const alreadyHasSku = await Product.findById(req.body.sku).exec();
+    const listOfCategories = await Category.find({}).exec();
+    if(alreadyHasSku !== null){
+      errors.push({msg: "Sku already exists"});
+    }
+    const newProduct = new Product({
+      _id: req.body.sku,
+      title: he.decode(req.body.title),
+      description: he.decode(req.body.description),
+      category: req.body.category,
+      price: req.body.price,
+      inventory: req.body.inventory,
+      featured: (req.body.featured === "true" ? true : false),
+      //TO-DO: validate imageUrl and change to file upload
+      imageUrl: req.body.image,
+    })
+    if(errors.length > 0){
+      const category = await Category.findById(newProduct.category).exec();
+      const currentCategory = category.name;
+      res.render('add-form', {
+        title: "Add Product",
+        product: newProduct,
+        categories: listOfCategories,
+        currentCategory: currentCategory,
+        errors: errors
+      })
+    } else {
+      await newProduct.save();
+      const updatedProductCategoryPopulated = await Product.findById(req.body.sku).populate('category').exec();
+      res.render('add-form',{
+        title: "Add Product",
+        product: updatedProductCategoryPopulated,
+        categories: listOfCategories,
+        message: 'Successfully added'
+      })
+    }
+  })
+]
 
 
 exports.product_edit = [
@@ -114,10 +172,8 @@ exports.product_edit = [
     }
 
     if(errors.length > 0){
-      // TO-DO: get product.category.name
       const category = await Category.findById(updatedProduct.category).exec();
       const currentCategory = category.name;
-      console.log(updatedProduct);
       res.render('edit-form', {
         title: "Edit Product",
         product: updatedProduct,
