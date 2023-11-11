@@ -16,6 +16,9 @@ html, body, #root {
   font-family: "Bubblegum Sans", "Times New Roman", "Serif";
 }
 
+h1 {
+  font-family: "KirbyClassic", "Bubblegum Sans", "Times New Roman"
+}
 
 button {
   background-color: hotpink;
