@@ -4,6 +4,12 @@
   flex-direction: column;
 }
 
+.form-name {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .edit-form {
   width: 80%;
   max-width: 800px;
@@ -85,6 +91,7 @@ input, textarea, select{
   display: flex;
   flex-wrap: wrap;
   gap: 3%;
+  row-gap: 20px;
 }
 
 .image-container {
@@ -131,3 +138,4 @@ input, textarea, select{
 .image-links input:nth-child(n+2) {
   margin-top: 6px;
 }
+
