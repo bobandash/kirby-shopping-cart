@@ -1,5 +1,5 @@
 .featured-items-container {
-  background: url('../../assets/kirby-star-allies-bg.jpeg');
+  background: url("../../assets/kirby-star-allies-bg.jpeg");
   background-position: center center;
   background-size: cover;
   padding-top: 60px;
@@ -59,9 +59,8 @@
   max-height: 100%;
 }
 
-
 .active {
-  background-color: rgb(255, 163, 184);;
+  background-color: rgb(255, 163, 184);
 }
 
 @media screen and (min-width: 800px) {
@@ -89,7 +88,7 @@
     aspect-ratio: 1.777 / 1;
     background-color: white;
     border: 5px solid black;
-  }  
+  }
 
   .clickable-images-container > img {
     display: block;

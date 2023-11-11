@@ -1,5 +1,5 @@
 .landing-screen {
-  background-color: rgb(255, 221, 226); 
+  background-color: rgb(255, 221, 226);
   height: 85vh;
   background-size: cover;
   background-position: center center;
@@ -36,7 +36,7 @@
   color: rgb(242, 242, 242);
   text-shadow:
     5px 5px 0 #000,
-    -3px -3px 0 #000,  
+    -3px -3px 0 #000,
     3px -3px 0 #000,
     -3px 3px 0 #000,
     3px 3px 0 #000;
@@ -83,8 +83,6 @@
   }
 }
 
-
-
 @media screen and (min-width: 800px) {
   .store-information {
     width: 60%;
@@ -113,7 +111,8 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .store-information, .kirby-sitting {
+  .store-information,
+  .kirby-sitting {
     width: 50%;
   }
 
@@ -148,8 +147,9 @@
   .top-middle {
     right: 17.5%;
     top: 0%;
-    animation: 2s linear 0s 1 hide, 
-               1s ease-in 2s 1 float-down;
+    animation:
+      2s linear 0s 1 hide,
+      1s ease-in 2s 1 float-down;
   }
 
   .top-left {
@@ -161,7 +161,8 @@
   .top-right {
     right: -10%;
     top: 10%;
-    animation: 1s linear 0s 1 hide, 
-               1s ease-in 1s 1 float-down;
+    animation:
+      1s linear 0s 1 hide,
+      1s ease-in 1s 1 float-down;
   }
 }

@@ -1,4 +1,5 @@
-.cart-section, .no-items-container {
+.cart-section,
+.no-items-container {
   background-color: rgb(255, 221, 226);
   min-height: 60vh;
 }
@@ -37,13 +38,15 @@
   margin: 12px 0px;
 }
 
-.cart-item-header, .cart-item, .cart-item-footer {
+.cart-item-header,
+.cart-item,
+.cart-item-footer {
   display: grid;
   grid-template-columns: 1fr 1.4fr 1fr 1fr;
   column-gap: 20px;
 }
 
-.cart-item:last-of-type{
+.cart-item:last-of-type {
   padding-bottom: 30px;
   border-bottom: 1px solid black;
   margin-bottom: 30px;
@@ -62,7 +65,8 @@
   flex-direction: column;
 }
 
-.quantity-container > :nth-child(n+2), .quantity-input-container > *:nth-child(n + 2){
+.quantity-container > :nth-child(n + 2),
+.quantity-input-container > *:nth-child(n + 2) {
   margin-top: 7.5px;
 }
 
@@ -72,7 +76,7 @@
 
 .quantity-input-container {
   text-align: center;
-  font-family: 'KirbyClassic', cursive;
+  font-family: "KirbyClassic", cursive;
   position: relative;
 }
 
@@ -96,19 +100,18 @@
   cursor: pointer;
 }
 
-.quantity-select, .quantity-select option {
+.quantity-select,
+.quantity-select option {
   font-size: 12px !important;
 }
 
 .quantity-select option {
-  font-family: 'KirbyClassic', cursive;
+  font-family: "KirbyClassic", cursive;
 }
-
 
 .quantity-container > * {
   width: 100%;
 }
-
 
 .product-image-name-container {
   display: flex;
@@ -160,7 +163,8 @@
     width: 70%;
   }
 
-  .quantity-select, .quantity-select option {
+  .quantity-select,
+  .quantity-select option {
     font-size: 16px !important;
   }
   .cart-item * {
@@ -169,7 +173,8 @@
 }
 
 @media screen and (min-width: 800px) {
-  .quantity-select, .quantity-select option {
+  .quantity-select,
+  .quantity-select option {
     font-size: 18px !important;
   }
 
@@ -202,14 +207,14 @@
     display: flex;
     flex-direction: row;
   }
-  
+
   .product-image-name-container > p {
     margin: 0;
     margin-left: 10px;
     width: 40%;
     font-size: 1px;
   }
-  
+
   .product-image-name-container > img {
     padding: 10px;
     background-color: white;
@@ -223,7 +228,8 @@
 }
 
 @media screen and (min-width: 1100px) {
-  .quantity-select, .quantity-select option {
+  .quantity-select,
+  .quantity-select option {
     font-size: 24px !important;
   }
 

@@ -26,11 +26,11 @@
 
 .item-name {
   margin-bottom: 5px;
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: "Bubblegum Sans", cursive;
 }
 
 .item-price {
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: "Bubblegum Sans", cursive;
   font-weight: bold;
   margin: 5px 0px 10px 0px;
   font-size: 20px;
@@ -42,7 +42,7 @@
 
 .item-description {
   margin-top: 5px;
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: "Bubblegum Sans", cursive;
 }
 
 .qty-form {
@@ -59,8 +59,8 @@
   font-size: 22px;
 }
 
-.add-cart{
-  font-family: 'Bubblegum Sans', cursive;
+.add-cart {
+  font-family: "Bubblegum Sans", cursive;
   text-transform: uppercase;
   background-color: hotpink;
   width: 100%;
@@ -76,13 +76,14 @@
   position: relative;
 }
 
-.qty-select, .qty-input {
+.qty-select,
+.qty-input {
   position: absolute;
   text-align: center;
   margin-left: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: "Bubblegum Sans", cursive;
 }
 
 .qty-input {
@@ -97,7 +98,7 @@
   padding-left: 10px;
   padding-right: 10px;
   margin: 0;
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: "Bubblegum Sans", cursive;
 }
 
 .qty-select option:hover {
@@ -107,7 +108,7 @@
 .message {
   margin: 0;
   margin-top: 5px;
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: "Bubblegum Sans", cursive;
 }
 
 .success {
@@ -118,11 +119,11 @@
   color: red;
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 800px) {
   .container {
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
   }
 
   .image-container {
@@ -155,7 +156,7 @@
   .qty-form {
     margin: 36px 0px;
   }
-  
+
   .qty-form * {
     font-size: 32px;
   }
@@ -163,7 +164,7 @@
   .qty-form > *:first-child {
     margin-bottom: 6px;
   }
-  
+
   .qty-form input {
     width: 35%;
     margin-left: 10px;
@@ -171,7 +172,7 @@
   }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1000px) {
   .image-container {
     width: 40%;
   }

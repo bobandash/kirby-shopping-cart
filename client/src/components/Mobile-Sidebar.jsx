@@ -1,25 +1,37 @@
-import styles from './Mobile-Sidebar.module.css'
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types'
+import styles from "./Mobile-Sidebar.module.css";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-function MobileSideBar({isActive}){
-  const asideClasses = isActive ? `${styles["mobile-sidebar"]} ${styles["active"]}` : `${styles["mobile-sidebar"]} ${styles["hidden"]}`
-  const linkClasses = isActive ? `${styles["link"]} ${styles["active"]}` : `${styles["link"]} ${styles["hidden"]}`
+function MobileSideBar({ isActive }) {
+  const asideClasses = isActive
+    ? `${styles["mobile-sidebar"]} ${styles["active"]}`
+    : `${styles["mobile-sidebar"]} ${styles["hidden"]}`;
+  const linkClasses = isActive
+    ? `${styles["link"]} ${styles["active"]}`
+    : `${styles["link"]} ${styles["hidden"]}`;
 
   return (
-    <aside className = {asideClasses}>
-      <ul className = {styles["sidebar-links"]}>
-          <li className = {linkClasses}><Link to = "/category/all">Shop All</Link></li>
-          <li className = {linkClasses}><Link to = '/category/games'>Games</Link></li>
-          <li className = {linkClasses}><Link to = '/category/plushies'>Plushies</Link></li>
-          <li className = {linkClasses}><Link to = "/category/keychains">Keychains</Link></li>
+    <aside className={asideClasses}>
+      <ul className={styles["sidebar-links"]}>
+        <li className={linkClasses}>
+          <Link to="/category/all">Shop All</Link>
+        </li>
+        <li className={linkClasses}>
+          <Link to="/category/games">Games</Link>
+        </li>
+        <li className={linkClasses}>
+          <Link to="/category/plushies">Plushies</Link>
+        </li>
+        <li className={linkClasses}>
+          <Link to="/category/keychains">Keychains</Link>
+        </li>
       </ul>
     </aside>
-  )
+  );
 }
 
 MobileSideBar.propTypes = {
   isActive: PropTypes.bool
-}
+};
 
 export default MobileSideBar;

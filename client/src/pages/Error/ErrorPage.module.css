@@ -19,11 +19,11 @@
   margin: 0;
   margin-bottom: 20px;
   text-shadow:
-  5px 5px 0 #000,
-  -3px -3px 0 #000,  
-  3px -3px 0 #000,
-  -3px 3px 0 #000,
-  3px 3px 0 #000;
+    5px 5px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000;
   color: white;
 }
 
@@ -38,8 +38,7 @@
   background-color: rgb(235, 59, 117);
 }
 
-
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
   .error-message {
     font-size: 96px;
   }
@@ -48,4 +47,3 @@
     font-size: 60px;
   }
 }
-

@@ -1,4 +1,3 @@
-
 .mobile-sidebar {
   position: fixed;
   background-color: rgb(255, 221, 226);
@@ -7,7 +6,7 @@
   opacity: 0;
   top: 7%;
   height: 0vh;
-/*   TO-DO: fix the opposite transition */
+  /*   TO-DO: fix the opposite transition */
   transition: height 1s ease-in;
 }
 
@@ -41,23 +40,31 @@
 }
 
 .link.active:nth-child(1) {
-  transition: opacity 0.5s ease-in 0.5s, transform 0.5s ease-in 0.5s;
+  transition:
+    opacity 0.5s ease-in 0.5s,
+    transform 0.5s ease-in 0.5s;
 }
 
 .link.active:nth-child(2) {
-  transition: opacity 0.5s ease-in 1s, transform 0.5s ease-in 1s;
+  transition:
+    opacity 0.5s ease-in 1s,
+    transform 0.5s ease-in 1s;
 }
 
 .link.active:nth-child(3) {
-  transition: opacity 0.5s ease-in 1.5s, transform 0.5s ease-in 1.5s;
+  transition:
+    opacity 0.5s ease-in 1.5s,
+    transform 0.5s ease-in 1.5s;
 }
 
 .link.active:nth-child(4) {
-  transition: opacity 0.5s ease-in 2s, transform 0.5s ease-in 2s;
+  transition:
+    opacity 0.5s ease-in 2s,
+    transform 0.5s ease-in 2s;
 }
 
 @media screen and (min-width: 800px) {
   .mobile-sidebar {
     display: none;
-  } 
+  }
 }

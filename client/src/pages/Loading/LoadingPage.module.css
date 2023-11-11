@@ -25,9 +25,6 @@
   animation: 4s ease-in infinite walk;
 }
 
-
-
-
 @keyframes walk {
   from {
     transform: translateX(-100%);
@@ -38,13 +35,11 @@
   }
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 800px) {
   .loading-gif {
     width: 20%;
   }
-
 }
-
 
 /* <section className = {styles["loading-screen"]}>
 <img className = {styles["loading-gif"]} src = {LoadingGif} alt = "loading gif"/>

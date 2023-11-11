@@ -1,5 +1,5 @@
-function convertCurrencyFormat(number){
-  return number.toFixed(2);
+function convertCurrencyFormat(number) {
+    return number.toFixed(2);
 }
 
-export {convertCurrencyFormat}
+export { convertCurrencyFormat };

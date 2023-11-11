@@ -22,7 +22,7 @@
 .image-container > img {
   display: block;
   height: 100%;
-  width: auto; 
+  width: auto;
   padding: 10px 0px;
   margin: 0 auto;
   overflow: none;
@@ -40,5 +40,5 @@
 .price {
   margin: 0;
   font-size: 18px;
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: "Bubblegum Sans", cursive;
 }

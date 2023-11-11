@@ -1,5 +1,5 @@
 .featured-plush-container {
-  background: url('../../assets/six different kirbies.jpg');
+  background: url("../../assets/six different kirbies.jpg");
   min-height: 80vh;
   background-position: center center;
   background-size: cover;
@@ -17,7 +17,7 @@
   margin: 0 auto;
   font-size: 36px;
   background-color: white;
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: "Bubblegum Sans", cursive;
   text-transform: uppercase;
   padding: 24px 30px;
   border-radius: 20px;
@@ -25,8 +25,6 @@
   background-color: hotpink;
   color: white;
 }
-
-
 
 @keyframes scaleBtn {
   0% {
@@ -51,7 +49,7 @@
   flex-direction: column;
 }
 
-.plush-container > *:not(:last-child){
+.plush-container > *:not(:last-child) {
   margin-bottom: 24px;
 }
 
@@ -79,10 +77,9 @@
   transition: transform 1s linear 0.5s;
 } */
 
-
 @media screen and (min-width: 900px) {
   .featured-plush-container {
-    background: url('../../assets/kirby all together.png');
+    background: url("../../assets/kirby all together.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -98,7 +95,7 @@
     width: 33%;
   }
 
-  .plush-container > *:not(:last-child){
+  .plush-container > *:not(:last-child) {
     margin-right: 0px;
     margin-bottom: 0px;
   }
@@ -107,7 +104,7 @@
     font-size: 48px;
   }
 
-/*   .plush-container > *:nth-child(1) {
+  /*   .plush-container > *:nth-child(1) {
     transform: translateX(0%);
   }
 
@@ -141,7 +138,7 @@
     width: 30%;
   }
 
-/*   .plush-container > *:nth-child(1) {
+  /*   .plush-container > *:nth-child(1) {
     transform: translateX(0%);
   }
 

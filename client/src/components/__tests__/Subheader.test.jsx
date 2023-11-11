@@ -1,55 +1,55 @@
-import {describe, it, expect, beforeEach, vi} from 'vitest'
+import { describe, it, expect, beforeEach, vi } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
-import SubHeader from '../Subheader';
-import { BrowserRouter } from 'react-router-dom';
-import userEvent from '@testing-library/user-event';
+import SubHeader from "../Subheader";
+import { BrowserRouter } from "react-router-dom";
+import userEvent from "@testing-library/user-event";
 
 // setups props
-describe('Subheader', () => {
-  describe('DOM', () => {
+describe("Subheader", () => {
+  describe("DOM", () => {
     it("matches snapshot", () => {
-      const routerWrapper = ({children}) => <BrowserRouter>{children}</BrowserRouter>
-      const {container} = render(<SubHeader />, {wrapper: routerWrapper});
+      const routerWrapper = ({ children }) => <BrowserRouter>{children}</BrowserRouter>;
+      const { container } = render(<SubHeader />, { wrapper: routerWrapper });
       expect(container).toMatchSnapshot();
-    })
-  })
+    });
+  });
 
-  describe('Subheader Links', () => {
+  describe("Subheader Links", () => {
     beforeEach(() => {
-      const routerWrapper = ({children}) => <BrowserRouter>{children}</BrowserRouter>
-      render(<SubHeader />, {wrapper: routerWrapper});      
-    })
+      const routerWrapper = ({ children }) => <BrowserRouter>{children}</BrowserRouter>;
+      render(<SubHeader />, { wrapper: routerWrapper });
+    });
 
-    it('Shop All works', async () => {
-      const link = screen.getByRole("link", {name: "Shop All"});
+    it("Shop All works", async () => {
+      const link = screen.getByRole("link", { name: "Shop All" });
       expect(link).toBeInTheDocument();
       const user = userEvent.setup();
       await user.click(link);
-      expect(window.location.pathname).toBe('/category/all');
-    })
+      expect(window.location.pathname).toBe("/category/all");
+    });
 
-    it('Games works', async () => {
-      const link = screen.getByRole("link", {name: "Games"});
+    it("Games works", async () => {
+      const link = screen.getByRole("link", { name: "Games" });
       expect(link).toBeInTheDocument();
       const user = userEvent.setup();
       await user.click(link);
-      expect(window.location.pathname).toBe('/category/games');
-    })
-    
-    it('Plushies works', async () => {
-      const link = screen.getByRole("link", {name: "Plushies"});
-      expect(link).toBeInTheDocument();
-      const user = userEvent.setup();
-      await user.click(link);
-      expect(window.location.pathname).toBe('/category/plushies');
-    })
+      expect(window.location.pathname).toBe("/category/games");
+    });
 
-    it('Keychains works', async () => {
-      const link = screen.getByRole("link", {name: "Keychains"});
+    it("Plushies works", async () => {
+      const link = screen.getByRole("link", { name: "Plushies" });
       expect(link).toBeInTheDocument();
       const user = userEvent.setup();
       await user.click(link);
-      expect(window.location.pathname).toBe('/category/keychains');
-    })
-  })
-})
+      expect(window.location.pathname).toBe("/category/plushies");
+    });
+
+    it("Keychains works", async () => {
+      const link = screen.getByRole("link", { name: "Keychains" });
+      expect(link).toBeInTheDocument();
+      const user = userEvent.setup();
+      await user.click(link);
+      expect(window.location.pathname).toBe("/category/keychains");
+    });
+  });
+});
