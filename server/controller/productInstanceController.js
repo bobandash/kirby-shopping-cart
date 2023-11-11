@@ -38,7 +38,7 @@ exports.product_edit_get = asyncHandler(async (req, res, next) => {
   const productInfo = await Product.findOne({_id: productId}).populate('category').exec();
   const listOfCategories = await Category.find({}).exec();
   res.render('edit-form', {
-    title: "Test",
+    title: "Edit Product",
     product: productInfo,
     categories: listOfCategories
   })
@@ -47,7 +47,7 @@ exports.product_edit_get = asyncHandler(async (req, res, next) => {
 exports.product_add_get = asyncHandler(async (req, res, next) => {
   const listOfCategories = await Category.find({}).sort({name: 1}).exec();
   res.render('add-form', {
-    title: "Add Products",
+    title: "Add Product",
     categories: listOfCategories
   })
 })
@@ -185,7 +185,7 @@ exports.product_edit = [
       await Product.findByIdAndUpdate(req.body.sku, updatedProduct);
       const updatedProductCategoryPopulated = await Product.findById(req.body.sku).populate('category').exec();
       res.render('edit-form',{
-        title: "Test",
+        title: "Edit Product",
         product: updatedProductCategoryPopulated,
         categories: listOfCategories,
         message: 'Successfully updated'
