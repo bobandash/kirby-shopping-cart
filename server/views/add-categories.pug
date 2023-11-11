@@ -1,34 +1,36 @@
 extends layout 
 
 block content
-  div.container
+  link(rel='stylesheet', href='/stylesheets/categories.css')
+  div.container.categories-container
     h1= title
-    form(method="POST")
-      label(for= "add-categories") Add Categories
+    h2.subheader= "Add Categories:"
+    form.add-category-form(method="POST")
       input(type="text"
         name= "add-categories"
-        id= "add-categories")
-      button.add-category(type="submit") Add
+        placeholder= "Category Name"
+        id= "add-categories"
+        autocomplete = "off")
+      button.add-category-btn(type="submit") Add
     if errors 
       ul
       each error in errors
         li #{error.msg}
-    h2= "Existing Categories"
-    table
-      thead 
+    h2.subheader= "Existing Categories:"
+    table.categories-table
+      tr
         th Category Name
         th Num Products
         th Update
         th Delete
-      tbody 
-        each category in categories 
-          tr
-            td 
-              input(type="text" form= category._id value = category.name name = "category-update")
-            td #{category.num_products}
-            td 
-              form(id= category._id method="POST" action = `/admin/categories/update/${category._id}`)
-                button Update             
-            td
-              form(method="POST" action = `/admin/categories/delete/${category._id}`)
-                button Delete
+      each category in categories 
+        tr
+          td.category-name
+            input(type="text" form= category._id value = category.name name = "category-update" autocomplete = "off")
+          td #{category.num_products}
+          td 
+            form(id= category._id method="POST" action = `/admin/categories/update/${category._id}`)
+              button Update             
+          td
+            form(method="POST" action = `/admin/categories/delete/${category._id}`)
+              button Delete

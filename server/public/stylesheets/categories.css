@@ -1,0 +1,115 @@
+.subheader {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+
+/* generic styling of categories buttons */
+button {
+  background-color: lightpink;
+  width: fit-content;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 2.5px 10px;
+}
+
+button:hover {
+  background-color: rgb(249, 193, 201);
+}
+
+input {
+  font-size: 18px;
+}
+
+.categories-container {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.add-category-btn {
+  background-color: #e4000f;
+  color: white;
+}
+
+.add-category-btn:hover {
+  background-color: #e4000f;
+}
+
+.categories-container input {
+  padding: 2.5px 5px;
+}
+
+.add-category-form {
+  margin-bottom: 20px;
+}
+
+.add-category-form td p {
+  font-size: 18px;
+}
+
+.categories-table {
+  width: 100%;
+}
+
+.categories-table tr {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.categories-table th {
+  text-align: center;
+  margin: 0 auto;
+}
+.categories-table tr:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.categories-table tr:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.product-row:hover {
+  cursor: pointer;
+}
+
+.categories-table tr:nth-child(2n + 3) {
+  background-color: pink;
+}
+
+.categories-table tr:nth-child(2n + 3):hover {
+  background-color: rgb(252, 170, 182);
+}
+
+.categories-table tr:nth-child(2n + 2) {
+  background-color: white;
+}
+
+.categories-table tr:nth-child(2n + 2):hover {
+  background-color: rgb(244, 236, 236);
+}
+
+.categories-table tr:first-child {
+  background-color: lightpink;
+}
+
+.categories-table tr img {
+  width: 40px;
+  border: 1px solid gray;
+}
+
+.categories-table input {
+  max-width: 100%;
+}
+
+.categories-table tr td:not(.category-name) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
