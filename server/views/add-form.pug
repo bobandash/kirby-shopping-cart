@@ -6,8 +6,8 @@ block content
     h1.form-name= title
     div.form-container
       if errors 
-        p Errors to Fix To Continue:
-        ul 
+        p.message.error Errors to Fix To Continue:
+        ul.error-message-container
           each error in errors 
             li= error.msg
       if message 
