@@ -30,7 +30,7 @@ function CategoryPage({ cartItems }) {
     async function getProducts() {
       try {
         const fetchUrl = getFetchUrl(name);
-        const response = await fetch(fetchUrl);
+        const response = await fetch(fetchUrl, {mode: "cors"});
         if (!response.ok) {
           setError(true);
         } else {

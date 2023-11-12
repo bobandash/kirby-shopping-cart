@@ -60,7 +60,7 @@ function ProductPage({ cartItems, addCartItem }) {
   useEffect(() => {
     async function getProduct(id) {
       try {
-        const response = await fetch("http://localhost:3000/admin/api/products/id/" + id);
+        const response = await fetch("http://localhost:3000/admin/api/products/id/" + id, {mode: "cors"});
         const data = await response.json();
         setItem(data);
         setError(false);
