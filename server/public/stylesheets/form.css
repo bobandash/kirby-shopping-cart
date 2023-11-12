@@ -22,7 +22,7 @@
   border: 1px solid black;
 }
 
-.edit-form label, p {
+.edit-form label, .edit-form p {
   font-size: 24px;
   margin: 12px 0px;
 }

@@ -9,8 +9,8 @@
 }
 
 .search-bar-container {
-  min-width: 50%;
-  width: 400px;
+  max-width: 600px;
+  width: 50%;
 }
 
 .header form {
@@ -78,4 +78,10 @@
 .action-btns button:hover {
   cursor: pointer;
   background-color: pink;
+}
+
+@media screen and (max-width: 650px) {
+  .search-bar-container {
+    display: none;
+  }
 }
