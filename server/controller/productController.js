@@ -45,7 +45,12 @@ exports.featured_games_list = asyncHandler(async (req, res, next) => {
 })
 
 exports.products_tabulated = asyncHandler(async (req, res, next) => {
-  const products = await Product.find({}).populate('category').exec();
+  const {filter} = req.query;
+  let products = Product.find({});
+  if(filter){
+    products = products.find({title: { $regex: "^" + filter }});
+  }
+  products = await products.populate('category').exec();
   res.render("products-tabulated", {
     title: 'Products',
     products: products,

@@ -4,8 +4,9 @@ header.header
     img(src= "/images/kirby-logo.png"
       alt = "Kirby Logo")
   div.search-bar-container
-    form.searchbar(action="GET") 
+    form.searchbar(method="GET" action = "/admin") 
       input(
+        name = "filter"
         type= "text"
         placeholder= "Enter Product")
       button(

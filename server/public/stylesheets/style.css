@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5 {
   margin: 0 auto;
 }
 
+.products-tabulated {
+  width: 100%;
+}
+
 .products-tabulated th {
   padding: 10px 0px;
 }
