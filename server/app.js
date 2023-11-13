@@ -1,3 +1,4 @@
+require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -9,9 +10,11 @@ const cors = require('cors');
 const adminRouter = require('./routes/admin');
 
 var app = express();
+
+
 const mongoose = require('mongoose');
 // TO-DO: hide this later
-mongoose.connect("mongodb+srv://brucehsu1126:fKLga9bwSJ5fZxc6@cluster0.pu5bkv7.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect(process.env.MONGODB_URL);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
