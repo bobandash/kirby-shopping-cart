@@ -12,7 +12,11 @@ function LandingScreen() {
     <section className={styles["landing-screen"]}>
       <div className={styles.container}>
         <div className={styles["stars-container"]}>
-          <img className={styles.stars} src={NoTrailStars} alt="stars no trail" />
+          <img
+            className={styles.stars}
+            src={NoTrailStars}
+            alt="stars no trail"
+          />
           <img
             className={`${styles.stars} ${styles["trail-animation"]}`}
             src={TrailStars}
@@ -20,10 +24,18 @@ function LandingScreen() {
           />
         </div>
         <div className={styles["store-information"]}>
-          <img className={styles["kirby-logo"]} src={KirbyLogo} alt="kirby-logo" />
+          <img
+            className={styles["kirby-logo"]}
+            src={KirbyLogo}
+            alt="kirby-logo"
+          />
           <h2 className={styles.subheader}>The Fake Online Store</h2>
         </div>
-        <img className={styles["kirby-sitting"]} src={KirbySitting} alt="kirby-sitting" />
+        <img
+          className={styles["kirby-sitting"]}
+          src={KirbySitting}
+          alt="kirby-sitting"
+        />
         <img
           className={`${styles["desktop-image"]} ${styles["top-middle"]}`}
           src={kingDeDeDe}
