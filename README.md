@@ -12,8 +12,8 @@ https://github.com/bobandash/kirby-shopping-cart/assets/74850332/7a1ffbd9-d426-4
 
 
 ## Live View:
-Front-End: https://shopkirby.netlify.app/
-BackEnd: https://shopkirby.onrender.com/admin
+- Front-End: https://shopkirby.netlify.app/
+- BackEnd: https://shopkirby.onrender.com/admin
 
 ## Technologies Used:
 Front-End:
