@@ -19,10 +19,10 @@ function CategoryPage({ cartItems }) {
     function getFetchUrl(name) {
       if (name === "all")
         // TO-DO: change URL
-        return "http://localhost:3000/admin/api/products/all";
+        return "https://shopkirby.onrender.com/admin/api/products/all";
       else {
         return (
-          "http://localhost:3000/admin/api/products/" + name.charAt(0).toUpperCase() + name.slice(1)
+          "https://shopkirby.onrender.com/admin/api/products/" + name.charAt(0).toUpperCase() + name.slice(1)
         );
       }
     }

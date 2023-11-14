@@ -15,7 +15,7 @@ function GetFeaturedProducts() {
   const [error, setError] = useState(false);
 
   async function getFeaturedPlushies() {
-    const response = await fetch(`http://localhost:3000/admin/api/featured/plush`, {
+    const response = await fetch(`https://shopkirby.onrender.com/admin/api/featured/plush`, {
       mode: "cors"
     });
     const data = response.json();
@@ -23,7 +23,7 @@ function GetFeaturedProducts() {
   }
 
   async function getFeaturedGames() {
-    const response = await fetch(`http://localhost:3000/admin/api/featured/game`, { mode: "cors" });
+    const response = await fetch(`https://shopkirby.onrender.com/admin/api/featured/game`, { mode: "cors" });
     const data = response.json();
     return data;
   }
