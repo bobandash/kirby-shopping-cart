@@ -25,7 +25,7 @@ Backend:
 
 ## Quick Start
 - Fork the project
-- Clone the project using git clone https://github.com/bobandash/wheres-waldo.git
+- Clone the project using git clone https://github.com/bobandash/kirby-shopping-cart.git
 - Open the project using the editor of your choice
 - Run npm install
 - Create a database on mongoDB
