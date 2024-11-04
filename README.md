@@ -16,9 +16,9 @@ https://github.com/bobandash/kirby-shopping-cart/assets/74850332/7a1ffbd9-d426-4
 - BackEnd: https://shopkirby.onrender.com/admin
 
 ## Technologies Used:
-Front-End:
+### Front-End:
 - React
-Backend:
+### Backend:
 - Express, Node.js
 - MongoDB,
 - Pug
